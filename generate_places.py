@@ -1,10 +1,9 @@
 import json
 import urllib.request
-import urllib.parse
 
 OUTPUT_FILE = "places.json"
 
-SEARCH_DATASET_URL = "https://opendata.paris.fr/api/v2/catalog/datasets"
+CATALOG_URL = "https://opendata.paris.fr/api/v2/catalog/datasets"
 
 
 def safe(val):
@@ -23,20 +22,31 @@ def fetch_json(url):
 
 
 def find_dataset():
-    print("Searching dataset catalog...")
+    print("Searching dataset catalog (paginated)...")
 
-    # query datasets
-    url = SEARCH_DATASET_URL + "?limit=100&offset=0"
-    data = fetch_json(url)
+    offset = 0
+    limit = 100
 
-    datasets = data.get("datasets", [])
-    for d in datasets:
-        dataset_id = d.get("dataset_id", "")
-        title = (d.get("metas") or {}).get("title", "").lower()
+    while True:
+        url = f"{CATALOG_URL}?limit={limit}&offset={offset}"
+        data = fetch_json(url)
 
-        if "lieux" in title and "culturel" in title:
-            print("Found dataset:", dataset_id, "-", title)
-            return dataset_id
+        datasets = data.get("datasets", [])
+        if not datasets:
+            break
+
+        for d in datasets:
+            dataset_id = d.get("dataset_id", "")
+            metas = d.get("metas", {}) or {}
+            title = safe(metas.get("title")).lower()
+
+            # This is flexible: will match "Lieux culturels", "Lieux culturels - équipements", etc.
+            if "lieux" in title and "culture" in title:
+                print("Found dataset:", dataset_id)
+                print("Title:", title)
+                return dataset_id
+
+        offset += limit
 
     return None
 
