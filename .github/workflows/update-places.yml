@@ -28,6 +28,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add places.json
-          git diff --cached --quiet || git commit -m "Auto-update places.json"
+
+          if git diff --cached --quiet; then
+            echo "No changes in places.json"
+            exit 0
+          fi
+
+          git commit -m "Auto-update places.json"
+          git pull --rebase
           git push
