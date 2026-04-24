@@ -1,8 +1,7 @@
 {
-  "source": "Paris Open Data (Ville de Paris)",
-  "dataset": "Elections - Présidentielles 2007 - 2èmeTour",
-  "dataset_id": "elections-presidentielles-2007-2emetour",
-  "license": "ODbL v1.0",
+  "source": "Wikidata (CC0)",
+  "license": "CC0 1.0",
+  "country": "France",
   "count": 0,
   "places": []
-}
+} 
