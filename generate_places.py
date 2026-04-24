@@ -4,73 +4,113 @@ import urllib.parse
 
 OUTPUT_FILE = "places.json"
 
-DOMAIN = "opendata.paris.fr"
+SPARQL_URL = "https://query.wikidata.org/sparql"
 
-# IDE ÍRD A HELYES DATASET ID-T
-DATASET_ID = "lieux-culturels"
+# Wikidata kulturális hely típusok (P31 = instance of)
+# Museum, art gallery, theatre, cinema, library, cultural center, opera house, concert hall
+CULTURAL_TYPES = [
+    "wd:Q33506",     # museum
+    "wd:Q1007870",   # art gallery
+    "wd:Q24354",     # theatre
+    "wd:Q41253",     # cinema
+    "wd:Q7075",      # library
+    "wd:Q174782",    # cultural center
+    "wd:Q166118",    # opera house
+    "wd:Q1060829"    # concert hall
+]
+
 
 def safe(val):
     if val is None:
         return ""
     return str(val).strip()
 
-def fetch_json(url):
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Mozilla/5.0 (NVO987 OpenData Bot)"}
-    )
+
+def fetch_json(url, headers=None):
+    req = urllib.request.Request(url, headers=headers or {})
     with urllib.request.urlopen(req) as response:
         return json.loads(response.read().decode("utf-8"))
 
-def fetch_records(dataset_id):
-    print("Downloading dataset records...")
 
-    all_records = []
-    offset = 0
-    limit = 100
+def run_sparql(query):
+    params = {
+        "query": query,
+        "format": "json"
+    }
 
-    while True:
-        params = {"limit": limit, "offset": offset}
-        url = f"https://{DOMAIN}/api/explore/v2.1/catalog/datasets/{dataset_id}/records?" + urllib.parse.urlencode(params)
+    url = SPARQL_URL + "?" + urllib.parse.urlencode(params)
 
-        data = fetch_json(url)
-        results = data.get("results", [])
+    headers = {
+        "User-Agent": "Mozilla/5.0 (NVO987 Cultural Map Bot)",
+        "Accept": "application/sparql-results+json"
+    }
 
-        if not results:
-            break
+    return fetch_json(url, headers=headers)
 
-        all_records.extend(results)
-        offset += limit
-        print(f"Fetched {len(all_records)} records...")
-
-        if len(results) < limit:
-            break
-
-    return all_records
 
 def main():
-    records = fetch_records(DATASET_ID)
+    type_values = " ".join(CULTURAL_TYPES)
+
+    query = f"""
+    SELECT ?place ?placeLabel ?typeLabel ?lat ?lon ?cityLabel ?website ?description WHERE {{
+      VALUES ?type {{ {type_values} }}
+
+      ?place wdt:P31 ?type .
+      ?place wdt:P17 wd:Q142 .   # France
+
+      OPTIONAL {{ ?place wdt:P625 ?coord . }}
+      BIND(geof:latitude(?coord) AS ?lat)
+      BIND(geof:longitude(?coord) AS ?lon)
+
+      OPTIONAL {{ ?place wdt:P131 ?city . }}
+
+      OPTIONAL {{ ?place wdt:P856 ?website . }}
+      OPTIONAL {{ ?place schema:description ?description FILTER(LANG(?description)="fr") }}
+
+      SERVICE wikibase:label {{
+        bd:serviceParam wikibase:language "fr,en".
+      }}
+    }}
+    """
+
+    print("Downloading Wikidata cultural places for France...")
+    data = run_sparql(query)
+
+    results = data.get("results", {}).get("bindings", [])
+    print("Raw results:", len(results))
 
     places = []
-    for r in records:
+
+    for r in results:
+        lat = r.get("lat", {}).get("value")
+        lon = r.get("lon", {}).get("value")
+
+        # csak akkor vesszük be, ha van koordináta
+        if not lat or not lon:
+            continue
+
+        place_url = r.get("place", {}).get("value", "")
+        place_id = place_url.split("/")[-1] if place_url else ""
+
         place = {
-            "name": safe(r.get("nom_du_lieu") or r.get("name") or r.get("title") or r.get("nom")),
-            "type": safe(r.get("type") or r.get("categorie") or r.get("type_de_lieu") or "Lieu culturel"),
-            "address": safe(r.get("adresse") or r.get("address") or r.get("adresse_complete")),
-            "postcode": safe(r.get("code_postal") or r.get("postcode")),
-            "city": safe(r.get("ville") or "Paris"),
-            "website": safe(r.get("site_web") or r.get("url") or r.get("link")),
-            "description": safe(r.get("description") or r.get("presentation") or r.get("resume")),
+            "id": place_id,
+            "name": safe(r.get("placeLabel", {}).get("value")),
+            "type": safe(r.get("typeLabel", {}).get("value")),
+            "city": safe(r.get("cityLabel", {}).get("value")),
+            "lat": float(lat),
+            "lon": float(lon),
+            "website": safe(r.get("website", {}).get("value")),
+            "description": safe(r.get("description", {}).get("value")),
+            "source": place_url
         }
 
         if place["name"]:
             places.append(place)
 
     final = {
-        "source": "Paris Open Data (Ville de Paris)",
-        "dataset": DATASET_ID,
-        "dataset_id": DATASET_ID,
-        "license": "ODbL v1.0",
+        "source": "Wikidata (CC0)",
+        "license": "CC0 1.0",
+        "country": "France",
         "count": len(places),
         "places": places
     }
@@ -79,6 +119,7 @@ def main():
         json.dump(final, f, ensure_ascii=False, indent=2)
 
     print(f"Generated {OUTPUT_FILE} with {len(places)} places.")
+
 
 if __name__ == "__main__":
     main()
