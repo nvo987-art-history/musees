@@ -1,0 +1,430 @@
+<!-- ==========================================================
+     FILE: index.html
+     NVO987.eu – Carte Culturelle (Musées & Galeries) – Paris
+     Static / GitHub Pages compatible / Privacy-friendly
+     Data loaded locally from places.json (Open Data compliant)
+========================================================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- BASIC -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Carte Culturelle – Paris (Musées & Galeries)</title>
+
+  <meta name="description" content="Carte culturelle de Paris (musées et galeries) basée sur des données publiques Open Data. Aucun cookie, aucun tracking, aucune collecte." />
+  <meta name="keywords" content="Paris, musées, galeries, carte culturelle, open data, NVO987" />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="color-scheme" content="light" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://nvo987.eu/" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SOCIAL PREVIEW -->
+  <meta property="og:site_name" content="NVO987.eu" />
+  <meta property="og:title" content="Carte Culturelle – Paris (Open Data)" />
+  <meta property="og:description" content="Carte culturelle (musées & galeries) basée sur des données publiques officielles Open Data. Aucun cookie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nvo987.eu/" />
+  <meta property="og:image" content="https://nvo987.eu/banner.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carte Culturelle – Paris" />
+  <meta name="twitter:description" content="Musées & galeries à Paris – Open Data. Aucun cookie, aucun tracking." />
+  <meta name="twitter:image" content="https://nvo987.eu/banner.jpg" />
+  <meta name="twitter:dnt" content="on" />
+
+  <!-- ICONS (optional if you add them later) -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+
+        <div class="brand">
+          <span class="brand-name">NVO987.eu</span>
+          <span class="brand-tag">Carte Culturelle</span>
+        </div>
+
+        <nav class="nav">
+          <a href="#places">Lieux</a>
+          <a href="#mentions">Mentions</a>
+          <a href="#sources">Sources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="container">
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Carte Culturelle – Paris</h1>
+        <p class="hero-sub">Musées • Galeries • Centres culturels</p>
+      </div>
+    </header>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="container">
+
+      <!-- PLACES -->
+      <section id="places" class="section">
+
+        <div class="section-header">
+          <h2>Lieux culturels</h2>
+          <p>Recherche instantanée sur une base Open Data locale (aucune requête serveur, aucun tracking).</p>
+        </div>
+
+        <div class="controls">
+          <input id="searchInput" type="text" placeholder="Rechercher (ex: musée, galerie, centre, exposition)..." />
+          <select id="typeSelect">
+            <option value="all" selected>Tout</option>
+            <option value="museum">Musées</option>
+            <option value="gallery">Galeries</option>
+            <option value="cultural_center">Centres culturels</option>
+          </select>
+
+          <select id="limitSelect">
+            <option value="20" selected>20 résultats</option>
+            <option value="40">40 résultats</option>
+            <option value="80">80 résultats</option>
+            <option value="120">120 résultats</option>
+          </select>
+        </div>
+
+        <div id="statusBox" class="status info">
+          Chargement des lieux…
+        </div>
+
+        <div id="placesGrid" class="grid"></div>
+
+      </section>
+
+      <!-- MENTIONS -->
+      <section id="mentions" class="section">
+
+        <div class="section-header">
+          <h2>Mentions légales / conformité</h2>
+          <p>Transparence, absence de cookies, conformité Open Data et limitation de responsabilité.</p>
+        </div>
+
+        <div class="legal-card">
+
+          <h3>1. Éditeur du site</h3>
+          <p>
+            Le site <strong>NVO987.eu</strong> est édité par l’association culturelle <strong>NVO987</strong>.
+            Les mentions légales officielles complètes sont disponibles sur :
+            <a href="https://www.nvo987.fr" target="_blank" rel="noopener noreferrer">www.nvo987.fr</a>.
+          </p>
+
+          <h3>2. Objet du site</h3>
+          <p>
+            Ce site propose une interface indépendante de consultation et de synthèse de lieux culturels à Paris,
+            à partir de données publiques disponibles légalement via des plateformes Open Data officielles.
+          </p>
+
+          <h3>3. Données personnelles / RGPD</h3>
+          <p>
+            <strong>Aucune donnée personnelle n’est collectée, stockée, analysée, profilée ou revendue.</strong>
+            Aucun compte utilisateur, aucun formulaire, aucun identifiant permanent.
+          </p>
+          <p>
+            Aucun outil d’analyse (Google Analytics, Meta Pixel, etc.) n’est utilisé.
+          </p>
+
+          <h3>4. Cookies / tracking</h3>
+          <p>
+            Aucun cookie publicitaire, aucun tracker et aucun système de suivi n’est mis en place.
+          </p>
+
+          <h3>5. Limitation de responsabilité</h3>
+          <p>
+            Les informations affichées sont fournies à titre informatif. Elles peuvent être modifiées,
+            supprimées ou incorrectes selon les mises à jour des sources officielles.
+            <strong>La source officielle fait foi.</strong>
+          </p>
+          <p>
+            L’éditeur décline toute responsabilité en cas d’erreur, d’omission ou de dommage direct/indirect
+            résultant de l’utilisation du site.
+          </p>
+
+          <p class="small-note">
+            Dernière mise à jour : 2026.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources" class="section">
+
+        <div class="section-header">
+          <h2>Sources & licences</h2>
+          <p>Attribution obligatoire conformément aux licences Open Data.</p>
+        </div>
+
+        <div class="sources-card">
+          <p>
+            Les informations affichées sur ce site proviennent exclusivement de sources publiques officielles
+            mises à disposition via des plateformes Open Data. Ce site présente uniquement une
+            <strong>synthèse</strong> destinée à la consultation.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Source officielle principale :</strong>
+              <a href="https://opendata.paris.fr/" target="_blank" rel="noopener noreferrer">
+                Paris Open Data (Ville de Paris)
+              </a>
+            </li>
+
+            <li>
+              <strong>Licence Open Data :</strong>
+              <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener noreferrer">
+                Open Database License (ODbL) v1.0
+              </a>
+            </li>
+
+            <li>
+              <strong>Attribution obligatoire (ODbL) :</strong>
+              Données issues de <strong>Paris Open Data / Ville de Paris</strong>, réutilisées conformément à la licence ODbL.
+            </li>
+
+            <li>
+              <strong>Crédit licence (ODbL) :</strong>
+              © Ville de Paris / Paris Open Data
+            </li>
+
+            <li>
+              <strong>Mentions légales officielles de l’association éditrice :</strong>
+              <a href="https://www.nvo987.fr" target="_blank" rel="noopener noreferrer">
+                www.nvo987.fr
+              </a>
+            </li>
+          </ul>
+
+          <p class="small-note">
+            <strong>Déclaration ODbL (Produced Work / synthèse) :</strong>
+            ce site constitue une mise en forme et une présentation web des données
+            (œuvre produite / <em>Produced Work</em> au sens de l’ODbL).
+            Les données originales et complètes restent accessibles via les plateformes officielles.
+          </p>
+
+          <p class="small-note">
+            <strong>Absence de redistribution de base de données :</strong>
+            ce site ne fournit pas d’export complet, de dump ou d’API publique visant à redistribuer
+            une partie substantielle de la base source.
+          </p>
+
+          <p class="small-note">
+            <strong>Non affiliation :</strong>
+            ce site est une interface indépendante et ne constitue pas un service officiel de la Ville de Paris.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Contact officiel et identité DID.</p>
+        </div>
+
+        <div class="sources-card">
+          <p>
+            Email officiel :
+            <a href="mailto:contact@nvo987.eu">contact@nvo987.eu</a>
+          </p>
+
+          <p>
+            Identité DID :
+            <a href="https://identity.nvo987.us">did:web:identity.nvo987.us</a>
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <p>© 2026 NVO987 – Culture Visuelle Moderne et Contemporaine</p>
+
+      <p class="muted">
+        Aucun cookie • Aucun suivi • Données publiques uniquement
+      </p>
+
+      <p>
+        Mentions légales officielles :
+        <a href="https://www.nvo987.fr" target="_blank" rel="noopener noreferrer">
+          www.nvo987.fr
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const statusBox = document.getElementById("statusBox");
+    const placesGrid = document.getElementById("placesGrid");
+    const searchInput = document.getElementById("searchInput");
+    const limitSelect = document.getElementById("limitSelect");
+    const typeSelect = document.getElementById("typeSelect");
+
+    let allPlaces = [];
+
+    function escapeHTML(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function normalize(str) {
+      return (str || "").toLowerCase();
+    }
+
+    function buildCard(place) {
+      const name = escapeHTML(place.name || "Lieu culturel");
+      const type = escapeHTML(place.type || "unknown");
+      const address = escapeHTML(place.address || "");
+      const city = escapeHTML(place.city || "Paris");
+      const website = escapeHTML(place.website || "");
+      const descriptionRaw = place.description || "";
+      let description = escapeHTML(descriptionRaw);
+
+      if (description.length > 220) {
+        description = description.slice(0, 220) + "...";
+      }
+
+      const typeLabel =
+        type === "museum" ? "Musée" :
+        type === "gallery" ? "Galerie" :
+        type === "cultural_center" ? "Centre culturel" :
+        "Lieu culturel";
+
+      const card = document.createElement("article");
+      card.className = "place-card";
+
+      card.innerHTML = `
+        <div class="place-type">${typeLabel}</div>
+
+        <h3>${name}</h3>
+
+        <div class="place-meta">
+          <span>${city}</span>
+          ${address ? `<span>•</span><span>${address}</span>` : ""}
+        </div>
+
+        <div class="place-desc">
+          ${description ? description : `<span class="muted">Aucune description disponible.</span>`}
+        </div>
+
+        <div class="place-actions">
+          ${
+            website
+              ? `<a class="btn" href="${website}" target="_blank" rel="noopener noreferrer nofollow">Site officiel</a>`
+              : `<span class="muted">Lien indisponible</span>`
+          }
+        </div>
+      `;
+
+      return card;
+    }
+
+    function renderPlaces() {
+      const query = normalize(searchInput.value.trim());
+      const limit = parseInt(limitSelect.value, 10);
+      const selectedType = typeSelect.value;
+
+      placesGrid.innerHTML = "";
+
+      let filtered = allPlaces;
+
+      if (selectedType !== "all") {
+        filtered = filtered.filter(p => normalize(p.type) === selectedType);
+      }
+
+      if (query.length > 0) {
+        filtered = filtered.filter(p => {
+          const blob = JSON.stringify(p).toLowerCase();
+          return blob.includes(query);
+        });
+      }
+
+      filtered = filtered.slice(0, limit);
+
+      if (filtered.length === 0) {
+        statusBox.className = "status warn";
+        statusBox.textContent = "Aucun lieu trouvé.";
+        return;
+      }
+
+      statusBox.className = "status success";
+      statusBox.textContent = `${filtered.length} lieu(x) affiché(s).`;
+
+      filtered.forEach(p => {
+        placesGrid.appendChild(buildCard(p));
+      });
+    }
+
+    async function loadPlaces() {
+      try {
+        statusBox.className = "status info";
+        statusBox.textContent = "Chargement des lieux…";
+
+        const res = await fetch("places.json?v=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP error " + res.status);
+
+        const data = await res.json();
+
+        if (!data.places || !Array.isArray(data.places)) {
+          throw new Error("Invalid JSON structure: places missing");
+        }
+
+        allPlaces = data.places;
+        renderPlaces();
+
+      } catch (err) {
+        console.error(err);
+        statusBox.className = "status error";
+        statusBox.textContent = "Erreur : impossible de charger places.json.";
+      }
+    }
+
+    searchInput.addEventListener("input", renderPlaces);
+    limitSelect.addEventListener("change", renderPlaces);
+    typeSelect.addEventListener("change", renderPlaces);
+
+    loadPlaces();
+  </script>
+
+</body>
+            </html>
