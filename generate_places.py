@@ -1,9 +1,23 @@
+#!/usr/bin/env python3
+# ==========================================================
+# FILE: generate_places.py
+# NVO987.eu – Carte Culturelle (Paris Open Data)
+# Generates places.json for GitHub Pages (static)
+#
+# Uses Paris Open Data API v2.1 (stable endpoint)
+# ==========================================================
+
 import json
 import urllib.request
+import urllib.parse
+import time
 
 OUTPUT_FILE = "places.json"
 
-CATALOG_URL = "https://opendata.paris.fr/api/v2/catalog/datasets"
+# ✅ WORKING API v2.1 endpoint (no catalog lookup needed)
+BASE_URL = "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/lieux-culturels/records"
+
+LIMIT = 100  # max per request (safe value)
 
 
 def safe(val):
@@ -12,86 +26,96 @@ def safe(val):
     return str(val).strip()
 
 
-def fetch_json(url):
+def fetch_page(offset):
+    params = {
+        "limit": LIMIT,
+        "offset": offset
+    }
+    url = BASE_URL + "?" + urllib.parse.urlencode(params)
+
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "NVO987.eu Places Generator"}
+        headers={
+            "User-Agent": "Mozilla/5.0 (NVO987.eu Open Data Generator)",
+            "Accept": "application/json"
+        }
     )
-    with urllib.request.urlopen(req) as response:
-        return json.loads(response.read())
+
+    with urllib.request.urlopen(req, timeout=60) as response:
+        raw = response.read()
+        return json.loads(raw)
 
 
-def find_dataset():
-    print("Searching dataset catalog (paginated)...")
+def normalize_type(raw_type):
+    t = (raw_type or "").lower()
 
-    offset = 0
-    limit = 100
+    if "musée" in t or "musee" in t:
+        return "museum"
+    if "galerie" in t:
+        return "gallery"
+    if "centre" in t or "culturel" in t:
+        return "cultural_center"
 
-    while True:
-        url = f"{CATALOG_URL}?limit={limit}&offset={offset}"
-        data = fetch_json(url)
-
-        datasets = data.get("datasets", [])
-        if not datasets:
-            break
-
-        for d in datasets:
-            dataset_id = d.get("dataset_id", "")
-            metas = d.get("metas", {}) or {}
-            title = safe(metas.get("title")).lower()
-
-            # This is flexible: will match "Lieux culturels", "Lieux culturels - équipements", etc.
-            if "lieux" in title and "culture" in title:
-                print("Found dataset:", dataset_id)
-                print("Title:", title)
-                return dataset_id
-
-        offset += limit
-
-    return None
+    return "cultural_place"
 
 
 def main():
-    dataset_id = find_dataset()
-    if not dataset_id:
-        raise Exception("Dataset not found in catalog (lieux culturels).")
+    print("Downloading dataset (Paris Open Data v2.1)...")
 
-    print("Downloading dataset records...")
+    offset = 0
+    all_places = []
 
-    records_url = f"https://opendata.paris.fr/api/records/1.0/search/?dataset={dataset_id}&rows=10000"
-    data = fetch_json(records_url)
+    while True:
+        print(f"Fetching offset={offset} ...")
+        data = fetch_page(offset)
 
-    records = data.get("records", [])
-    places = []
+        results = data.get("results", [])
+        total_count = data.get("total_count", None)
 
-    for r in records:
-        f = r.get("fields", {})
+        if not results:
+            break
 
-        place = {
-            "name": safe(f.get("nom_du_lieu") or f.get("name") or f.get("title") or f.get("nom")),
-            "type": safe(f.get("type") or f.get("categorie") or f.get("type_du_lieu") or "Lieu culturel"),
-            "address": safe(f.get("adresse") or f.get("address") or f.get("adresse_complete")),
-            "postcode": safe(f.get("code_postal") or f.get("postcode") or f.get("cp")),
-            "city": safe(f.get("ville") or f.get("commune") or "Paris"),
-            "website": safe(f.get("site_web") or f.get("url") or f.get("link")),
-            "description": safe(f.get("description") or f.get("presentation") or f.get("resume")),
-        }
+        for f in results:
+            name = safe(f.get("nom_du_lieu") or f.get("name") or f.get("title"))
+            if not name:
+                continue
 
-        if place["name"]:
-            places.append(place)
+            raw_type = safe(f.get("type_du_lieu") or f.get("type") or f.get("categorie"))
+
+            place = {
+                "name": name,
+                "type": normalize_type(raw_type),
+                "type_label": raw_type if raw_type else "Lieu culturel",
+                "address": safe(f.get("adresse") or f.get("address")),
+                "postcode": safe(f.get("code_postal") or f.get("postcode")),
+                "city": safe(f.get("ville") or "Paris"),
+                "website": safe(f.get("site_web") or f.get("url") or f.get("link")),
+                "description": safe(f.get("description") or f.get("presentation")),
+            }
+
+            all_places.append(place)
+
+        offset += LIMIT
+
+        if total_count is not None and offset >= total_count:
+            break
+
+        time.sleep(0.2)  # small delay to avoid rate-limit issues
 
     final = {
+        "project": "NVO987.eu – Carte Culturelle",
         "source": "Paris Open Data (Ville de Paris)",
-        "dataset_id": dataset_id,
+        "dataset": "lieux-culturels",
         "license": "ODbL v1.0",
-        "count": len(places),
-        "places": places
+        "generated_at": time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()),
+        "count": len(all_places),
+        "places": all_places
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(final, f, ensure_ascii=False, indent=2)
 
-    print(f"Generated {OUTPUT_FILE} with {len(places)} places.")
+    print(f"Generated {OUTPUT_FILE} with {len(all_places)} places.")
 
 
 if __name__ == "__main__":
