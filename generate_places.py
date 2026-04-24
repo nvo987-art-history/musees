@@ -5,14 +5,15 @@ import urllib.parse
 OUTPUT_FILE = "places.json"
 
 CATALOG_URL = "https://opendata.paris.fr/api/v2/catalog/datasets"
-
 SEARCH_QUERY = "lieux culturels"
 ROWS_PER_PAGE = 100
+
 
 def safe(val):
     if val is None:
         return ""
     return str(val).strip()
+
 
 def fetch_json(url):
     req = urllib.request.Request(
@@ -22,10 +23,13 @@ def fetch_json(url):
     with urllib.request.urlopen(req) as response:
         return json.loads(response.read().decode("utf-8"))
 
+
 def find_dataset():
     print("Searching dataset catalog...")
 
     start = 0
+    best_match = None
+
     while True:
         params = {
             "q": SEARCH_QUERY,
@@ -44,15 +48,27 @@ def find_dataset():
             dataset_id = ds.get("dataset_id", "")
             title = ds.get("metas", {}).get("default", {}).get("title", "")
 
-            # You can adjust the condition if needed
-            if "lieu" in title.lower() and "culture" in title.lower():
+            title_lower = title.lower()
+
+            # Lazább keresés: elég ha bármelyik szó benne van
+            if "lieu" in title_lower or "culture" in title_lower:
                 print("Dataset found:", title)
                 print("Dataset ID:", dataset_id)
                 return dataset_id, title
 
+            # Tartalék: elmentjük az első datasetet, ha semmi más nincs
+            if best_match is None and dataset_id:
+                best_match = (dataset_id, title)
+
         start += ROWS_PER_PAGE
 
+    # Ha nem talált pontosat, de volt találat a keresésben
+    if best_match:
+        print("No perfect match, using first dataset result:", best_match[1])
+        return best_match
+
     raise Exception("Dataset not found in catalog.")
+
 
 def fetch_records(dataset_id):
     print("Downloading dataset records...")
@@ -67,6 +83,7 @@ def fetch_records(dataset_id):
             "limit": limit,
             "offset": offset
         }
+
         url = f"https://opendata.paris.fr/api/v2/catalog/datasets/{dataset_id}/records?" + urllib.parse.urlencode(params)
 
         data = fetch_json(url)
@@ -84,6 +101,7 @@ def fetch_records(dataset_id):
             break
 
     return all_records
+
 
 def main():
     dataset_id, dataset_title = find_dataset()
@@ -120,6 +138,7 @@ def main():
         json.dump(final, f, ensure_ascii=False, indent=2)
 
     print(f"Generated {OUTPUT_FILE} with {len(places)} places.")
+
 
 if __name__ == "__main__":
     main()
