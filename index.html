@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Musées & Galeries – Paris (Open Data)</title>
+
+  <meta name="description" content="NVO987.eu – Musées et galeries à Paris. Interface indépendante basée sur les données publiques Paris Open Data. Aucun cookie, aucun tracking." />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="no-referrer" />
+
+  <link rel="canonical" href="https://nvo987.eu/" />
+
+  <meta property="og:title" content="Musées & Galeries – Paris (Open Data)" />
+  <meta property="og:description" content="Interface indépendante de consultation des musées et galeries à Paris, basée sur Paris Open Data. Aucun cookie, aucun tracking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nvo987.eu/" />
+  <meta property="og:image" content="https://nvo987.eu/banner.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Musées & Galeries – Paris (Open Data)" />
+  <meta name="twitter:description" content="Interface indépendante basée sur Paris Open Data. Aucun cookie, aucun tracking." />
+  <meta name="twitter:image" content="https://nvo987.eu/banner.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+
+        <div class="brand">
+          <span class="brand-name">NVO987.eu</span>
+          <span class="brand-tag">Musées & Galeries</span>
+        </div>
+
+        <nav class="nav">
+          <a href="#places">Lieux</a>
+          <a href="#sources">Sources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="container">
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Musées & Galeries – Paris</h1>
+      </div>
+    </header>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="container">
+
+      <!-- PLACES -->
+      <section id="places" class="section">
+
+        <div class="section-header">
+          <h2>Lieux culturels</h2>
+          <p>Recherche de musées, galeries et institutions culturelles à Paris à partir de données publiques officielles.</p>
+        </div>
+
+        <div class="controls">
+          <input id="searchInput" type="text" placeholder="Rechercher (ex: musée, galerie, art moderne, photographie)..." />
+
+          <select id="typeSelect">
+            <option value="all" selected>Tous types</option>
+            <option value="musée">Musées</option>
+            <option value="galerie">Galeries</option>
+            <option value="centre">Centres culturels</option>
+          </select>
+
+          <select id="arrSelect">
+            <option value="all" selected>Tous arrondissements</option>
+            <option value="1">1e</option>
+            <option value="2">2e</option>
+            <option value="3">3e</option>
+            <option value="4">4e</option>
+            <option value="5">5e</option>
+            <option value="6">6e</option>
+            <option value="7">7e</option>
+            <option value="8">8e</option>
+            <option value="9">9e</option>
+            <option value="10">10e</option>
+            <option value="11">11e</option>
+            <option value="12">12e</option>
+            <option value="13">13e</option>
+            <option value="14">14e</option>
+            <option value="15">15e</option>
+            <option value="16">16e</option>
+            <option value="17">17e</option>
+            <option value="18">18e</option>
+            <option value="19">19e</option>
+            <option value="20">20e</option>
+          </select>
+
+          <select id="limitSelect">
+            <option value="20" selected>20 résultats</option>
+            <option value="40">40 résultats</option>
+            <option value="60">60 résultats</option>
+            <option value="100">100 résultats</option>
+          </select>
+        </div>
+
+        <div id="statusBox" class="status info">
+          Chargement des lieux…
+        </div>
+
+        <div id="placesGrid" class="grid"></div>
+
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources" class="section">
+
+        <div class="section-header">
+          <h2>Sources & licences</h2>
+          <p>Attribution obligatoire conformément aux licences Open Data.</p>
+        </div>
+
+        <div class="sources-card">
+          <p>
+            Les informations affichées sur ce site proviennent exclusivement de sources publiques officielles
+            mises à disposition via la plateforme <strong>Paris Open Data (Ville de Paris)</strong>.
+            Ce site présente uniquement une <strong>synthèse</strong> destinée à la consultation.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Source officielle :</strong>
+              <a href="https://opendata.paris.fr/" target="_blank" rel="noopener noreferrer">
+                Paris Open Data (Ville de Paris)
+              </a>
+            </li>
+
+            <li>
+              <strong>Licence Open Data :</strong>
+              <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener noreferrer">
+                Open Database License (ODbL) v1.0
+              </a>
+            </li>
+
+            <li>
+              <strong>Attribution obligatoire (ODbL) :</strong>
+              Données issues de <strong>Paris Open Data / Ville de Paris</strong>, réutilisées conformément à la licence ODbL.
+            </li>
+
+            <li>
+              <strong>Crédit licence (ODbL) :</strong>
+              © Ville de Paris / Paris Open Data
+            </li>
+          </ul>
+
+          <p class="small-note">
+            Ce site constitue une interface indépendante de consultation et ne constitue pas un service officiel de la Ville de Paris.
+          </p>
+
+          <p class="small-note">
+            La source officielle fait foi en cas de divergence ou de mise à jour.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Contact officiel et identité DID.</p>
+        </div>
+
+        <div class="sources-card">
+          <p>
+            Email officiel :
+            <a href="mailto:contact@nvo987.eu">contact@nvo987.eu</a>
+          </p>
+
+          <p>
+            Identité DID :
+            <a href="https://identity.nvo987.us">did:web:identity.nvo987.us</a>
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <p>© 2026 NVO987 – Culture Visuelle Moderne et Contemporaine</p>
+
+      <p class="muted">
+        Aucun cookie • Aucun suivi • Données publiques uniquement
+      </p>
+
+      <p>
+        Contact :
+        <a href="mailto:contact@nvo987.eu">contact@nvo987.eu</a>
+      </p>
+
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+  </html> 
