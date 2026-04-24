@@ -41,7 +41,9 @@ def find_dataset():
         url = CATALOG_URL + "?" + urllib.parse.urlencode(params)
         data = fetch_json(url)
 
-        datasets = data.get("datasets", [])
+        datasets = data.get("results", [])
+        total_count = data.get("total_count", 0)
+
         if not datasets:
             break
 
@@ -56,7 +58,6 @@ def find_dataset():
 
         offset += ROWS_PER_PAGE
 
-        total_count = data.get("total_count", 0)
         if offset >= total_count:
             break
 
