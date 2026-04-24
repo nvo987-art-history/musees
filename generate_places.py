@@ -1,15 +1,10 @@
 import json
 import urllib.request
-
-# ==========================================================
-# NVO987.eu – Places generator (Paris Open Data)
-# Uses the stable Opendatasoft API v1.0 (records/1.0/search)
-# Generates: places.json
-# ==========================================================
-
-DATASET_URL = "https://opendata.paris.fr/api/records/1.0/search/?dataset=lieux-culturels&rows=10000"
+import urllib.parse
 
 OUTPUT_FILE = "places.json"
+
+SEARCH_DATASET_URL = "https://opendata.paris.fr/api/v2/catalog/datasets"
 
 
 def safe(val):
@@ -18,17 +13,43 @@ def safe(val):
     return str(val).strip()
 
 
-def main():
-    print("Downloading dataset...")
-
+def fetch_json(url):
     req = urllib.request.Request(
-        DATASET_URL,
+        url,
         headers={"User-Agent": "NVO987.eu Places Generator"}
     )
-
     with urllib.request.urlopen(req) as response:
-        raw = response.read()
-        data = json.loads(raw)
+        return json.loads(response.read())
+
+
+def find_dataset():
+    print("Searching dataset catalog...")
+
+    # query datasets
+    url = SEARCH_DATASET_URL + "?limit=100&offset=0"
+    data = fetch_json(url)
+
+    datasets = data.get("datasets", [])
+    for d in datasets:
+        dataset_id = d.get("dataset_id", "")
+        title = (d.get("metas") or {}).get("title", "").lower()
+
+        if "lieux" in title and "culturel" in title:
+            print("Found dataset:", dataset_id, "-", title)
+            return dataset_id
+
+    return None
+
+
+def main():
+    dataset_id = find_dataset()
+    if not dataset_id:
+        raise Exception("Dataset not found in catalog (lieux culturels).")
+
+    print("Downloading dataset records...")
+
+    records_url = f"https://opendata.paris.fr/api/records/1.0/search/?dataset={dataset_id}&rows=10000"
+    data = fetch_json(records_url)
 
     records = data.get("records", [])
     places = []
@@ -51,7 +72,7 @@ def main():
 
     final = {
         "source": "Paris Open Data (Ville de Paris)",
-        "dataset": "lieux-culturels",
+        "dataset_id": dataset_id,
         "license": "ODbL v1.0",
         "count": len(places),
         "places": places
