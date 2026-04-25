@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Carte Culturelle – France",
+  "url": "https://musees.nvo987.eu/",
+  "description": "Carte culturelle de France basée sur Wikidata (CC0). Recherche locale instantanée. Aucun cookie, aucun tracking, aucune collecte de données personnelles.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NVO987",
+    "url": "https://www.nvo987.fr"
+  },
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+}
