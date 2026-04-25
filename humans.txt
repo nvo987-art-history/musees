@@ -1,0 +1,16 @@
+/* TEAM */
+Project: Carte Culturelle – France
+Owner: NVO987
+Contact: contact@nvo987.eu
+Website: https://www.nvo987.fr
+Location: France
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Hosting: GitHub Pages
+Data Source: Wikidata (CC0)
+Privacy: No cookies, no tracking, no analytics
+
+/* THANKS */
+Wikidata community
+Open Data contributors
