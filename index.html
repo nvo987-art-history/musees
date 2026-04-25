@@ -29,7 +29,52 @@
   <meta name="color-scheme" content="light">
   <meta name="format-detection" content="telephone=no, email=no, address=no">
 
-  <!-- SECURITY / PRIVACY -->
+<!-- DID document -->
+<link rel="alternate" type="application/did+json" href="https://identity.nvo987.us/.well-known/did.json">
+
+<!-- DID domain linkage proof -->
+<link rel="alternate" type="application/did+ld+json" href="https://identity.nvo987.us/.well-known/did-configuration.json">
+
+<!-- Canonical DID -->
+<meta name="did" content="did:web:identity.nvo987.us">
+
+<!-- Identity authority -->
+<link rel="me" href="https://identity.nvo987.us">
+
+<!-- Connected domains -->
+<link rel="me" href="https://nvo987.us">
+<link rel="me" href="https://lab.nvo987.us">
+<link rel="me" href="https://knowledge.nvo987.us">
+<link rel="me" href="https://art.nvo987.us">
+<link rel="me" href="https://social.nvo987.us">
+<link rel="me" href="https://nvo987.fr">
+
+<!-- Machine-readable identity -->
+<script type="application/ld+json">
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/did/v1"
+  ],
+  "@type": "Person",
+  "@id": "did:web:identity.nvo987.us",
+  "identifier": "did:web:identity.nvo987.us",
+  "url": "https://identity.nvo987.us",
+  "sameAs": [
+    "https://nvo987.us",
+    "https://lab.nvo987.us",
+     "https://nvo987.fr",
+    "https://knowledge.nvo987.us",
+    "https://art.nvo987.us",
+    "https://social.nvo987.us"
+  ]
+}
+</script>
+
+<!-- Machine endpoints -->
+<link rel="alternate" type="application/ld+json" href="https://identity.nvo987.us/machine/graph.jsonld">
+<link rel="alternate" type="application/ld+json" href="https://identity.nvo987.us/machine/agents.jsonld">
+<link rel="alternate" type="application/ld+json" href="https://identity.nvo987.us/machine/vc.jsonld">
   <!-- NOTE: Permissions-Policy is not valid via meta http-equiv in HTML validator (use HTTP headers). -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
 
