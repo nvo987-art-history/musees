@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://musees.nvo987.eu/sitemap.xml
