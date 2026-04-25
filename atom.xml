@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Carte Culturelle – France (NVO987.eu)</title>
+  <subtitle>Open Data cultural directory based on Wikidata (CC0). No cookies, no tracking.</subtitle>
+  <link href="https://musees.nvo987.eu/" />
+  <link href="https://musees.nvo987.eu/atom.xml" rel="self" />
+  <id>https://musees.nvo987.eu/</id>
+  <updated>2026-01-01T00:00:00Z</updated>
+
+  <entry>
+    <title>Website launch</title>
+    <link href="https://musees.nvo987.eu/" />
+    <id>https://musees.nvo987.eu/</id>
+    <updated>2026-01-01T00:00:00Z</updated>
+    <summary>Carte Culturelle is now available online.</summary>
+  </entry>
+</feed> 
