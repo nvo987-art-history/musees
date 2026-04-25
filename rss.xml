@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Carte Culturelle – France (NVO987.eu)</title>
+    <link>https://musees.nvo987.eu/</link>
+    <description>Open Data cultural places directory based on Wikidata (CC0). No cookies, no tracking.</description>
+    <language>fr-fr</language>
+
+    <item>
+      <title>Website launch</title>
+      <link>https://musees.nvo987.eu/</link>
+      <guid>https://musees.nvo987.eu/</guid>
+      <description>Carte Culturelle is now available online.</description>
+      <pubDate>Mon, 01 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss> 
