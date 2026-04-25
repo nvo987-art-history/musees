@@ -1,0 +1,14 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://www.nvo987.fr> a foaf:Organization ;
+  foaf:name "NVO987" ;
+  foaf:homepage <https://www.nvo987.fr> ;
+  foaf:mbox <mailto:contact@nvo987.eu> .
+
+<https://musees.nvo987.eu/> a schema:WebSite ;
+  schema:name "Carte Culturelle – France" ;
+  schema:url <https://musees.nvo987.eu/> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  schema:publisher <https://www.nvo987.fr> .
