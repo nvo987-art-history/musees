@@ -1,0 +1,581 @@
+<!-- ==========================================================
+     FILE: index.html
+     NVO987.eu – Carte Culturelle (France)
+     Static / GitHub Pages compatible / Privacy-friendly
+     Data loaded locally from places.json (generated from Wikidata)
+
+     LEGAL / COMPLIANCE SUMMARY (IMPORTANT):
+     - Data source: Wikidata (CC0 1.0 Universal - Public Domain Dedication)
+     - No cookies, no analytics, no tracking, no profiling
+     - No user accounts, no user database, no marketing pixels
+     - Local client-side search only (no server queries from the website)
+     - Hosted on GitHub Pages (third-party infrastructure logs may exist)
+     - Independent informational produced work / no affiliation
+========================================================== -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- BASIC -->
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Carte Culturelle – France (Musées, Galeries, Théâtres, Bibliothèques)</title>
+
+  <meta name="description" content="Carte culturelle de France basée sur Wikidata (CC0). Recherche locale instantanée. Aucun cookie, aucun tracking, aucune collecte de données personnelles.">
+  <meta name="keywords" content="France, carte culturelle, musées, galeries, théâtres, bibliothèques, cinémas, opéra, open data, Wikidata, NVO987">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+
+  <!-- SECURITY / PRIVACY -->
+  <!-- NOTE: Permissions-Policy is not valid via meta http-equiv in HTML validator (use HTTP headers). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://musees.nvo987.eu/">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SOCIAL PREVIEW -->
+  <meta property="og:site_name" content="NVO987.eu">
+  <meta property="og:title" content="Carte Culturelle – France (Open Data)">
+  <meta property="og:description" content="Musées, galeries, théâtres, bibliothèques et lieux culturels en France. Données Wikidata (CC0). Aucun cookie, aucun tracking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://musees.nvo987.eu/">
+  <meta property="og:image" content="https://musees.nvo987.eu/banner.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carte Culturelle – France">
+  <meta name="twitter:description" content="Carte culturelle Open Data (Wikidata CC0). Aucun cookie, aucun tracking.">
+  <meta name="twitter:image" content="https://musees.nvo987.eu/banner.jpg">
+  <meta name="twitter:dnt" content="on">
+
+  <!-- ICON -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- STRUCTURED DATA (SEO / TRANSPARENCY) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NVO987.eu – Carte Culturelle",
+    "url": "https://musees.nvo987.eu/",
+    "description": "Carte culturelle de France basée sur Wikidata (CC0). Aucun cookie, aucun tracking, aucune collecte de données personnelles.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "NVO987",
+      "url": "https://www.nvo987.fr"
+    },
+    "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+
+        <div class="brand">
+          <span class="brand-name">NVO987.eu</span>
+          <span class="brand-tag">Carte Culturelle</span>
+        </div>
+
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="#places">Lieux</a>
+          <a href="#mentions">Mentions</a>
+          <a href="#sources">Sources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="container">
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Carte Culturelle – France</h1>
+        <p class="hero-sub">Musées • Galeries • Théâtres • Bibliothèques • Cinémas • Opéras</p>
+        <p class="hero-note">
+          Base Open Data locale (Wikidata CC0) • Aucun cookie • Aucun tracking • Aucune collecte
+        </p>
+      </div>
+    </header>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="container">
+
+      <!-- PLACES -->
+      <section id="places" class="section">
+
+        <div class="section-header">
+          <h2>Lieux culturels</h2>
+          <p>
+            Recherche instantanée sur une base locale téléchargée depuis <strong>Wikidata</strong>.
+            Aucun traitement serveur, aucune analyse comportementale, aucune publicité.
+          </p>
+        </div>
+
+        <div class="controls">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Rechercher (ex: Louvre, musée, théâtre, bibliothèque)..."
+            autocomplete="off"
+            inputmode="search"
+            aria-label="Rechercher un lieu culturel">
+
+          <select id="typeSelect" aria-label="Filtrer par type">
+            <option value="all" selected>Tout</option>
+            <option value="musée">Musées</option>
+            <option value="galerie d'art">Galeries</option>
+            <option value="théâtre">Théâtres</option>
+            <option value="cinéma">Cinémas</option>
+            <option value="bibliothèque">Bibliothèques</option>
+            <option value="centre culturel">Centres culturels</option>
+            <option value="opéra">Opéras</option>
+            <option value="salle de concert">Salles de concert</option>
+          </select>
+
+          <select id="limitSelect" aria-label="Nombre de résultats">
+            <option value="20" selected>20 résultats</option>
+            <option value="40">40 résultats</option>
+            <option value="80">80 résultats</option>
+            <option value="120">120 résultats</option>
+            <option value="200">200 résultats</option>
+          </select>
+        </div>
+
+        <div id="statusBox" class="status info">
+          Chargement des lieux…
+        </div>
+
+        <div id="placesGrid" class="grid"></div>
+
+      </section>
+
+      <!-- MENTIONS -->
+      <section id="mentions" class="section">
+
+        <div class="section-header">
+          <h2>Mentions légales / conformité</h2>
+          <p>
+            Transparence, confidentialité, Open Data, non-affiliation et limitation de responsabilité.
+          </p>
+        </div>
+
+        <div class="legal-card">
+
+          <h3>1. Éditeur du site</h3>
+          <p>
+            Le présent site web <strong>musees.nvo987.eu</strong> est édité par l’association culturelle
+            <strong>NVO987</strong>.
+          </p>
+
+          <p>
+            Les mentions légales complètes et officielles (conformité juridique française,
+            identité administrative de l’éditeur, publication et responsabilités) sont accessibles ici :
+            <a href="https://www.nvo987.fr" target="_blank" rel="noopener noreferrer">
+              www.nvo987.fr
+            </a>.
+          </p>
+
+          <h3>2. Nature du service</h3>
+          <p>
+            Ce site est une interface documentaire indépendante permettant la consultation,
+            la recherche et le filtrage de lieux culturels situés en <strong>France</strong>
+            (musées, galeries, bibliothèques, théâtres, cinémas, opéras, centres culturels, etc.).
+          </p>
+
+          <p class="small-note">
+            Il s’agit d’un service d’information à but culturel et éducatif.
+            Ce site ne constitue pas un service officiel de réservation, billetterie ou communication institutionnelle.
+          </p>
+
+          <h3>3. Non-affiliation / absence de représentation</h3>
+          <p>
+            <strong>Ce site n’est affilié à aucune institution</strong> (État français, collectivités territoriales,
+            musées nationaux, opérateurs publics, établissements culturels, fondations privées, ou plateformes officielles).
+          </p>
+
+          <p>
+            Les noms, marques et dénominations cités restent la propriété de leurs détenteurs respectifs.
+          </p>
+
+          <h3>4. Données personnelles / RGPD (privacy by design)</h3>
+          <p>
+            Ce site est conçu selon une approche stricte <strong>privacy by design</strong> :
+          </p>
+
+          <ul>
+            <li>Aucune inscription / aucun compte utilisateur</li>
+            <li>Aucun formulaire de collecte de données personnelles</li>
+            <li>Aucune base de données utilisateur</li>
+            <li>Aucun identifiant persistant</li>
+            <li>Aucun profilage ou ciblage publicitaire</li>
+            <li>Aucune analyse d’audience (Google Analytics, Matomo, etc.)</li>
+            <li>Aucun pixel marketing (Meta Pixel, TikTok, etc.)</li>
+          </ul>
+
+          <p>
+            <strong>Aucune donnée personnelle n’est intentionnellement collectée, traitée,
+            vendue, cédée ou conservée</strong> par l’éditeur dans le cadre de ce service.
+          </p>
+
+          <p class="small-note">
+            Le site est hébergé via GitHub Pages. Comme tout hébergeur, GitHub peut générer des journaux techniques
+            (logs réseau, sécurité, disponibilité). Ces traitements relèvent du prestataire d’hébergement
+            et ne sont pas exploités volontairement par l’éditeur.
+          </p>
+
+          <h3>5. Cookies / tracking</h3>
+          <p>
+            <strong>Aucun cookie publicitaire</strong>, aucun cookie de mesure d’audience,
+            aucun traceur tiers et aucun outil d’analyse comportementale n’est utilisé.
+          </p>
+
+          <p>
+            Ce site est utilisable sans acceptation de cookies, car aucun cookie non essentiel n’est déployé.
+          </p>
+
+          <h3>6. Contenus affichés</h3>
+          <p>
+            Le site affiche uniquement des informations descriptives limitées à des fins documentaires :
+            nom, type, ville, coordonnées géographiques approximatives, description courte et lien officiel lorsque disponible.
+          </p>
+
+          <p>
+            Le site n’héberge pas de photographies d’œuvres, de vidéos, de catalogues intégraux,
+            ni de reproductions complètes de contenus propriétaires.
+          </p>
+
+          <h3>7. Exactitude / absence de garantie</h3>
+          <p>
+            Les informations proviennent d’une base Open Data collaborative (Wikidata).
+            Elles peuvent être inexactes, obsolètes, incomplètes ou modifiées sans préavis.
+          </p>
+
+          <p>
+            <strong>Les institutions officielles font foi</strong> en cas de divergence.
+          </p>
+
+          <h3>8. Limitation de responsabilité</h3>
+          <p>
+            L’utilisateur reconnaît utiliser ce site sous sa seule responsabilité.
+            L’éditeur ne pourra en aucun cas être tenu responsable de dommages directs ou indirects
+            liés à l’utilisation du service ou à l’exactitude des informations affichées.
+          </p>
+
+          <p>
+            L’éditeur ne garantit ni la disponibilité permanente du site, ni l’absence d’erreurs techniques,
+            ni la complétude des données affichées.
+          </p>
+
+          <h3>9. Liens externes</h3>
+          <p>
+            Ce site contient des liens vers des sites tiers (institutions culturelles, sites officiels, pages Wikidata).
+            L’éditeur ne contrôle pas ces sites et décline toute responsabilité quant à leur contenu,
+            disponibilité, sécurité ou politique de confidentialité.
+          </p>
+
+          <h3>10. Signalement / retrait</h3>
+          <p>
+            Si une donnée affichée semble erronée ou si une institution souhaite demander une correction
+            ou un retrait d’affichage, une demande peut être adressée à :
+            <a href="mailto:contact@nvo987.eu">contact@nvo987.eu</a>.
+          </p>
+
+          <p class="small-note">
+            Dernière mise à jour : 2026.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources" class="section">
+
+        <div class="section-header">
+          <h2>Sources & licences</h2>
+          <p>
+            Déclaration de réutilisation Open Data, transparence et licence libre.
+          </p>
+        </div>
+
+        <div class="sources-card">
+
+          <h3>Source des données</h3>
+          <p>
+            Les informations affichées sur ce site proviennent de la base publique <strong>Wikidata</strong>,
+            accessible librement et légalement.
+          </p>
+
+          <ul>
+            <li>
+              <strong>Plateforme officielle :</strong>
+              <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">
+                Wikidata.org
+              </a>
+            </li>
+
+            <li>
+              <strong>Licence officielle des données :</strong>
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">
+                Creative Commons Zero (CC0 1.0 Universal)
+              </a>
+            </li>
+
+            <li>
+              <strong>Accès technique :</strong>
+              Extraction automatisée via le service officiel
+              <a href="https://query.wikidata.org/" target="_blank" rel="noopener noreferrer">
+                Wikidata Query Service (SPARQL)
+              </a>.
+            </li>
+          </ul>
+
+          <h3>Conformité licence CC0</h3>
+          <p>
+            Les données Wikidata sont publiées sous licence <strong>CC0</strong>,
+            ce qui signifie qu’elles sont dédiées au domaine public.
+            Aucune obligation stricte d’attribution n’est imposée par la licence.
+          </p>
+
+          <p>
+            Par transparence et bonnes pratiques Open Data, ce site mentionne explicitement la source Wikidata
+            et conserve lorsque possible un lien direct vers la page Wikidata d’origine.
+          </p>
+
+          <h3>Absence de données personnelles</h3>
+          <p>
+            Les informations affichées concernent principalement des lieux publics et établissements culturels
+            (institutions, bâtiments, organisations).
+            Le site n’a pas pour finalité de traiter des données personnelles.
+          </p>
+
+          <p class="small-note">
+            Si une entrée contient accidentellement une information pouvant être considérée comme personnelle,
+            une demande de correction/retrait peut être envoyée à contact@nvo987.eu.
+          </p>
+
+          <h3>Licence du code du site</h3>
+          <p>
+            Le code source HTML/CSS/JS et les scripts d’automatisation (GitHub Actions, génération JSON)
+            sont publiés sous licence <strong>MIT</strong> dans le dépôt GitHub du projet.
+          </p>
+
+          <p class="small-note">
+            La licence MIT concerne uniquement le code et ne modifie pas la licence CC0 des données Wikidata.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Contact officiel et identité DID.</p>
+        </div>
+
+        <div class="sources-card">
+          <p>
+            Email officiel :
+            <a href="mailto:contact@nvo987.eu">contact@nvo987.eu</a>
+          </p>
+
+          <p>
+            Identité DID :
+            <a href="https://identity.nvo987.us" target="_blank" rel="noopener noreferrer">
+              did:web:identity.nvo987.us
+            </a>
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <p>© 2026 NVO987 – Culture Visuelle Moderne et Contemporaine</p>
+
+      <p class="muted">
+        Aucun cookie • Aucun suivi • Aucune collecte • Données publiques uniquement
+      </p>
+
+      <p>
+        Mentions légales officielles :
+        <a href="https://www.nvo987.fr" target="_blank" rel="noopener noreferrer">
+          www.nvo987.fr
+        </a>
+      </p>
+
+      <p class="small-note">
+        Données : Wikidata (CC0 1.0) • Source publique ouverte • Site indépendant
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const statusBox = document.getElementById("statusBox");
+    const placesGrid = document.getElementById("placesGrid");
+    const searchInput = document.getElementById("searchInput");
+    const limitSelect = document.getElementById("limitSelect");
+    const typeSelect = document.getElementById("typeSelect");
+
+    let allPlaces = [];
+
+    function escapeHTML(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function normalize(str) {
+      return (str || "").toLowerCase();
+    }
+
+    function buildCard(place) {
+      const name = escapeHTML(place.name || "Lieu culturel");
+      const type = escapeHTML(place.type || "Lieu culturel");
+      const city = escapeHTML(place.city || "");
+      const website = escapeHTML(place.website || "");
+      const wikidata = escapeHTML(place.source || "");
+
+      const descriptionRaw = place.description || "";
+      let description = escapeHTML(descriptionRaw);
+
+      if (description.length > 220) {
+        description = description.slice(0, 220) + "...";
+      }
+
+      const card = document.createElement("article");
+      card.className = "place-card";
+
+      card.innerHTML = `
+        <div class="place-type">${type || "Lieu culturel"}</div>
+
+        <h3>${name}</h3>
+
+        <div class="place-meta">
+          ${city ? `<span>${city}</span>` : `<span class="muted">Ville inconnue</span>`}
+        </div>
+
+        <div class="place-desc">
+          ${description ? description : `<span class="muted">Aucune description disponible.</span>`}
+        </div>
+
+        <div class="place-actions">
+          ${
+            website
+              ? `<a class="btn" href="${website}" target="_blank" rel="noopener noreferrer nofollow">Site officiel</a>`
+              : ""
+          }
+
+          ${
+            wikidata
+              ? `<a class="btn secondary" href="${wikidata}" target="_blank" rel="noopener noreferrer nofollow">Wikidata</a>`
+              : `<span class="muted">Lien indisponible</span>`
+          }
+        </div>
+      `;
+
+      return card;
+    }
+
+    function renderPlaces() {
+      const query = normalize(searchInput.value.trim());
+      const limit = parseInt(limitSelect.value, 10);
+      const selectedType = normalize(typeSelect.value);
+
+      placesGrid.innerHTML = "";
+
+      let filtered = allPlaces;
+
+      if (selectedType !== "all") {
+        filtered = filtered.filter(p => normalize(p.type) === selectedType);
+      }
+
+      if (query.length > 0) {
+        filtered = filtered.filter(p => {
+          const blob = JSON.stringify(p).toLowerCase();
+          return blob.includes(query);
+        });
+      }
+
+      filtered = filtered.slice(0, limit);
+
+      if (filtered.length === 0) {
+        statusBox.className = "status warn";
+        statusBox.textContent = "Aucun lieu trouvé.";
+        return;
+      }
+
+      statusBox.className = "status success";
+      statusBox.textContent = `${filtered.length} lieu(x) affiché(s).`;
+
+      filtered.forEach(p => {
+        placesGrid.appendChild(buildCard(p));
+      });
+    }
+
+    async function loadPlaces() {
+      try {
+        statusBox.className = "status info";
+        statusBox.textContent = "Chargement des lieux…";
+
+        const res = await fetch("places.json?v=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP error " + res.status);
+
+        const data = await res.json();
+
+        if (!data.places || !Array.isArray(data.places)) {
+          throw new Error("Invalid JSON structure: places missing");
+        }
+
+        allPlaces = data.places;
+
+        statusBox.className = "status success";
+        statusBox.textContent = `${allPlaces.length} lieu(x) chargé(s).`;
+
+        renderPlaces();
+
+      } catch (err) {
+        console.error(err);
+        statusBox.className = "status error";
+        statusBox.textContent = "Erreur : impossible de charger places.json.";
+      }
+    }
+
+    searchInput.addEventListener("input", renderPlaces);
+    limitSelect.addEventListener("change", renderPlaces);
+    typeSelect.addEventListener("change", renderPlaces);
+
+    loadPlaces();
+  </script>
+
+</body>
+  </html>
