@@ -1,0 +1,19 @@
+{
+  "subject": "https://musees.nvo987.eu/",
+  "links": [
+    {
+      "rel": "self",
+      "type": "text/html",
+      "href": "https://musees.nvo987.eu/"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://www.nvo987.fr"
+    },
+    {
+      "rel": "http://openid.net/specs/connect/1.0/issuer",
+      "href": "https://musees.nvo987.eu/"
+    }
+  ]
+}
