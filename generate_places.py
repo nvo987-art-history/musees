@@ -1,6 +1,7 @@
 import json
 import urllib.request
 import urllib.parse
+import time
 
 OUTPUT_FILE = "places.json"
 
@@ -26,10 +27,26 @@ def safe(val):
     return str(val).strip()
 
 
-def fetch_json(url, headers=None):
+def fetch_json(url, headers=None, retries=5):
     req = urllib.request.Request(url, headers=headers or {})
-    with urllib.request.urlopen(req) as response:
-        return json.loads(response.read().decode("utf-8"))
+
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as response:
+                raw = response.read().decode("utf-8", errors="replace")
+
+                try:
+                    return json.loads(raw)
+                except json.JSONDecodeError:
+                    print("ERROR: Wikidata response is not valid JSON (attempt", attempt + 1, ")")
+                    print(raw[:300])
+
+        except Exception as e:
+            print("ERROR: request failed (attempt", attempt + 1, "):", str(e))
+
+        time.sleep(3 * (attempt + 1))
+
+    raise RuntimeError("Failed to fetch valid JSON from Wikidata after retries.")
 
 
 def run_sparql(query):
