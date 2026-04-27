@@ -4,7 +4,6 @@ import urllib.parse
 import time
 
 OUTPUT_FILE = "places.json"
-
 SPARQL_URL = "https://query.wikidata.org/sparql"
 
 # Wikidata kulturális hely típusok (P31 = instance of)
@@ -27,42 +26,46 @@ def safe(val):
     return str(val).strip()
 
 
-def fetch_json(url, headers=None, retries=5):
-    req = urllib.request.Request(url, headers=headers or {})
-
+def fetch_json(req, retries=5):
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(req, timeout=60) as response:
+            with urllib.request.urlopen(req, timeout=120) as response:
                 raw = response.read().decode("utf-8", errors="replace")
 
                 try:
                     return json.loads(raw)
                 except json.JSONDecodeError:
                     print("ERROR: Wikidata response is not valid JSON (attempt", attempt + 1, ")")
-                    print(raw[:300])
+                    print(raw[:500])
 
         except Exception as e:
             print("ERROR: request failed (attempt", attempt + 1, "):", str(e))
 
-        time.sleep(3 * (attempt + 1))
+        time.sleep(5 * (attempt + 1))
 
     raise RuntimeError("Failed to fetch valid JSON from Wikidata after retries.")
 
 
 def run_sparql(query):
-    params = {
+    post_data = urllib.parse.urlencode({
         "query": query,
         "format": "json"
-    }
-
-    url = SPARQL_URL + "?" + urllib.parse.urlencode(params)
+    }).encode("utf-8")
 
     headers = {
         "User-Agent": "Mozilla/5.0 (NVO987 Cultural Map Bot)",
-        "Accept": "application/sparql-results+json"
+        "Accept": "application/sparql-results+json",
+        "Content-Type": "application/x-www-form-urlencoded"
     }
 
-    return fetch_json(url, headers=headers)
+    req = urllib.request.Request(
+        SPARQL_URL,
+        data=post_data,
+        headers=headers,
+        method="POST"
+    )
+
+    return fetch_json(req)
 
 
 def main():
