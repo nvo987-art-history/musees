@@ -102,7 +102,7 @@ def main():
 
         all_results.extend(results)
 
-        time.sleep(2)
+        time.sleep(15)
 
     print("Raw results:", len(all_results))
 
