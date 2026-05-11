@@ -69,39 +69,46 @@ def run_sparql(query):
 
 
 def main():
-    type_values = " ".join(CULTURAL_TYPES)
+    all_results = []
 
-    query = f"""
-    SELECT ?place ?placeLabel ?typeLabel ?lat ?lon ?cityLabel ?website ?description WHERE {{
-      VALUES ?type {{ {type_values} }}
+    for cultural_type in CULTURAL_TYPES:
+        print("Downloading type:", cultural_type)
 
-      ?place wdt:P31 ?type .
-      ?place wdt:P17 wd:Q142 .   # France
+        query = f"""
+        SELECT ?place ?placeLabel ?typeLabel ?lat ?lon ?cityLabel ?website ?description WHERE {{
 
-      OPTIONAL {{ ?place wdt:P625 ?coord . }}
-      BIND(geof:latitude(?coord) AS ?lat)
-      BIND(geof:longitude(?coord) AS ?lon)
+          ?place wdt:P31 {cultural_type} .
+          ?place wdt:P17 wd:Q142 .   # France
 
-      OPTIONAL {{ ?place wdt:P131 ?city . }}
+          OPTIONAL {{ ?place wdt:P625 ?coord . }}
+          BIND(geof:latitude(?coord) AS ?lat)
+          BIND(geof:longitude(?coord) AS ?lon)
 
-      OPTIONAL {{ ?place wdt:P856 ?website . }}
-      OPTIONAL {{ ?place schema:description ?description FILTER(LANG(?description)="fr") }}
+          OPTIONAL {{ ?place wdt:P131 ?city . }}
 
-      SERVICE wikibase:label {{
-        bd:serviceParam wikibase:language "fr,en".
-      }}
-    }}
-    """
+          OPTIONAL {{ ?place wdt:P856 ?website . }}
+          OPTIONAL {{ ?place schema:description ?description FILTER(LANG(?description)="fr") }}
 
-    print("Downloading Wikidata cultural places for France...")
-    data = run_sparql(query)
+          SERVICE wikibase:label {{
+            bd:serviceParam wikibase:language "fr,en".
+          }}
+        }}
+        """
 
-    results = data.get("results", {}).get("bindings", [])
-    print("Raw results:", len(results))
+        data = run_sparql(query)
+
+        results = data.get("results", {}).get("bindings", [])
+        print("Results:", len(results))
+
+        all_results.extend(results)
+
+        time.sleep(2)
+
+    print("Raw results:", len(all_results))
 
     places = []
 
-    for r in results:
+    for r in all_results:
         lat = r.get("lat", {}).get("value")
         lon = r.get("lon", {}).get("value")
 
