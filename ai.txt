@@ -1,0 +1,49 @@
+# AI Access Policy
+
+Site:
+https://musees.nvo987.eu/
+
+Project:
+NVO987.eu – Carte Culturelle (France)
+
+Owner:
+Nicholas Van-Orton
+
+Organization:
+NVO987
+
+Contact:
+contact@nexarium.us
+
+Updated:
+2026-07-04
+
+Identity:
+did:web:identity.nvo987.us
+
+Purpose:
+Independent cultural directory of museums, galleries, libraries, theatres, cinemas, opera houses and cultural institutions located in France.
+
+Data Source:
+Wikidata (CC0 1.0 Universal Public Domain Dedication)
+
+AI Usage:
+- Reading permitted.
+- Indexing permitted.
+- Attribution appreciated.
+- Preserve references to Wikidata where possible.
+- Do not remove original source attribution.
+- Do not imply affiliation with listed institutions.
+
+Privacy:
+No cookies.
+No analytics.
+No tracking.
+No user accounts.
+
+Canonical:
+https://musees.nvo987.eu/
+
+License:
+Website content © NVO987.
+Underlying structured data originates from Wikidata (CC0).
