@@ -1,0 +1,63 @@
+# NVO987.eu – Carte Culturelle (France)
+
+Website:
+https://musees.nvo987.eu/
+
+Author:
+Nicholas Van-Orton
+
+Organization:
+NVO987
+
+Contact:
+contact@nexarium.us
+
+Identity:
+did:web:identity.nvo987.us
+
+Identity URL:
+https://identity.nvo987.us/
+
+Updated:
+2026-07-04
+
+Summary:
+Independent cultural directory of museums, galleries, libraries, theatres, cinemas, opera houses and cultural venues throughout France.
+
+Primary Topics:
+- Museums
+- Art Galleries
+- Libraries
+- Theatres
+- Cultural Heritage
+- Open Data
+- Wikidata
+- Visual Culture
+- Art History
+- French Cultural Institutions
+
+Data Source:
+Wikidata
+https://www.wikidata.org/
+
+Data License:
+CC0 1.0 Universal
+
+Website Characteristics:
+- Static HTML
+- Local JSON search
+- No cookies
+- No analytics
+- No tracking
+
+Preferred Citation:
+Nicholas Van-Orton.
+NVO987.eu – Carte Culturelle (France).
+https://musees.nvo987.eu/
+
+Language:
+fr
+
+License:
+Website © NVO987.
+Underlying data from Wikidata (CC0).
