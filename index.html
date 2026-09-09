@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#17191c">
   <meta name="description" content="Carte Culturelle – France : musées, galeries, théâtres, bibliothèques, cinémas, opéras et centres culturels.">
 
-  <title>Carte Culturelle – France | NVO987.eu</title>
+  <title>Carte Culturelle – France - NVO987 - Culture Visuelle Moderne et Contemporaine | (Musées, Galeries, Théâtres, Bibliothèques)</title> 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1743,6 +1743,199 @@
 
     </div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const searchInput = document.getElementById("searchInput");
+  const typeSelect = document.getElementById("typeSelect");
+  const limitSelect = document.getElementById("limitSelect");
+  const statusBox = document.getElementById("statusBox");
+  const placesGrid = document.getElementById("placesGrid");
 
+  let places = [];
+
+  async function loadPlaces() {
+    try {
+      statusBox.textContent = "Chargement des lieux…";
+
+      /*
+       * IDE: az eredeti HTML-ben szereplő JSON-fájl URL-je/path-ja
+       * kell maradjon.
+       *
+       * Példa:
+       * const response = await fetch("./data/places.json");
+       */
+      const response = await fetch("./places.json");
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      places = await response.json();
+
+      renderPlaces();
+
+    } catch (error) {
+      console.error(error);
+
+      statusBox.textContent =
+        "Impossible de charger les données culturelles.";
+
+      placesGrid.innerHTML = `
+        <div class="place-card">
+          <h3>Données indisponibles</h3>
+          <p>
+            Le fichier local des lieux culturels n'a pas pu être chargé.
+          </p>
+        </div>
+      `;
+    }
+  }
+
+  function renderPlaces() {
+    const query =
+      searchInput.value.trim().toLowerCase();
+
+    const selectedType =
+      typeSelect.value.toLowerCase();
+
+    const limit =
+      Number(limitSelect.value) || 20;
+
+    const filtered = places
+      .filter(place => {
+        const searchable = [
+          place.name,
+          place.label,
+          place.city,
+          place.type,
+          place.description
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        const matchesSearch =
+          !query || searchable.includes(query);
+
+        const placeType =
+          String(place.type || "").toLowerCase();
+
+        const matchesType =
+          selectedType === "all" ||
+          placeType.includes(selectedType);
+
+        return matchesSearch && matchesType;
+      })
+      .slice(0, limit);
+
+    placesGrid.innerHTML = "";
+
+    if (!filtered.length) {
+      placesGrid.innerHTML = `
+        <div class="place-card">
+          <h3>Aucun résultat</h3>
+          <p>
+            Aucun lieu culturel ne correspond à votre recherche.
+          </p>
+        </div>
+      `;
+
+      statusBox.textContent =
+        "0 lieu trouvé.";
+
+      return;
+    }
+
+    statusBox.textContent =
+      `${filtered.length} lieu${filtered.length > 1 ? "x" : ""} affiché${filtered.length > 1 ? "s" : ""}.`;
+
+    filtered.forEach(place => {
+      const article = document.createElement("article");
+
+      article.className = "place-card";
+
+      const name =
+        place.name ||
+        place.label ||
+        "Lieu culturel";
+
+      const type =
+        place.type ||
+        "Lieu culturel";
+
+      const city =
+        place.city ||
+        place.addressLocality ||
+        "";
+
+      const description =
+        place.description ||
+        "";
+
+      const officialUrl =
+        place.url ||
+        place.website ||
+        place.officialUrl ||
+        "";
+
+      article.innerHTML = `
+        <h3>${escapeHtml(name)}</h3>
+
+        <p>
+          <strong>${escapeHtml(type)}</strong>
+          ${city ? ` · ${escapeHtml(city)}` : ""}
+        </p>
+
+        ${
+          description
+            ? `<p>${escapeHtml(description)}</p>`
+            : ""
+        }
+
+        ${
+          officialUrl
+            ? `
+              <p>
+                <a
+                  href="${escapeAttribute(officialUrl)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Site officiel →
+                </a>
+              </p>
+            `
+            : ""
+        }
+      `;
+
+      placesGrid.appendChild(article);
+    });
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function escapeAttribute(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;");
+  }
+
+  searchInput.addEventListener("input", renderPlaces);
+  typeSelect.addEventListener("change", renderPlaces);
+  limitSelect.addEventListener("change", renderPlaces);
+
+  await loadPlaces();
+});
+</script>
 </body>
   </html>
