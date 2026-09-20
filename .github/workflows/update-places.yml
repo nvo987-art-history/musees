@@ -26,7 +26,23 @@ jobs:
         run: pip install requests
 
       - name: Generate places.json
-        run: python generate_places.py
+        run: |
+          for attempt in 1 2 3; do
+            echo "Attempt $attempt: generating places.json"
+
+            if python generate_places.py; then
+              echo "Successfully generated places.json"
+              exit 0
+            fi
+
+            if [ "$attempt" -lt 3 ]; then
+              echo "Generation failed. Waiting before retry..."
+              sleep $((attempt * 30))
+            fi
+          done
+
+          echo "Failed to generate places.json after 3 attempts."
+          exit 1
 
       - name: Commit and push if changed
         run: |
