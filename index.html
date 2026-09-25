@@ -1527,10 +1527,10 @@
 
   <script>
 /*
-  STRICT INSTRUCTION:
-  NE JAMAIS modifier les textes juridiques, de conformité, RGPD,
-  licences, sources, contacts, droits, mentions légales ou textes
-  similaires. Seul le fonctionnement technique peut être corrigé.
+STRICT INSTRUCTION:
+NE JAMAIS modifier les textes juridiques, de conformité, RGPD,
+licences, sources, contacts, droits, mentions légales ou textes
+similaires. Seul le fonctionnement technique peut être corrigé.
 */
 
 (() => {
@@ -1543,6 +1543,11 @@
   const typeSelect = document.getElementById("typeSelect");
 
   let allPlaces = [];
+
+  if (!statusBox || !placesGrid) {
+    console.error("Éléments HTML manquants : #status ou #placesGrid");
+    return;
+  }
 
   function escapeHTML(value) {
     return String(value ?? "")
@@ -1561,47 +1566,16 @@
       .trim();
   }
 
-  /*
-    Rend le filtre compatible avec :
-    Musée / Musées
-    Galerie / Galeries
-    Théâtre / Théâtres
-    Bibliothèque / Bibliothèques
-    Cinéma / Cinémas
-    Opéra / Opéras
-  */
-  function normalizeType(value) {
-    let result = normalize(value);
-
-    if (result.endsWith("ies")) {
-      result = result.slice(0, -3) + "y";
-    } else if (result.endsWith("s")) {
-      result = result.slice(0, -1);
-    }
-
-    return result;
-  }
-
-  function typeMatches(placeType, selectedType) {
-    if (!selectedType || selectedType === "all") {
-      return true;
-    }
-
-    const a = normalizeType(placeType);
-    const b = normalizeType(selectedType);
-
-    return a === b ||
-      a.includes(b) ||
-      b.includes(a);
-  }
-
   function safeURL(value) {
     if (!value) return "";
 
     try {
-      const url = new URL(String(value), document.baseURI);
+      const url = new URL(String(value), window.location.href);
 
-      if (url.protocol !== "https:" && url.protocol !== "http:") {
+      if (
+        url.protocol !== "https:" &&
+        url.protocol !== "http:"
+      ) {
         return "";
       }
 
@@ -1611,17 +1585,70 @@
     }
   }
 
+  function getValue(place, keys) {
+    for (const key of keys) {
+      if (
+        place &&
+        place[key] !== undefined &&
+        place[key] !== null &&
+        String(place[key]).trim() !== ""
+      ) {
+        return place[key];
+      }
+    }
+
+    return "";
+  }
+
   /*
-    Recherche robuste des champs Wikipédia.
-    Compatible avec plusieurs noms possibles dans places.json.
+    Recherche du Q-ID Wikidata dans plusieurs formats.
+  */
+  function getWikidataId(place) {
+    const candidates = [
+      place.wikidata,
+      place.wikidata_id,
+      place.wikidataId,
+      place.wikidata_qid,
+      place.qid,
+      place.QID,
+      place.source
+    ];
+
+    for (const value of candidates) {
+      if (!value) continue;
+
+      const text = String(value).trim();
+
+      const match = text.match(
+        /(?:wikidata\.org\/(?:wiki\/)?(?:Special:EntityData\/)?)(Q\d+)/i
+      );
+
+      if (match) {
+        return match[1].toUpperCase();
+      }
+
+      if (/^Q\d+$/i.test(text)) {
+        return text.toUpperCase();
+      }
+    }
+
+    return "";
+  }
+
+  /*
+    Wikipédia :
+    1. URL Wikipédia déjà présente dans le JSON
+    2. URL Wikipedia alternative
+    3. sinon lien vers la page française correspondante
+       via Wikidata si un Q-ID est disponible
   */
   function getWikipediaURL(place) {
     const candidates = [
       place.wikipedia,
       place.wikipedia_url,
       place.wikipediaUrl,
-      place.wikipedia_url_fr,
       place.wikipedia_fr,
+      place.wikipedia_fr_url,
       place.wiki,
       place.wiki_url,
       place.wikiUrl
@@ -1630,15 +1657,36 @@
     for (const candidate of candidates) {
       const url = safeURL(candidate);
 
-      if (url && /(^|\.)wikipedia\.org$/i.test(new URL(url).hostname)) {
+      if (
+        url &&
+        /(^|\.)wikipedia\.org$/i.test(
+          new URL(url).hostname
+        )
+      ) {
         return url;
       }
+    }
+
+    const qid = getWikidataId(place);
+
+    if (qid) {
+      return (
+        "https://fr.wikipedia.org/wiki/Special:" +
+        "GoToLinkedPage?site=frwiki&item=" +
+        encodeURIComponent(qid)
+      );
     }
 
     return "";
   }
 
   function getWikidataURL(place) {
+    const qid = getWikidataId(place);
+
+    if (qid) {
+      return "https://www.wikidata.org/wiki/" + qid;
+    }
+
     const candidates = [
       place.wikidata,
       place.wikidata_url,
@@ -1651,9 +1699,8 @@
 
       if (
         url &&
-        (
-          /(^|\.)wikidata\.org$/i.test(new URL(url).hostname) ||
-          /(^|\.)wikipedia\.org$/i.test(new URL(url).hostname)
+        /(^|\.)wikidata\.org$/i.test(
+          new URL(url).hostname
         )
       ) {
         return url;
@@ -1670,6 +1717,7 @@
       place.websiteUrl,
       place.site,
       place.site_officiel,
+      place.site_officiel_url,
       place.official_website,
       place.officialWebsite
     ];
@@ -1685,34 +1733,79 @@
     return "";
   }
 
+  function normalizeType(value) {
+    let result = normalize(value);
+
+    if (result.endsWith("ies")) {
+      result = result.slice(0, -3) + "y";
+    }
+
+    if (result.endsWith("s")) {
+      result = result.slice(0, -1);
+    }
+
+    return result;
+  }
+
+  function typeMatches(placeType, selectedType) {
+    if (
+      !selectedType ||
+      selectedType === "all" ||
+      selectedType === "Tout"
+    ) {
+      return true;
+    }
+
+    const a = normalizeType(placeType);
+    const b = normalizeType(selectedType);
+
+    return (
+      a === b ||
+      a.includes(b) ||
+      b.includes(a)
+    );
+  }
+
   function buildCard(place) {
     const name = escapeHTML(
-      place.name ||
-      place.nom ||
-      "Lieu culturel"
+      getValue(place, [
+        "name",
+        "nom",
+        "label",
+        "title"
+      ]) || "Lieu culturel"
     );
 
     const type = escapeHTML(
-      place.type ||
-      place.types ||
-      "Lieu culturel"
+      getValue(place, [
+        "type",
+        "types",
+        "categorie",
+        "category"
+      ]) || "Lieu culturel"
     );
 
     const city = escapeHTML(
-      place.city ||
-      place.ville ||
-      ""
+      getValue(place, [
+        "city",
+        "ville",
+        "commune",
+        "location"
+      ])
     );
 
     const descriptionRaw = String(
-      place.description ||
-      place.description_fr ||
-      ""
+      getValue(place, [
+        "description",
+        "description_fr",
+        "summary",
+        "resume"
+      ]) || ""
     );
 
     const description = escapeHTML(
       descriptionRaw.length > 220
-        ? descriptionRaw.slice(0, 220) + "..."
+        ? descriptionRaw.substring(0, 220) + "..."
         : descriptionRaw
     );
 
@@ -1720,46 +1813,51 @@
     const wikipediaURL = getWikipediaURL(place);
     const wikidataURL = getWikidataURL(place);
 
-    const officialLink = officialURL
-      ? `
+    let links = "";
+
+    if (officialURL) {
+      links += `
         <a
           class="card-link card-link-primary"
           href="${escapeHTML(officialURL)}"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >Site officiel</a>
-      `
-      : "";
+      `;
+    }
 
-    const wikipediaLink = wikipediaURL
-      ? `
+    if (wikipediaURL) {
+      links += `
         <a
           class="card-link"
           href="${escapeHTML(wikipediaURL)}"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >Wikipédia</a>
-      `
-      : "";
+      `;
+    }
 
-    const wikidataLink =
-      wikidataURL &&
-      !/wikipedia\.org$/i.test(new URL(wikidataURL).hostname)
-        ? `
-          <a
-            class="card-link"
-            href="${escapeHTML(wikidataURL)}"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >Wikidata</a>
-        `
-        : "";
+    if (wikidataURL) {
+      links += `
+        <a
+          class="card-link"
+          href="${escapeHTML(wikidataURL)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >Wikidata</a>
+      `;
+    }
 
     return `
       <article class="place-card">
-        <div class="place-type">${type}</div>
 
-        <h3>${name}</h3>
+        <div class="place-type">
+          ${type}
+        </div>
+
+        <h3>
+          ${name}
+        </h3>
 
         ${
           city
@@ -1775,38 +1873,57 @@
         </p>
 
         ${
-          officialLink ||
-          wikipediaLink ||
-          wikidataLink
+          links
             ? `
               <div class="card-links">
-                ${officialLink}
-                ${wikipediaLink}
-                ${wikidataLink}
+                ${links}
               </div>
             `
             : ""
         }
+
       </article>
     `;
   }
 
   function renderPlaces() {
-    const query = normalize(searchInput?.value || "");
-    const selectedType = typeSelect?.value || "all";
-    const limit = Number(limitSelect?.value || 20);
+    const query = normalize(
+      searchInput?.value || ""
+    );
+
+    const selectedType =
+      typeSelect?.value || "all";
+
+    const limitValue =
+      Number(limitSelect?.value || 20);
+
+    const limit =
+      Number.isFinite(limitValue) &&
+      limitValue > 0
+        ? limitValue
+        : 20;
 
     const filtered = allPlaces.filter(place => {
-      if (!place || typeof place !== "object") {
+      if (
+        !place ||
+        typeof place !== "object"
+      ) {
         return false;
       }
 
-      const matchesType = typeMatches(
-        place.type || place.types || "",
-        selectedType
-      );
+      const placeType = getValue(place, [
+        "type",
+        "types",
+        "categorie",
+        "category"
+      ]);
 
-      if (!matchesType) {
+      if (
+        !typeMatches(
+          placeType,
+          selectedType
+        )
+      ) {
         return false;
       }
 
@@ -1818,16 +1935,19 @@
         [
           place.name,
           place.nom,
+          place.label,
+          place.title,
           place.type,
           place.types,
           place.city,
           place.ville,
+          place.commune,
           place.description,
           place.description_fr,
+          place.wikidata,
+          place.wikidata_id,
           place.wikipedia,
           place.wikipedia_url,
-          place.wikidata,
-          place.wikidata_url,
           place.website,
           place.website_url
         ]
@@ -1838,44 +1958,125 @@
       return searchableText.includes(query);
     });
 
-    const visible = filtered.slice(0, limit);
+    const visible =
+      filtered.slice(0, limit);
 
     if (!visible.length) {
       placesGrid.innerHTML = "";
-      statusBox.textContent = "Aucun lieu trouvé.";
+
+      statusBox.textContent =
+        allPlaces.length
+          ? "Aucun lieu trouvé."
+          : "Aucun lieu disponible.";
+
       return;
     }
 
-    placesGrid.innerHTML = visible
-      .map(buildCard)
-      .join("");
+    placesGrid.innerHTML =
+      visible
+        .map(buildCard)
+        .join("");
 
     statusBox.textContent =
-      `${visible.length} résultat${visible.length > 1 ? "s" : ""}`;
+      `${visible.length} résultat${
+        visible.length > 1 ? "s" : ""
+      }`;
   }
 
   async function loadPlaces() {
-    statusBox.textContent = "Chargement…";
+    statusBox.textContent =
+      "Chargement des lieux…";
+
+    /*
+      Timeout :
+      le site ne doit jamais rester bloqué
+      indéfiniment sur "Chargement".
+    */
+    const controller =
+      new AbortController();
+
+    const timeout =
+      setTimeout(() => {
+        controller.abort();
+      }, 10000);
 
     try {
-      const response = await fetch(
-        `./places.json?v=${Date.now()}`,
-        {
-          cache: "no-store",
-          headers: {
-            "Accept": "application/json"
+      /*
+        IMPORTANT :
+        places.json doit être dans le même dossier
+        que cette page HTML.
+      */
+      const url =
+        new URL(
+          "./places.json",
+          window.location.href
+        ).href;
+
+      const response =
+        await fetch(
+          url,
+          {
+            method: "GET",
+            cache: "no-store",
+            credentials: "same-origin",
+            signal: controller.signal,
+            headers: {
+              "Accept": "application/json"
+            }
           }
-        }
-      );
+        );
 
       if (!response.ok) {
         throw new Error(
-          `HTTP ${response.status}`
+          "HTTP " + response.status
         );
       }
 
-      const data = await response.json();
+      const text =
+        await response.text();
 
+      if (!text.trim()) {
+        throw new Error(
+          "places.json est vide."
+        );
+      }
+
+      let data;
+
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error(
+          "places.json contient un JSON invalide."
+        );
+      }
+
+      /*
+        Formats acceptés :
+
+        [
+          {...},
+          {...}
+        ]
+
+        ou
+
+        {
+          "places": [
+            {...},
+            {...}
+          ]
+        }
+
+        ou
+
+        {
+          "data": [
+            {...},
+            {...}
+          ]
+        }
+      */
       if (Array.isArray(data)) {
         allPlaces = data;
       } else if (
@@ -1883,30 +2084,52 @@
         Array.isArray(data.places)
       ) {
         allPlaces = data.places;
+      } else if (
+        data &&
+        Array.isArray(data.data)
+      ) {
+        allPlaces = data.data;
       } else {
         throw new Error(
-          "Format places.json invalide."
+          "Structure JSON non reconnue."
         );
       }
 
-      allPlaces = allPlaces.filter(
-        place =>
-          place &&
-          typeof place === "object"
-      );
+      allPlaces =
+        allPlaces.filter(
+          item =>
+            item &&
+            typeof item === "object"
+        );
+
+      clearTimeout(timeout);
 
       renderPlaces();
 
     } catch (error) {
+      clearTimeout(timeout);
+
       console.error(
-        "Erreur de chargement des lieux :",
+        "Erreur places.json :",
         error
       );
 
-      allPlaces = [];
       placesGrid.innerHTML = "";
-      statusBox.textContent =
-        "Impossible de charger les lieux.";
+
+      /*
+        Message technique visible uniquement
+        en cas d'échec du chargement.
+      */
+      if (
+        error &&
+        error.name === "AbortError"
+      ) {
+        statusBox.textContent =
+          "Le chargement de places.json a expiré.";
+      } else {
+        statusBox.textContent =
+          "Impossible de charger places.json.";
+      }
     }
   }
 
@@ -1925,9 +2148,25 @@
     renderPlaces
   );
 
-  loadPlaces();
+  /*
+    Lance le chargement uniquement lorsque
+    le DOM est prêt.
+  */
+  if (
+    document.readyState ===
+    "loading"
+  ) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      loadPlaces,
+      { once: true }
+    );
+  } else {
+    loadPlaces();
+  }
+
 })();
-      </script>
+  </script>
   
 </body>
   </html> 
