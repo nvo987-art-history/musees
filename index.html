@@ -1526,256 +1526,408 @@
   </footer>
 
   <script>
-    "use strict";
+/*
+  STRICT INSTRUCTION:
+  NE JAMAIS modifier les textes juridiques, de conformité, RGPD,
+  licences, sources, contacts, droits, mentions légales ou textes
+  similaires. Seul le fonctionnement technique peut être corrigé.
+*/
 
-    const statusBox = document.getElementById("statusBox");
-    const placesGrid = document.getElementById("placesGrid");
-    const searchInput = document.getElementById("searchInput");
-    const limitSelect = document.getElementById("limitSelect");
-    const typeSelect = document.getElementById("typeSelect");
+(() => {
+  "use strict";
 
-    let allPlaces = [];
+  const statusBox = document.getElementById("status");
+  const placesGrid = document.getElementById("placesGrid");
+  const searchInput = document.getElementById("searchInput");
+  const limitSelect = document.getElementById("limitSelect");
+  const typeSelect = document.getElementById("typeSelect");
 
-    function escapeHTML(value) {
-      if (value === null || value === undefined) {
+  let allPlaces = [];
+
+  function escapeHTML(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function normalize(value) {
+    return String(value ?? "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+  }
+
+  /*
+    Rend le filtre compatible avec :
+    Musée / Musées
+    Galerie / Galeries
+    Théâtre / Théâtres
+    Bibliothèque / Bibliothèques
+    Cinéma / Cinémas
+    Opéra / Opéras
+  */
+  function normalizeType(value) {
+    let result = normalize(value);
+
+    if (result.endsWith("ies")) {
+      result = result.slice(0, -3) + "y";
+    } else if (result.endsWith("s")) {
+      result = result.slice(0, -1);
+    }
+
+    return result;
+  }
+
+  function typeMatches(placeType, selectedType) {
+    if (!selectedType || selectedType === "all") {
+      return true;
+    }
+
+    const a = normalizeType(placeType);
+    const b = normalizeType(selectedType);
+
+    return a === b ||
+      a.includes(b) ||
+      b.includes(a);
+  }
+
+  function safeURL(value) {
+    if (!value) return "";
+
+    try {
+      const url = new URL(String(value), document.baseURI);
+
+      if (url.protocol !== "https:" && url.protocol !== "http:") {
         return "";
       }
 
-      return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+      return url.href;
+    } catch {
+      return "";
     }
+  }
 
-    function normalize(value) {
-      return String(value || "")
-        .toLocaleLowerCase("fr-FR")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-    }
+  /*
+    Recherche robuste des champs Wikipédia.
+    Compatible avec plusieurs noms possibles dans places.json.
+  */
+  function getWikipediaURL(place) {
+    const candidates = [
+      place.wikipedia,
+      place.wikipedia_url,
+      place.wikipediaUrl,
+      place.wikipedia_url_fr,
+      place.wikipedia_fr,
+      place.wiki,
+      place.wiki_url,
+      place.wikiUrl
+    ];
 
-    function safeExternalURL(value) {
-      if (!value) {
-        return "";
-      }
+    for (const candidate of candidates) {
+      const url = safeURL(candidate);
 
-      try {
-        const url = new URL(String(value), window.location.href);
-
-        if (
-          url.protocol === "https:" ||
-          url.protocol === "http:"
-        ) {
-          return url.href;
-        }
-
-        return "";
-      } catch {
-        return "";
+      if (url && /(^|\.)wikipedia\.org$/i.test(new URL(url).hostname)) {
+        return url;
       }
     }
 
-    function createLink({
-      href,
-      className,
-      textContent,
-      secondary = false
-    }) {
-      const link = document.createElement("a");
+    return "";
+  }
 
-      link.className = `btn${secondary ? " secondary" : ""}`;
+  function getWikidataURL(place) {
+    const candidates = [
+      place.wikidata,
+      place.wikidata_url,
+      place.wikidataUrl,
+      place.source
+    ];
 
-      link.href = href;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer nofollow";
-      link.textContent = textContent;
+    for (const candidate of candidates) {
+      const url = safeURL(candidate);
 
-      return link;
+      if (
+        url &&
+        (
+          /(^|\.)wikidata\.org$/i.test(new URL(url).hostname) ||
+          /(^|\.)wikipedia\.org$/i.test(new URL(url).hostname)
+        )
+      ) {
+        return url;
+      }
     }
 
-    function buildCard(place) {
-      const article = document.createElement("article");
-      article.className = "place-card";
+    return "";
+  }
 
-      const type = document.createElement("div");
-      type.className = "place-type";
-      type.textContent = place.type || "Lieu culturel";
+  function getOfficialURL(place) {
+    const candidates = [
+      place.website,
+      place.website_url,
+      place.websiteUrl,
+      place.site,
+      place.site_officiel,
+      place.official_website,
+      place.officialWebsite
+    ];
 
-      const title = document.createElement("h3");
-      title.textContent = place.name || "Lieu culturel";
+    for (const candidate of candidates) {
+      const url = safeURL(candidate);
 
-      const meta = document.createElement("div");
-      meta.className = "place-meta";
-
-      const city = document.createElement("span");
-
-      if (place.city) {
-        city.textContent = place.city;
-      } else {
-        city.className = "muted";
-        city.textContent = "Ville inconnue";
+      if (url) {
+        return url;
       }
+    }
 
-      meta.appendChild(city);
+    return "";
+  }
 
-      const descriptionBox = document.createElement("div");
-      descriptionBox.className = "place-desc";
+  function buildCard(place) {
+    const name = escapeHTML(
+      place.name ||
+      place.nom ||
+      "Lieu culturel"
+    );
 
-      const descriptionRaw = String(place.description || "");
-      const description = descriptionRaw.length > 220
+    const type = escapeHTML(
+      place.type ||
+      place.types ||
+      "Lieu culturel"
+    );
+
+    const city = escapeHTML(
+      place.city ||
+      place.ville ||
+      ""
+    );
+
+    const descriptionRaw = String(
+      place.description ||
+      place.description_fr ||
+      ""
+    );
+
+    const description = escapeHTML(
+      descriptionRaw.length > 220
         ? descriptionRaw.slice(0, 220) + "..."
-        : descriptionRaw;
+        : descriptionRaw
+    );
 
-      if (description) {
-        descriptionBox.textContent = description;
-      } else {
-        const muted = document.createElement("span");
-        muted.className = "muted";
-        muted.textContent = "Aucune description disponible.";
-        descriptionBox.appendChild(muted);
+    const officialURL = getOfficialURL(place);
+    const wikipediaURL = getWikipediaURL(place);
+    const wikidataURL = getWikidataURL(place);
+
+    const officialLink = officialURL
+      ? `
+        <a
+          class="card-link card-link-primary"
+          href="${escapeHTML(officialURL)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >Site officiel</a>
+      `
+      : "";
+
+    const wikipediaLink = wikipediaURL
+      ? `
+        <a
+          class="card-link"
+          href="${escapeHTML(wikipediaURL)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >Wikipédia</a>
+      `
+      : "";
+
+    const wikidataLink =
+      wikidataURL &&
+      !/wikipedia\.org$/i.test(new URL(wikidataURL).hostname)
+        ? `
+          <a
+            class="card-link"
+            href="${escapeHTML(wikidataURL)}"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >Wikidata</a>
+        `
+        : "";
+
+    return `
+      <article class="place-card">
+        <div class="place-type">${type}</div>
+
+        <h3>${name}</h3>
+
+        ${
+          city
+            ? `<div class="place-city">${city}</div>`
+            : ""
+        }
+
+        <p class="place-description">
+          ${
+            description ||
+            "Aucune description disponible."
+          }
+        </p>
+
+        ${
+          officialLink ||
+          wikipediaLink ||
+          wikidataLink
+            ? `
+              <div class="card-links">
+                ${officialLink}
+                ${wikipediaLink}
+                ${wikidataLink}
+              </div>
+            `
+            : ""
+        }
+      </article>
+    `;
+  }
+
+  function renderPlaces() {
+    const query = normalize(searchInput?.value || "");
+    const selectedType = typeSelect?.value || "all";
+    const limit = Number(limitSelect?.value || 20);
+
+    const filtered = allPlaces.filter(place => {
+      if (!place || typeof place !== "object") {
+        return false;
       }
 
-      const actions = document.createElement("div");
-      actions.className = "place-actions";
-
-      const website = safeExternalURL(place.website);
-      const wikidata = safeExternalURL(place.source);
-
-      if (website) {
-        actions.appendChild(
-          createLink({
-            href: website,
-            textContent: "Site officiel"
-          })
-        );
-      }
-
-      if (wikidata) {
-        actions.appendChild(
-          createLink({
-            href: wikidata,
-            textContent: "Wikidata",
-            secondary: true
-          })
-        );
-      } else {
-        const unavailable = document.createElement("span");
-        unavailable.className = "muted";
-        unavailable.textContent = "Lien indisponible";
-        actions.appendChild(unavailable);
-      }
-
-      article.appendChild(type);
-      article.appendChild(title);
-      article.appendChild(meta);
-      article.appendChild(descriptionBox);
-      article.appendChild(actions);
-
-      return article;
-    }
-
-    function renderPlaces() {
-      const query = normalize(searchInput.value.trim());
-      const limit = Math.max(
-        1,
-        parseInt(limitSelect.value, 10) || 20
+      const matchesType = typeMatches(
+        place.type || place.types || "",
+        selectedType
       );
-      const selectedType = normalize(typeSelect.value);
 
-      placesGrid.replaceChildren();
-
-      let filtered = Array.isArray(allPlaces)
-        ? allPlaces
-        : [];
-
-      if (selectedType !== "all") {
-        filtered = filtered.filter(place => {
-          return normalize(place.type) === selectedType;
-        });
+      if (!matchesType) {
+        return false;
       }
 
-      if (query.length > 0) {
-        filtered = filtered.filter(place => {
-          try {
-            return normalize(JSON.stringify(place)).includes(query);
-          } catch {
-            return false;
-          }
-        });
+      if (!query) {
+        return true;
       }
 
-      filtered = filtered.slice(0, limit);
+      const searchableText = normalize(
+        [
+          place.name,
+          place.nom,
+          place.type,
+          place.types,
+          place.city,
+          place.ville,
+          place.description,
+          place.description_fr,
+          place.wikipedia,
+          place.wikipedia_url,
+          place.wikidata,
+          place.wikidata_url,
+          place.website,
+          place.website_url
+        ]
+          .filter(Boolean)
+          .join(" ")
+      );
 
-      if (filtered.length === 0) {
-        statusBox.className = "status warn";
-        statusBox.textContent = "Aucun lieu trouvé.";
-        return;
-      }
+      return searchableText.includes(query);
+    });
 
-      statusBox.className = "status success";
-      statusBox.textContent = `${filtered.length} lieu(x) affiché(s).`;
+    const visible = filtered.slice(0, limit);
 
-      const fragment = document.createDocumentFragment();
-
-      filtered.forEach(place => {
-        fragment.appendChild(buildCard(place));
-      });
-
-      placesGrid.appendChild(fragment);
+    if (!visible.length) {
+      placesGrid.innerHTML = "";
+      statusBox.textContent = "Aucun lieu trouvé.";
+      return;
     }
 
-    async function loadPlaces() {
-      try {
-        statusBox.className = "status info";
-        statusBox.textContent = "Chargement des lieux…";
+    placesGrid.innerHTML = visible
+      .map(buildCard)
+      .join("");
 
-        const response = await fetch(
-          "./places.json?v=" + Date.now(),
-          {
-            cache: "no-store",
-            credentials: "same-origin"
+    statusBox.textContent =
+      `${visible.length} résultat${visible.length > 1 ? "s" : ""}`;
+  }
+
+  async function loadPlaces() {
+    statusBox.textContent = "Chargement…";
+
+    try {
+      const response = await fetch(
+        `./places.json?v=${Date.now()}`,
+        {
+          cache: "no-store",
+          headers: {
+            "Accept": "application/json"
           }
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          `HTTP ${response.status}`
         );
-
-        if (!response.ok) {
-          throw new Error("HTTP error " + response.status);
-        }
-
-        const data = await response.json();
-
-        if (Array.isArray(data)) {
-          allPlaces = data;
-        } else if (data && Array.isArray(data.places)) {
-          allPlaces = data.places;
-        } else {
-          throw new Error("Invalid JSON structure: places missing");
-        }
-
-        statusBox.className = "status success";
-        statusBox.textContent = `${allPlaces.length} lieu(x) chargé(s).`;
-
-        renderPlaces();
-
-      } catch (error) {
-        console.error("places.json error:", error);
-
-        allPlaces = [];
-        placesGrid.replaceChildren();
-
-        statusBox.className = "status error";
-        statusBox.textContent =
-          "Erreur : impossible de charger places.json.";
       }
+
+      const data = await response.json();
+
+      if (Array.isArray(data)) {
+        allPlaces = data;
+      } else if (
+        data &&
+        Array.isArray(data.places)
+      ) {
+        allPlaces = data.places;
+      } else {
+        throw new Error(
+          "Format places.json invalide."
+        );
+      }
+
+      allPlaces = allPlaces.filter(
+        place =>
+          place &&
+          typeof place === "object"
+      );
+
+      renderPlaces();
+
+    } catch (error) {
+      console.error(
+        "Erreur de chargement des lieux :",
+        error
+      );
+
+      allPlaces = [];
+      placesGrid.innerHTML = "";
+      statusBox.textContent =
+        "Impossible de charger les lieux.";
     }
+  }
 
-    searchInput.addEventListener("input", renderPlaces);
-    limitSelect.addEventListener("change", renderPlaces);
-    typeSelect.addEventListener("change", renderPlaces);
+  searchInput?.addEventListener(
+    "input",
+    renderPlaces
+  );
 
-    loadPlaces();
-  </script>
+  typeSelect?.addEventListener(
+    "change",
+    renderPlaces
+  );
 
+  limitSelect?.addEventListener(
+    "change",
+    renderPlaces
+  );
+
+  loadPlaces();
+})();
+      </script>
+  
 </body>
   </html> 
