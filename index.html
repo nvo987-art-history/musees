@@ -1532,11 +1532,10 @@ NE JAMAIS modifier les textes juridiques, de conformité, RGPD,
 licences, sources, contacts, droits, mentions légales ou textes
 similaires. Seul le fonctionnement technique peut être corrigé.
 */
-
 (() => {
   "use strict";
 
-  const statusBox = document.getElementById("status");
+  const statusBox = document.getElementById("statusBox");
   const placesGrid = document.getElementById("placesGrid");
   const searchInput = document.getElementById("searchInput");
   const limitSelect = document.getElementById("limitSelect");
@@ -1545,9 +1544,9 @@ similaires. Seul le fonctionnement technique peut être corrigé.
   let allPlaces = [];
 
   if (!statusBox || !placesGrid) {
-    console.error("Éléments HTML manquants : #status ou #placesGrid");
+    console.error("Éléments HTML manquants : #statusBox ou #placesGrid");
     return;
-  }
+  } 
 
   function escapeHTML(value) {
     return String(value ?? "")
