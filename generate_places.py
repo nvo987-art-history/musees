@@ -6,100 +6,59 @@ import time
 OUTPUT_FILE = "places.json"
 SPARQL_URL = "https://query.wikidata.org/sparql"
 
-# ------------------------------------------------------------
-# Wikidata kulturális hely típusok
-#
-# A lekérdezés P31/P279* használ:
-#
-#   place
-#      P31 -> art museum
-#      P279 -> museum
-#
-# Így a specializált altípusok is bekerülnek.
-# ------------------------------------------------------------
-
+# Kulturális helyek
+# A Louvre miatt az art museum Q207694 is külön szerepel.
 CULTURAL_TYPES = [
-    "wd:Q33506",     # museum
-    "wd:Q1007870",   # art gallery
-    "wd:Q24354",     # theatre
-    "wd:Q41253",     # cinema
-    "wd:Q7075",      # library
-    "wd:Q174782",    # cultural center
-    "wd:Q166118",    # opera house
-    "wd:Q1060829"    # concert hall
+    "wd:Q33506",      # museum
+    "wd:Q207694",     # art museum
+    "wd:Q1007870",    # art gallery
+    "wd:Q24354",      # theatre
+    "wd:Q41253",      # cinema
+    "wd:Q7075",       # library
+    "wd:Q174782",     # cultural center
+    "wd:Q166118",     # opera house
+    "wd:Q1060829"     # concert hall
 ]
 
 
 def safe(value):
-    """
-    Biztonságos string-konverzió.
-    """
     if value is None:
         return ""
-
     return str(value).strip()
 
 
-def fetch_json(req, retries=5):
-    """
-    HTTP JSON lekérés újrapróbálkozással.
-    """
-
+def fetch_json(req, retries=3):
     for attempt in range(retries):
-
         try:
-            with urllib.request.urlopen(req, timeout=180) as response:
-
+            with urllib.request.urlopen(req, timeout=120) as response:
                 raw = response.read().decode(
                     "utf-8",
                     errors="replace"
                 )
-
-                try:
-                    return json.loads(raw)
-
-                except json.JSONDecodeError:
-
-                    print(
-                        "ERROR: Wikidata response is not valid JSON "
-                        f"(attempt {attempt + 1})"
-                    )
-
-                    print(raw[:1000])
+                return json.loads(raw)
 
         except Exception as e:
-
             print(
                 f"ERROR: request failed "
                 f"(attempt {attempt + 1}): {e}"
             )
 
-        wait = 5 * (attempt + 1)
-
-        print(f"Retrying in {wait} seconds...")
-
-        time.sleep(wait)
+            if attempt < retries - 1:
+                time.sleep(10)
 
     raise RuntimeError(
-        "Failed to fetch valid JSON from Wikidata after retries."
+        "Failed to fetch data from Wikidata."
     )
 
 
 def run_sparql(query):
-    """
-    SPARQL lekérdezés küldése a Wikidata Query Service-nek.
-    """
-
     post_data = urllib.parse.urlencode({
         "query": query,
         "format": "json"
     }).encode("utf-8")
 
     headers = {
-        "User-Agent": (
-            "NVO987 Cultural Map Bot/1.0 "
-            "(https://musees.nvo987.eu/)"
-        ),
+        "User-Agent": "NVO987 Cultural Map Bot/1.0",
         "Accept": "application/sparql-results+json",
         "Content-Type": "application/x-www-form-urlencoded"
     }
@@ -114,445 +73,203 @@ def run_sparql(query):
     return fetch_json(req)
 
 
-def get_value(binding, key):
-    """
-    Wikidata SPARQL bindingből érték kivétele.
-    """
-
-    return safe(
-        binding.get(key, {}).get("value", "")
-    )
-
-
-def add_unique(lst, value):
-    """
-    Hozzáad egy értéket, ha még nincs a listában.
-    """
-
-    value = safe(value)
-
-    if value and value not in lst:
-        lst.append(value)
-
-
 def main():
 
-    print("Starting Wikidata cultural places import...")
+    all_results = []
 
-    # --------------------------------------------------------
-    # Kulturális gyökértípusok VALUES blokkja
-    # --------------------------------------------------------
+    for cultural_type in CULTURAL_TYPES:
 
-    cultural_values = "\n".join(
-        f"    {item}"
-        for item in CULTURAL_TYPES
-    )
+        print("Downloading type:", cultural_type)
 
-    # --------------------------------------------------------
-    # FONTOS:
-    #
-    # ?place wdt:P31/wdt:P279* ?cultural_type
-    #
-    # Ez oldja meg a Louvre problémát.
-    #
-    # A Louvre:
-    #
-    # Q19675
-    #   P31 -> art museum
-    #   art museum P279 -> museum
-    #
-    # Ezért most megtalálja a museum ágon keresztül.
-    # --------------------------------------------------------
+        query = f"""
+        SELECT DISTINCT
+            ?place
+            ?placeLabel
+            ?lat
+            ?lon
+            ?cityLabel
+            ?website
+            ?article
+        WHERE {{
 
-    query = f"""
-    SELECT DISTINCT
-        ?place
-        ?placeLabel
-        ?cultural_type
-        ?cultural_typeLabel
-        ?lat
-        ?lon
-        ?city
-        ?cityLabel
-        ?website
-        ?description
-        ?alias
-    WHERE {{
+            ?place wdt:P31 {cultural_type} .
+            ?place wdt:P17 wd:Q142 .
 
-        VALUES ?cultural_type {{
-{cultural_values}
+            OPTIONAL {{
+                ?place wdt:P625 ?coord .
+
+                BIND(
+                    geof:latitude(?coord)
+                    AS ?lat
+                )
+
+                BIND(
+                    geof:longitude(?coord)
+                    AS ?lon
+                )
+            }}
+
+            OPTIONAL {{
+                ?place wdt:P131 ?city .
+            }}
+
+            OPTIONAL {{
+                ?place wdt:P856 ?website .
+            }}
+
+            OPTIONAL {{
+                ?article schema:about ?place .
+                ?article schema:isPartOf
+                    <https://fr.wikipedia.org/> .
+            }}
+
+            SERVICE wikibase:label {{
+                bd:serviceParam
+                    wikibase:language "fr,en" .
+            }}
         }}
+        """
 
-        ?place wdt:P31/wdt:P279* ?cultural_type .
+        try:
+            data = run_sparql(query)
 
-        # Franciaország
-        ?place wdt:P17 wd:Q142 .
-
-        # --------------------------------------------
-        # Koordináták
-        # --------------------------------------------
-
-        OPTIONAL {{
-            ?place wdt:P625 ?coord .
-
-            BIND(
-                geof:latitude(?coord)
-                AS ?lat
+            results = (
+                data
+                .get("results", {})
+                .get("bindings", [])
             )
 
-            BIND(
-                geof:longitude(?coord)
-                AS ?lon
+            print("Results:", len(results))
+
+            all_results.extend(results)
+
+        except Exception as e:
+            print(
+                "ERROR downloading",
+                cultural_type,
+                ":",
+                e
             )
-        }}
 
-        # --------------------------------------------
-        # Közigazgatási hely
-        # --------------------------------------------
+        # Ne terheljük túl a Wikidatát
+        time.sleep(5)
 
-        OPTIONAL {{
-            ?place wdt:P131 ?city .
-        }}
+    print("Raw results:", len(all_results))
 
-        # --------------------------------------------
-        # Hivatalos weboldal
-        # --------------------------------------------
-
-        OPTIONAL {{
-            ?place wdt:P856 ?website .
-        }}
-
-        # --------------------------------------------
-        # Francia leírás
-        # --------------------------------------------
-
-        OPTIONAL {{
-            ?place schema:description ?description .
-
-            FILTER(
-                LANG(?description) = "fr"
-            )
-        }}
-
-        # --------------------------------------------
-        # Wikidata aliasok
-        #
-        # Ez különösen fontos a kereséshez.
-        #
-        # Például:
-        # Musée du Louvre
-        # Louvre Museum
-        # The Louvre
-        # Louvre
-        # --------------------------------------------
-
-        OPTIONAL {{
-            ?place skos:altLabel ?alias .
-
-            FILTER(
-                LANG(?alias) = "fr"
-                ||
-                LANG(?alias) = "en"
-            )
-        }}
-
-        # --------------------------------------------
-        # Label service
-        # --------------------------------------------
-
-        SERVICE wikibase:label {{
-            bd:serviceParam
-                wikibase:language "fr,en" .
-        }}
-    }}
-    """
-
-    print("Downloading data from Wikidata...")
-    print("This may take some time...")
-
-    data = run_sparql(query)
-
-    results = (
-        data
-        .get("results", {})
-        .get("bindings", [])
-    )
-
-    print("Raw SPARQL rows:", len(results))
-
-    # --------------------------------------------------------
-    # HELPER:
-    #
-    # A Wikidata SPARQL eredményben ugyanaz a hely többször
-    # szerepelhet:
-    #
-    # - több alias
-    # - több P31
-    # - több website
-    # - több P131
-    #
-    # Ezért ID alapján összefűzzük őket.
-    # --------------------------------------------------------
-
+    # ID alapján deduplikálunk
     places_by_id = {}
 
-    for r in results:
+    for r in all_results:
 
-        place_url = get_value(r, "place")
+        place_url = safe(
+            r.get("place", {}).get("value")
+        )
 
         if not place_url:
             continue
 
         place_id = place_url.rstrip("/").split("/")[-1]
 
-        if not place_id:
+        lat = r.get("lat", {}).get("value")
+        lon = r.get("lon", {}).get("value")
+
+        # Koordináta nélkül nem kell
+        if not lat or not lon:
             continue
 
-        # ----------------------------------------------------
-        # Alapobjektum létrehozása
-        # ----------------------------------------------------
+        name = safe(
+            r.get("placeLabel", {}).get("value")
+        )
+
+        if not name:
+            continue
+
+        # Wikipédia
+        wikipedia_url = safe(
+            r.get("article", {}).get("value")
+        )
+
+        # Hivatalos website
+        website = safe(
+            r.get("website", {}).get("value")
+        )
+
+        city = safe(
+            r.get("cityLabel", {}).get("value")
+        )
 
         if place_id not in places_by_id:
 
             places_by_id[place_id] = {
                 "id": place_id,
-                "name": "",
-                "aliases": [],
-                "type": "",
-                "types": [],
-                "city": "",
-                "lat": None,
-                "lon": None,
-                "website": "",
-                "description": "",
+                "name": name,
+                "city": city,
+                "lat": float(lat),
+                "lon": float(lon),
+
+                # Wikidata URL
+                "wikidata": place_url,
+
+                # Wikipédia URL
+                "wikipedia": wikipedia_url,
+
+                # Hivatalos website
+                "website": website,
+
                 "source": place_url
             }
 
-        place = places_by_id[place_id]
-
-        # ----------------------------------------------------
-        # NAME
-        # ----------------------------------------------------
-
-        name = get_value(r, "placeLabel")
-
-        if name and not place["name"]:
-            place["name"] = name
-
-        # ----------------------------------------------------
-        # ALIAS
-        # ----------------------------------------------------
-
-        alias = get_value(r, "alias")
-
-        add_unique(
-            place["aliases"],
-            alias
-        )
-
-        # A fő nevet is tegyük bele az alias-listába.
-        # Ez megkönnyíti a kliensoldali keresést.
-        if place["name"]:
-            add_unique(
-                place["aliases"],
-                place["name"]
-            )
-
-        # ----------------------------------------------------
-        # TYPE
-        # ----------------------------------------------------
-
-        type_label = get_value(
-            r,
-            "cultural_typeLabel"
-        )
-
-        add_unique(
-            place["types"],
-            type_label
-        )
-
-        # ----------------------------------------------------
-        # CITY
-        # ----------------------------------------------------
-
-        city = get_value(
-            r,
-            "cityLabel"
-        )
-
-        if city and not place["city"]:
-            place["city"] = city
-
-        # ----------------------------------------------------
-        # COORDINATES
-        # ----------------------------------------------------
-
-        lat = get_value(r, "lat")
-        lon = get_value(r, "lon")
-
-        if lat and place["lat"] is None:
-
-            try:
-                place["lat"] = float(lat)
-
-            except ValueError:
-                pass
-
-        if lon and place["lon"] is None:
-
-            try:
-                place["lon"] = float(lon)
-
-            except ValueError:
-                pass
-
-        # ----------------------------------------------------
-        # WEBSITE
-        # ----------------------------------------------------
-
-        website = get_value(
-            r,
-            "website"
-        )
-
-        if website and not place["website"]:
-            place["website"] = website
-
-        # ----------------------------------------------------
-        # DESCRIPTION
-        # ----------------------------------------------------
-
-        description = get_value(
-            r,
-            "description"
-        )
-
-        if description and not place["description"]:
-            place["description"] = description
-
-    # --------------------------------------------------------
-    # PLACE lista
-    # --------------------------------------------------------
-
-    places = []
-
-    for place_id, place in places_by_id.items():
-
-        # ----------------------------------------------------
-        # Csak koordinátával rendelkező helyek
-        # ----------------------------------------------------
-
-        if place["lat"] is None:
-            continue
-
-        if place["lon"] is None:
-            continue
-
-        # ----------------------------------------------------
-        # Név nélküli objektum kihagyása
-        # ----------------------------------------------------
-
-        if not place["name"]:
-            continue
-
-        # ----------------------------------------------------
-        # Aliasok rendezése
-        # ----------------------------------------------------
-
-        place["aliases"] = sorted(
-            set(place["aliases"]),
-            key=str.casefold
-        )
-
-        # ----------------------------------------------------
-        # Típusok rendezése
-        # ----------------------------------------------------
-
-        place["types"] = sorted(
-            set(place["types"]),
-            key=str.casefold
-        )
-
-        # ----------------------------------------------------
-        # Kompatibilitás a régi struktúrával
-        #
-        # A meglévő frontend valószínűleg a "type" mezőt
-        # használja, ezért megtartjuk.
-        # ----------------------------------------------------
-
-        if place["types"]:
-            place["type"] = ", ".join(
-                place["types"]
-            )
-
         else:
-            place["type"] = ""
 
-        places.append(place)
+            place = places_by_id[place_id]
 
-    # --------------------------------------------------------
-    # ID szerinti végső biztonsági deduplikáció
-    # --------------------------------------------------------
+            # Ha valamelyik lekérdezésből hiányzott,
+            # a másikból még megkaphatja.
+            if not place["wikipedia"] and wikipedia_url:
+                place["wikipedia"] = wikipedia_url
 
-    unique_places = {}
+            if not place["website"] and website:
+                place["website"] = website
 
-    for place in places:
+            if not place["city"] and city:
+                place["city"] = city
 
-        unique_places[place["id"]] = place
+    places = list(places_by_id.values())
 
-    places = list(
-        unique_places.values()
-    )
-
-    # --------------------------------------------------------
-    # Rendezés név szerint
-    # --------------------------------------------------------
-
+    # Név szerint rendezés
     places.sort(
         key=lambda x: x["name"].casefold()
     )
 
-    # --------------------------------------------------------
-    # Louvre ellenőrzése
-    # --------------------------------------------------------
+    # --------------------------------------------------
+    # Louvre ellenőrzés
+    # --------------------------------------------------
 
     louvre = next(
         (
-            place
-            for place in places
-            if place["id"] == "Q19675"
+            p for p in places
+            if p["id"] == "Q19675"
         ),
         None
     )
 
     if louvre:
-
         print()
-        print("======================================")
-        print("LOUVRE FOUND")
-        print("======================================")
-        print("ID:", louvre["id"])
-        print("Name:", louvre["name"])
-        print("Type:", louvre["type"])
-        print("City:", louvre["city"])
-        print("Lat:", louvre["lat"])
-        print("Lon:", louvre["lon"])
-        print("Website:", louvre["website"])
-        print("Aliases:", louvre["aliases"])
-        print("======================================")
+        print("Louvre FOUND:")
+        print(json.dumps(
+            louvre,
+            ensure_ascii=False,
+            indent=2
+        ))
         print()
-
     else:
-
         print()
-        print("WARNING:")
-        print("Q19675 (Musée du Louvre) was NOT found!")
+        print("WARNING: Louvre Q19675 not found!")
         print()
 
-    # --------------------------------------------------------
-    # Végső JSON
-    # --------------------------------------------------------
+    # --------------------------------------------------
+    # JSON
+    # --------------------------------------------------
 
     final = {
         "source": "Wikidata (CC0)",
@@ -561,10 +278,6 @@ def main():
         "count": len(places),
         "places": places
     }
-
-    # --------------------------------------------------------
-    # JSON mentése
-    # --------------------------------------------------------
 
     with open(
         OUTPUT_FILE,
