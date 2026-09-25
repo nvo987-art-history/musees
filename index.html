@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Carte Culturelle – France : musées, galeries, théâtres, bibliothèques, cinémas, opéras et centres culturels.">
+
+  <title>Carte Culturelle – France - NVO987 - Culture Visuelle Moderne et Contemporaine | (Musées, Galeries, Théâtres, Bibliothèques)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+  <!-- DID document -->
+  <link rel="alternate" type="application/did+json" href="https://identity.nvo987.us/.well-known/did.json">
+
+  <!-- DID domain linkage proof -->
+  <link rel="alternate" type="application/did+ld+json" href="https://identity.nvo987.us/.well-known/did-configuration.json">
+
+  <!-- Canonical DID -->
+  <meta name="did" content="did:web:identity.nvo987.us">
+
+  <!-- Identity authority -->
+  <link rel="me" href="https://identity.nvo987.us">
+
+  <!--
+    ============================================================
+    STRICT CONTENT PRESERVATION COMMAND
+    ============================================================
+    LEGAL TEXT, PRIVACY TEXT, COMPLIANCE TEXT, LICENCE TEXT,
+    SOURCE TEXT, DISCLAIMERS, COPYRIGHT TEXT, CONTACT TEXT,
+    IDENTITY TEXT AND OTHER SIMILAR DECLARATIVE TEXT MUST NOT
+    BE MODIFIED, TRANSLATED, SHORTENED, REWRITTEN, SUMMARIZED,
+    REMOVED OR OTHERWISE ALTERED.
+
+    Only HTML structure, CSS, JavaScript functionality,
+    accessibility and technical implementation may be corrected.
+    ============================================================
+  -->
+
+  <style>
+    :root {
+      --ink: #171513;
+      --ink-soft: #454039;
+      --paper: #f7f3e9;
+      --paper-light: #fcfaf4;
+      --paper-deep: #ebe4d5;
+
+      --orange: #df5b22;
+      --orange-dark: #b94312;
+      --yellow: #e5b92f;
+
+      --line: rgba(23, 21, 19, .16);
+      --line-soft: rgba(23, 21, 19, .10);
+      --white: #fffdf8;
+
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      --max-width: 1240px;
+      --content-width: 1120px;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /*
+      Finom papírérzet geometrikus minta nélkül.
+      Nem használunk gridet, négyzetmintát vagy geometrikus hátteret.
+    */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .18;
+      background:
+        radial-gradient(
+          ellipse at 18% 12%,
+          rgba(229, 185, 47, .045),
+          transparent 30%
+        ),
+        radial-gradient(
+          ellipse at 84% 64%,
+          rgba(223, 91, 34, .035),
+          transparent 34%
+        );
+    }
+
+    ::selection {
+      color: var(--paper);
+      background: var(--orange);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-weight: 600;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      margin-bottom: 28px;
+      font-size: clamp(4.5rem, 10.5vw, 9.6rem);
+      line-height: .77;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(3.35rem, 6vw, 6.2rem);
+      line-height: .82;
+    }
+
+    h3 {
+      margin-bottom: 16px;
+      font-size: 1.9rem;
+      line-height: .98;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 243, 233, .95);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 56px), var(--max-width));
+      min-height: 82px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 15px;
+      min-width: 0;
+      color: var(--ink);
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -.04em;
+      white-space: nowrap;
+    }
+
+    .brand-tag {
+      color: var(--ink-soft);
+      font-size: .63rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 3px 9px;
+    }
+
+    .nav a {
+      position: relative;
+      padding: 9px 8px 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: color 220ms var(--ease);
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: 4px;
+      height: 2px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 260ms var(--ease);
+    }
+
+    .nav a:hover {
+      color: var(--orange-dark);
+    }
+
+    .nav a:hover::after,
+    .nav a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    main {
+      width: min(calc(100% - 56px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .container {
+      width: min(calc(100% - 56px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      position: relative;
+      min-height: min(780px, calc(100vh - 82px));
+      display: flex;
+      align-items: center;
+      padding: clamp(110px, 14vw, 185px) 0;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /*
+      Organikus absztrakt rajz.
+      Csak ívek, körív és szabálytalan folt.
+      Nincs négyzet, téglalap, kocka vagy paralelogramma.
+    */
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 520px;
+      height: 250px;
+      right: 1%;
+      top: 17%;
+      border: 4px solid var(--orange);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 71% 29% 63% 37%;
+      transform: rotate(-19deg);
+      opacity: .92;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 370px;
+      height: 290px;
+      right: 7%;
+      top: 31%;
+      border: 5px solid var(--ink);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 58% 42% 69% 31%;
+      transform: rotate(29deg);
+      opacity: .9;
+    }
+
+    .hero-content {
+      position: relative;
+      width: min(100%, 950px);
+    }
+
+    .hero-content::before {
+      content: "";
+      position: absolute;
+      width: 128px;
+      height: 128px;
+      right: -35px;
+      top: -75px;
+      border-radius: 63% 37% 54% 46%;
+      background: var(--yellow);
+      opacity: .9;
+      z-index: -1;
+      transform: rotate(17deg);
+    }
+
+    .hero-content::after {
+      content: "";
+      position: absolute;
+      width: 175px;
+      height: 105px;
+      right: -250px;
+      bottom: -100px;
+      border: 5px solid var(--yellow);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 68% 32% 61% 39%;
+      transform: rotate(-24deg);
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 34px;
+      color: var(--orange-dark);
+      font-size: .69rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .hero-eyebrow::before {
+      content: "";
+      width: 56px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .hero h1 {
+      max-width: 900px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    /* =========================================================
+       SECTIONS
+       ========================================================= */
+
+    .section {
+      position: relative;
+      padding: clamp(95px, 11vw, 155px) 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 92px;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 90px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: minmax(320px, .9fr) minmax(360px, 1.1fr);
+      align-items: end;
+      gap: clamp(45px, 8vw, 125px);
+      margin-bottom: 62px;
+    }
+
+    .section-header p {
+      max-width: 650px;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    /* =========================================================
+       SEARCH / CONTROLS
+       ========================================================= */
+
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) minmax(180px, 230px) minmax(160px, 200px);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .controls input,
+    .controls select {
+      width: 100%;
+      min-height: 54px;
+      border: 1px solid rgba(23, 21, 19, .24);
+      border-radius: 999px;
+      outline: none;
+      color: var(--ink);
+      background: rgba(252, 250, 244, .72);
+      transition:
+        border-color 220ms var(--ease),
+        background 220ms var(--ease),
+        box-shadow 220ms var(--ease);
+    }
+
+    .controls input {
+      padding: 0 21px;
+    }
+
+    .controls select {
+      padding: 0 38px 0 18px;
+      cursor: pointer;
+    }
+
+    .controls input::placeholder {
+      color: #78736b;
+    }
+
+    .controls input:hover,
+    .controls select:hover {
+      border-color: rgba(23, 21, 19, .42);
+      background: var(--paper-light);
+    }
+
+    .controls input:focus,
+    .controls select:focus {
+      border-color: var(--orange);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(223, 91, 34, .09);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      margin-bottom: 34px;
+      padding: 10px 16px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--ink-soft);
+      background: transparent;
+      font-size: 16px;
+    }
+
+    .status.info {
+      border-left: 3px solid var(--orange);
+    }
+
+    .status.success {
+      border-left: 3px solid var(--yellow);
+    }
+
+    .status.warn,
+    .status.error {
+      border-left: 3px solid var(--orange-dark);
+    }
+
+    /* =========================================================
+       CULTURAL PLACES
+       ========================================================= */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .grid > * {
+      min-width: 0;
+    }
+
+    /*
+      Editorial list:
+      nincs card-shadow, nincs dobozhatás, nincs lekerekített panel.
+      A függőleges vonalak csak finom tipográfiai szervezőelemek.
+    */
+
+    .place-card,
+    .card,
+    .grid article {
+      position: relative;
+      padding: 34px 32px 38px;
+      border: 0;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      transition:
+        background 250ms var(--ease),
+        transform 250ms var(--ease);
+    }
+
+    .grid > *:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .place-card::before,
+    .card::before,
+    .grid article::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 32px;
+      width: 48px;
+      height: 2px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 280ms var(--ease);
+    }
+
+    .place-card:hover,
+    .card:hover,
+    .grid article:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 253, 248, .38);
+      box-shadow: none;
+    }
+
+    .place-card:hover::before,
+    .card:hover::before,
+    .grid article:hover::before {
+      transform: scaleX(1);
+    }
+
+    .grid article h3,
+    .place-card h3 {
+      margin-bottom: 11px;
+    }
+
+    .grid article p,
+    .place-card p {
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    .grid article a,
+    .place-card a {
+      color: var(--orange-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .grid article a:hover,
+    .place-card a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .place-type {
+      margin-bottom: 9px;
+      color: var(--orange-dark);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .place-meta,
+    .place-city {
+      margin-bottom: 13px;
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    .place-desc,
+    .place-description {
+      margin-bottom: 20px;
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    .place-actions,
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+    }
+
+    .place-actions .btn,
+    .card-links .card-link {
+      display: inline-block;
+      padding: 7px 15px;
+      border: 1px solid var(--orange);
+      border-radius: 999px;
+      color: var(--orange-dark);
+      background: transparent;
+      font-size: .75rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        color 200ms ease,
+        background 200ms ease,
+        border-color 200ms ease;
+    }
+
+    .place-actions .btn:hover,
+    .card-links .card-link:hover {
+      color: var(--paper);
+      background: var(--orange);
+      text-decoration: none;
+    }
+
+    .place-actions .btn.secondary,
+    .card-links .card-link:not(.card-link-primary) {
+      border-color: var(--line);
+      color: var(--ink-soft);
+    }
+
+    .place-actions .btn.secondary:hover,
+    .card-links .card-link:not(.card-link-primary):hover {
+      color: var(--ink);
+      background: var(--paper-deep);
+      border-color: var(--paper-deep);
+    }
+
+    /* =========================================================
+       LEGAL / SOURCES / CONTACT
+       ========================================================= */
+
+    .legal-card,
+    .sources-card {
+      position: relative;
+      width: min(100%, 900px);
+      padding: 0 0 5px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .legal-card::after,
+    .sources-card::after {
+      display: none;
+    }
+
+    .legal-card h3,
+    .sources-card h3 {
+      position: relative;
+      margin: 58px 0 22px;
+      padding-left: 27px;
+      font-size: 2rem;
+    }
+
+    .legal-card h3:first-child,
+    .sources-card h3:first-child {
+      margin-top: 0;
+    }
+
+    .legal-card h3::before,
+    .sources-card h3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .42em;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    .legal-card p,
+    .sources-card p,
+    .legal-card li,
+    .sources-card li {
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    .legal-card ul,
+    .sources-card ul {
+      margin: 20px 0 28px;
+      padding-left: 26px;
+    }
+
+    .legal-card li,
+    .sources-card li {
+      margin: 8px 0;
+      padding-left: 4px;
+    }
+
+    .legal-card li::marker,
+    .sources-card li::marker {
+      color: var(--orange);
+    }
+
+    .small-note,
+    .muted {
+      color: #625d55 !important;
+      font-size: 16px !important;
+    }
+
+    .legal-card a,
+    .sources-card a {
+      color: var(--orange-dark);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: color 200ms ease;
+    }
+
+    .legal-card a:hover,
+    .sources-card a:hover {
+      color: var(--ink);
+    }
+
+    #contact .sources-card {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px 70px;
+      width: 100%;
+      padding: 10px 0 5px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    #contact .sources-card p {
+      margin: 22px 0;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      position: relative;
+      margin-top: 60px;
+      padding: 110px 0 48px;
+      overflow: hidden;
+      color: var(--paper);
+      background: var(--ink);
+      text-align: center;
+    }
+
+    /*
+      A footer dekorációja is kizárólag organikus ív:
+      nincs blokk, lap, téglalap vagy háromszög.
+    */
+
+    footer::before {
+      content: "";
+      position: absolute;
+      width: 270px;
+      height: 125px;
+      top: 63px;
+      left: 50%;
+      border: 3px solid var(--orange);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 67% 33% 58% 42%;
+      transform: translateX(-50%) rotate(-9deg);
+      opacity: .82;
+    }
+
+    footer::after {
+      content: "";
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      top: 88px;
+      left: calc(50% + 125px);
+      border-radius: 64% 36% 55% 45%;
+      background: var(--yellow);
+      opacity: .9;
+      transform: rotate(18deg);
+    }
+
+    footer > div,
+    footer .footer-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 56px), 850px);
+      margin: 0 auto;
+    }
+
+    footer p {
+      margin: 0 0 16px;
+      color: var(--paper);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    footer p:first-child {
+      margin-bottom: 22px;
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 1.95rem;
+      line-height: 1;
+    }
+
+    footer .muted,
+    footer .small-note {
+      color: rgba(247, 243, 233, .68) !important;
+      font-size: 16px !important;
+    }
+
+    footer a {
+      color: var(--orange);
+      text-decoration: none;
+      text-underline-offset: 4px;
+    }
+
+    footer a:hover {
+      color: var(--yellow);
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       RESPONSIVE — TABLET
+       ========================================================= */
+
+    @media (max-width: 980px) {
+      .header-inner {
+        min-height: 72px;
+        gap: 22px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-name {
+        font-size: 1.5rem;
+      }
+
+      .brand-tag {
+        font-size: .58rem;
+      }
+
+      .nav {
+        gap: 0 2px;
+      }
+
+      .nav a {
+        padding-inline: 6px;
+        font-size: .62rem;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .hero::before {
+        right: -12%;
+        transform: rotate(-18deg) scale(.78);
+      }
+
+      .hero::after {
+        right: -1%;
+        transform: rotate(31deg) scale(.72);
+      }
+
+      .hero-content::after {
+        right: -190px;
+      }
+
+      .section-header {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .controls {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .controls input {
+        grid-column: 1 / -1;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid > *:nth-child(3n) {
+        border-right: 1px solid var(--line);
+      }
+
+      .grid > *:nth-child(2n) {
+        border-right: 0;
+      }
+
+      #contact .sources-card {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    /* =========================================================
+       RESPONSIVE — MOBILE
+       ========================================================= */
+
+    @media (max-width: 680px) {
+      body {
+        font-size: 16px;
+      }
+
+      .header-inner,
+      main,
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      footer > div,
+      footer .footer-inner {
+        width: min(calc(100% - 28px), 850px);
+      }
+
+      /*
+        Nincs hamburger.
+        Nincs drawer.
+        A normál navigáció egyszerűen tördelődik.
+      */
+
+      header {
+        position: relative;
+      }
+
+      .header-inner {
+        min-height: auto;
+        padding: 16px 0 13px;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 11px;
+      }
+
+      .brand {
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .brand-name {
+        font-size: 1.42rem;
+      }
+
+      .brand-tag {
+        font-size: .54rem;
+        letter-spacing: .1em;
+      }
+
+      .nav {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2px 1px;
+      }
+
+      .nav a {
+        padding: 6px 7px;
+        font-size: .58rem;
+        letter-spacing: .1em;
+      }
+
+      .nav a::after {
+        left: 7px;
+        right: 7px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 95px 0 120px;
+      }
+
+      .hero::before {
+        width: 280px;
+        height: 140px;
+        right: -75px;
+        top: 25%;
+        border-width: 3px;
+        transform: rotate(-18deg);
+      }
+
+      .hero::after {
+        width: 220px;
+        height: 160px;
+        right: -50px;
+        top: 34%;
+        border-width: 3px;
+        transform: rotate(31deg);
+      }
+
+      .hero-content::before {
+        width: 72px;
+        height: 72px;
+        right: -12px;
+        top: -52px;
+      }
+
+      .hero-content::after {
+        width: 100px;
+        height: 65px;
+        right: -50px;
+        bottom: -90px;
+        border-width: 3px;
+      }
+
+      h1 {
+        font-size: clamp(4rem, 20vw, 6.3rem);
+      }
+
+      h2 {
+        font-size: 3.35rem;
+      }
+
+      .hero-eyebrow {
+        margin-bottom: 28px;
+        font-size: .61rem;
+        letter-spacing: .15em;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-header {
+        margin-bottom: 40px;
+      }
+
+      .section-header p {
+        font-size: 16px;
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .controls input {
+        grid-column: auto;
+      }
+
+      .controls input,
+      .controls select {
+        min-height: 52px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid > *,
+      .grid > *:nth-child(2n),
+      .grid > *:nth-child(3n) {
+        border-right: 0;
+      }
+
+      .place-card,
+      .card,
+      .grid article {
+        padding: 29px 0 33px;
+      }
+
+      .place-card::before,
+      .card::before,
+      .grid article::before {
+        left: 0;
+      }
+
+      .legal-card h3,
+      .sources-card h3 {
+        margin-top: 48px;
+        font-size: 1.85rem;
+      }
+
+      .legal-card p,
+      .sources-card p,
+      .legal-card li,
+      .sources-card li,
+      .small-note,
+      .muted {
+        font-size: 16px !important;
+      }
+
+      #contact .sources-card {
+        display: block;
+      }
+
+      #contact .sources-card p + p {
+        margin-top: 0;
+      }
+
+      footer {
+        margin-top: 35px;
+        padding: 95px 0 38px;
+      }
+
+      footer::before {
+        width: 205px;
+        height: 94px;
+      }
+
+      footer::after {
+        left: calc(50% + 95px);
+        width: 58px;
+        height: 58px;
+      }
+
+      footer p:first-child {
+        font-size: 1.68rem;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .brand-tag {
+        max-width: 130px;
+        white-space: normal;
+        text-align: right;
+        line-height: 1.3;
+      }
+
+      .nav a {
+        padding-inline: 5px;
+        font-size: .55rem;
+      }
+
+      h1 {
+        font-size: 3.8rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-name">NVO987.eu</span>
+        <span class="brand-tag">Carte Culturelle</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#places">Lieux</a>
+        <a href="https://nvo987.fr/mentions-legales.html">Mentions légales</a>
+        <a href="#sources">Sources</a>
+        <a href="https://nvo987.fr/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Culture visuelle · France</div>
+
+        <h1 id="page-title">Carte Culturelle</h1>
+
+        <p>
+          Musées • Galeries • Théâtres • Bibliothèques • Cinémas • Opéras
+        </p>
+      </div>
+    </section>
+
+    <section id="places" class="section">
+
+      <div class="section-header">
+        <div>
+          <h2>Lieux culturels</h2>
+        </div>
+
+        <p>
+          Recherche instantanée sur une base locale téléchargée depuis
+          <strong>Wikidata</strong>.
+          Aucun traitement serveur, aucune analyse comportementale,
+          aucune publicité.
+        </p>
+      </div>
+
+      <div class="controls">
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Rechercher (ex: Louvre, musée, théâtre, bibliothèque)..."
+          autocomplete="off"
+          inputmode="search"
+          aria-label="Rechercher un lieu culturel"
+        >
+
+        <select id="typeSelect" aria-label="Filtrer par type">
+          <option value="all" selected>Tout</option>
+          <option value="musée">Musées</option>
+          <option value="galerie d'art">Galeries</option>
+          <option value="théâtre">Théâtres</option>
+          <option value="cinéma">Cinémas</option>
+          <option value="bibliothèque">Bibliothèques</option>
+          <option value="centre culturel">Centres culturels</option>
+          <option value="opéra">Opéras</option>
+          <option value="salle de concert">Salles de concert</option>
+        </select>
+
+        <select id="limitSelect" aria-label="Nombre de résultats">
+          <option value="20" selected>20 résultats</option>
+          <option value="40">40 résultats</option>
+          <option value="80">80 résultats</option>
+          <option value="120">120 résultats</option>
+          <option value="200">200 résultats</option>
+        </select>
+
+      </div>
+
+      <div id="statusBox" class="status info" role="status" aria-live="polite">
+        Chargement des lieux…
+      </div>
+
+      <div id="placesGrid" class="grid"></div>
+
+    </section>
+
+    <section id="mentions" class="section">
+
+      <div class="section-header">
+        <div>
+          <h2>Mentions légales / conformité</h2>
+        </div>
+
+        <p>
+          Transparence, confidentialité, Open Data, non-affiliation
+          et limitation de responsabilité.
+        </p>
+      </div>
+
+      <div class="legal-card">
+
+        <h3>1. Éditeur du site</h3>
+
+        <p>
+          Le présent site web <strong>musees.nvo987.eu</strong> est édité
+          par l’association culturelle <strong>NVO987</strong>.
+        </p>
+
+        <p>
+          Les mentions légales complètes et officielles
+          (conformité juridique française, identité administrative de
+          l’éditeur, publication et responsabilités) sont accessibles ici :
+          <a href="https://www.nvo987.fr" target="_blank" rel="noopener noreferrer">
+            www.nvo987.fr
+          </a>.
+        </p>
+
+        <h3>2. Nature du service</h3>
+
+        <p>
+          Ce site est une interface documentaire indépendante permettant
+          la consultation, la recherche et le filtrage de lieux culturels
+          situés en <strong>France</strong> (musées, galeries, bibliothèques,
+          théâtres, cinémas, opéras, centres culturels, etc.).
+        </p>
+
+        <p class="small-note">
+          Il s’agit d’un service d’information à but culturel et éducatif.
+          Ce site ne constitue pas un service officiel de réservation,
+          billetterie ou communication institutionnelle.
+        </p>
+
+        <h3>3. Non-affiliation / absence de représentation</h3>
+
+        <p>
+          <strong>Ce site n’est affilié à aucune institution</strong>
+          (État français, collectivités territoriales, musées nationaux,
+          opérateurs publics, établissements culturels, fondations privées,
+          ou plateformes officielles).
+        </p>
+
+        <p>
+          Les noms, marques et dénominations cités restent la propriété
+          de leurs détenteurs respectifs.
+        </p>
+
+        <h3>4. Données personnelles / RGPD (privacy by design)</h3>
+
+        <p>
+          Ce site est conçu selon une approche stricte
+          <strong>privacy by design</strong> :
+        </p>
+
+        <ul>
+          <li>Aucune inscription / aucun compte utilisateur</li>
+          <li>Aucun formulaire de collecte de données personnelles</li>
+          <li>Aucune base de données utilisateur</li>
+          <li>Aucun identifiant persistant</li>
+          <li>Aucun profilage ou ciblage publicitaire</li>
+          <li>Aucune analyse d’audience (Google Analytics, Matomo, etc.)</li>
+          <li>Aucun pixel marketing (Meta Pixel, TikTok, etc.)</li>
+        </ul>
+
+        <p>
+          <strong>
+            Aucune donnée personnelle n’est intentionnellement collectée,
+            traitée, vendue, cédée ou conservée
+          </strong>
+          par l’éditeur dans le cadre de ce service.
+        </p>
+
+        <p class="small-note">
+          Le site est hébergé via GitHub Pages. Comme tout hébergeur,
+          GitHub peut générer des journaux techniques (logs réseau,
+          sécurité, disponibilité). Ces traitements relèvent du
+          prestataire d’hébergement et ne sont pas exploités volontairement
+          par l’éditeur.
+        </p>
+
+        <h3>5. Cookies / tracking</h3>
+
+        <p>
+          <strong>Aucun cookie publicitaire</strong>, aucun cookie de mesure
+          d’audience, aucun traceur tiers et aucun outil d’analyse
+          comportementale n’est utilisé.
+        </p>
+
+        <p>
+          Ce site est utilisable sans acceptation de cookies, car aucun
+          cookie non essentiel n’est déployé.
+        </p>
+
+        <h3>6. Contenus affichés</h3>
+
+        <p>
+          Le site affiche uniquement des informations descriptives limitées
+          à des fins documentaires : nom, type, ville, coordonnées
+          géographiques approximatives, description courte et lien officiel
+          lorsque disponible.
+        </p>
+
+        <p>
+          Le site n’héberge pas de photographies d’œuvres, de vidéos,
+          de catalogues intégraux, ni de reproductions complètes de contenus
+          propriétaires.
+        </p>
+
+        <h3>7. Exactitude / absence de garantie</h3>
+
+        <p>
+          Les informations proviennent d’une base Open Data collaborative
+          (Wikidata). Elles peuvent être inexactes, obsolètes, incomplètes
+          ou modifiées sans préavis.
+        </p>
+
+        <p>
+          <strong>Les institutions officielles font foi</strong>
+          en cas de divergence.
+        </p>
+
+        <h3>8. Limitation de responsabilité</h3>
+
+        <p>
+          L’utilisateur reconnaît utiliser ce site sous sa seule
+          responsabilité. L’éditeur ne pourra en aucun cas être tenu
+          responsable de dommages directs ou indirects liés à l’utilisation
+          du service ou à l’exactitude des informations affichées.
+        </p>
+
+        <p>
+          L’éditeur ne garantit ni la disponibilité permanente du site,
+          ni l’absence d’erreurs techniques, ni la complétude des données
+          affichées.
+        </p>
+
+        <h3>9. Liens externes</h3>
+
+        <p>
+          Ce site contient des liens vers des sites tiers
+          (institutions culturelles, sites officiels, pages Wikidata).
+          L’éditeur ne contrôle pas ces sites et décline toute responsabilité
+          quant à leur contenu, disponibilité, sécurité ou politique de
+          confidentialité.
+        </p>
+
+        <h3>10. Signalement / retrait</h3>
+
+        <p>
+          Si une donnée affichée semble erronée ou si une institution souhaite
+          demander une correction ou un retrait d’affichage, une demande peut
+          être adressée à :
+          <a href="mailto:contact@nvo987.eu">contact@nvo987.eu</a>.
+        </p>
+
+        <p class="small-note">
+          Dernière mise à jour : 2026.
+        </p>
+
+      </div>
+    </section>
+
+    <section id="sources" class="section">
+
+      <div class="section-header">
+        <div>
+          <h2>Sources & licences</h2>
+        </div>
+
+        <p>
+          Déclaration de réutilisation Open Data, transparence et licence libre.
+        </p>
+      </div>
+
+      <div class="sources-card">
+
+        <h3>Source des données</h3>
+
+        <p>
+          Les informations affichées sur ce site proviennent de la base
+          publique <strong>Wikidata</strong>, accessible librement et légalement.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Plateforme officielle :</strong>
+            <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">
+              Wikidata.org
+            </a>
+          </li>
+
+          <li>
+            <strong>Licence officielle des données :</strong>
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">
+              Creative Commons Zero (CC0 1.0 Universal)
+            </a>
+          </li>
+        </ul>
+
+        <h3>Conformité licence CC0</h3>
+
+        <p>
+          Les données Wikidata sont publiées sous licence
+          <strong>CC0</strong>, ce qui signifie qu’elles sont dédiées
+          au domaine public. Aucune obligation stricte d’attribution
+          n’est imposée par la licence.
+        </p>
+
+        <p>
+          Par transparence et bonnes pratiques Open Data, ce site mentionne
+          explicitement la source Wikidata et conserve lorsque possible
+          un lien direct vers la page Wikidata d’origine.
+        </p>
+
+        <h3>Absence de données personnelles</h3>
+
+        <p>
+          Les informations affichées concernent principalement des lieux
+          publics et établissements culturels (institutions, bâtiments,
+          organisations). Le site n’a pas pour finalité de traiter
+          des données personnelles.
+        </p>
+
+        <p class="small-note">
+          Si une entrée contient accidentellement une information pouvant
+          être considérée comme personnelle, une demande de correction/retrait
+          peut être envoyée à contact@nvo987.eu.
+        </p>
+
+        <h3>Licence du code du site</h3>
+
+        <p>
+          Le code source HTML/CSS/JS et les scripts d’automatisation
+          (GitHub Actions, génération JSON) sont publiés sous licence
+          <strong>MIT</strong> dans le dépôt GitHub du projet.
+        </p>
+
+        <p class="small-note">
+          La licence MIT concerne uniquement le code et ne modifie pas
+          la licence CC0 des données Wikidata.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+
+      <p>
+        © 2026 NVO987 – Culture Visuelle Moderne et Contemporaine
+      </p>
+
+      <p class="small-note">
+        Données : Wikidata (CC0 1.0) • Source publique ouverte • Site indépendant
+      </p>
+
+      <p class="small-note">
+        ISSN :  3131-3272
+      </p>
+
+    </div>
+  </footer>
+
+  <script>
+/*
+STRICT INSTRUCTION:
+NE JAMAIS modifier les textes juridiques, de conformité, RGPD,
+licences, sources, contacts, droits, mentions légales ou textes
+similaires. Seul le fonctionnement technique peut être corrigé.
+*/
+(() => {
+  "use strict";
+
+  const statusBox = document.getElementById("statusBox");
+  const placesGrid = document.getElementById("placesGrid");
+  const searchInput = document.getElementById("searchInput");
+  const limitSelect = document.getElementById("limitSelect");
+  const typeSelect = document.getElementById("typeSelect");
+
+  let allPlaces = [];
+
+  if (!statusBox || !placesGrid) {
+    console.error("Éléments HTML manquants : #statusBox ou #placesGrid");
+    return;
+  }
+
+  function escapeHTML(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function normalize(value) {
+    return String(value ?? "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+  }
+
+  function safeURL(value) {
+    if (!value) return "";
+
+    try {
+      const url = new URL(String(value), window.location.href);
+
+      if (
+        url.protocol !== "https:" &&
+        url.protocol !== "http:"
+      ) {
+        return "";
+      }
+
+      return url.href;
+    } catch {
+      return "";
+    }
+  }
+
+  function getValue(place, keys) {
+    for (const key of keys) {
+      if (
+        place &&
+        place[key] !== undefined &&
+        place[key] !== null &&
+        String(place[key]).trim() !== ""
+      ) {
+        return place[key];
+      }
+    }
+
+    return "";
+  }
+
+  function getWikidataId(place) {
+    const candidates = [
+      place.wikidata,
+      place.wikidata_id,
+      place.wikidataId,
+      place.wikidata_qid,
+      place.qid,
+      place.QID,
+      place.source
+    ];
+
+    for (const value of candidates) {
+      if (!value) continue;
+
+      const text = String(value).trim();
+
+      const match = text.match(
+        /(?:wikidata\.org\/(?:wiki\/)?(?:Special:EntityData\/)?)(Q\d+)/i
+      );
+
+      if (match) {
+        return match[1].toUpperCase();
+      }
+
+      if (/^Q\d+$/i.test(text)) {
+        return text.toUpperCase();
+      }
+    }
+
+    return "";
+  }
+
+  function getWikipediaURL(place) {
+    const candidates = [
+      place.wikipedia,
+      place.wikipedia_url,
+      place.wikipediaUrl,
+      place.wikipedia_fr,
+      place.wikipedia_fr_url,
+      place.wiki,
+      place.wiki_url,
+      place.wikiUrl
+    ];
+
+    for (const candidate of candidates) {
+      const url = safeURL(candidate);
+
+      if (
+        url &&
+        /(^|\.)wikipedia\.org$/i.test(
+          new URL(url).hostname
+        )
+      ) {
+        return url;
+      }
+    }
+
+    const qid = getWikidataId(place);
+
+    if (qid) {
+      return (
+        "https://fr.wikipedia.org/wiki/Special:" +
+        "GoToLinkedPage?site=frwiki&item=" +
+        encodeURIComponent(qid)
+      );
+    }
+
+    return "";
+  }
+
+  function getWikidataURL(place) {
+    const qid = getWikidataId(place);
+
+    if (qid) {
+      return "https://www.wikidata.org/wiki/" + qid;
+    }
+
+    const candidates = [
+      place.wikidata,
+      place.wikidata_url,
+      place.wikidataUrl,
+      place.source
+    ];
+
+    for (const candidate of candidates) {
+      const url = safeURL(candidate);
+
+      if (
+        url &&
+        /(^|\.)wikidata\.org$/i.test(
+          new URL(url).hostname
+        )
+      ) {
+        return url;
+      }
+    }
+
+    return "";
+  }
+
+  function getOfficialURL(place) {
+    const candidates = [
+      place.website,
+      place.website_url,
+      place.websiteUrl,
+      place.site,
+      place.site_officiel,
+      place.site_officiel_url,
+      place.official_website,
+      place.officialWebsite
+    ];
+
+    for (const candidate of candidates) {
+      const url = safeURL(candidate);
+
+      if (url) {
+        return url;
+      }
+    }
+
+    return "";
+  }
+
+  function normalizeType(value) {
+    let result = normalize(value);
+
+    if (result.endsWith("ies")) {
+      result = result.slice(0, -3) + "y";
+    }
+
+    if (result.endsWith("s")) {
+      result = result.slice(0, -1);
+    }
+
+    return result;
+  }
+
+  function typeMatches(placeType, selectedType) {
+    if (
+      !selectedType ||
+      selectedType === "all" ||
+      selectedType === "Tout"
+    ) {
+      return true;
+    }
+
+    const a = normalizeType(placeType);
+    const b = normalizeType(selectedType);
+
+    return (
+      a === b ||
+      a.includes(b) ||
+      b.includes(a)
+    );
+  }
+
+  function buildCard(place) {
+    const name = escapeHTML(
+      getValue(place, [
+        "name",
+        "nom",
+        "label",
+        "title"
+      ]) || "Lieu culturel"
+    );
+
+    const type = escapeHTML(
+      getValue(place, [
+        "type",
+        "types",
+        "categorie",
+        "category"
+      ]) || "Lieu culturel"
+    );
+
+    const city = escapeHTML(
+      getValue(place, [
+        "city",
+        "ville",
+        "commune",
+        "location"
+      ])
+    );
+
+    const descriptionRaw = String(
+      getValue(place, [
+        "description",
+        "description_fr",
+        "summary",
+        "resume"
+      ]) || ""
+    );
+
+    const description = escapeHTML(
+      descriptionRaw.length > 220
+        ? descriptionRaw.substring(0, 220) + "..."
+        : descriptionRaw
+    );
+
+    const officialURL = getOfficialURL(place);
+    const wikipediaURL = getWikipediaURL(place);
+    const wikidataURL = getWikidataURL(place);
+
+    let links = "";
+
+    if (officialURL) {
+      links += `
+        <a
+          class="card-link card-link-primary"
+          href="${escapeHTML(officialURL)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >Site officiel</a>
+      `;
+    }
+
+    if (wikipediaURL) {
+      links += `
+        <a
+          class="card-link"
+          href="${escapeHTML(wikipediaURL)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >Wikipédia</a>
+      `;
+    }
+
+    if (wikidataURL) {
+      links += `
+        <a
+          class="card-link"
+          href="${escapeHTML(wikidataURL)}"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >Wikidata</a>
+      `;
+    }
+
+    return `
+      <article class="place-card">
+
+        <div class="place-type">
+          ${type}
+        </div>
+
+        <h3>
+          ${name}
+        </h3>
+
+        ${
+          city
+            ? `<div class="place-city">${city}</div>`
+            : ""
+        }
+
+        <p class="place-description">
+          ${
+            description ||
+            "Aucune description disponible."
+          }
+        </p>
+
+        ${
+          links
+            ? `
+              <div class="card-links">
+                ${links}
+              </div>
+            `
+            : ""
+        }
+
+      </article>
+    `;
+  }
+
+  function renderPlaces() {
+    const query = normalize(
+      searchInput?.value || ""
+    );
+
+    const selectedType =
+      typeSelect?.value || "all";
+
+    const limitValue =
+      Number(limitSelect?.value || 20);
+
+    const limit =
+      Number.isFinite(limitValue) &&
+      limitValue > 0
+        ? limitValue
+        : 20;
+
+    const filtered = allPlaces.filter(place => {
+      if (
+        !place ||
+        typeof place !== "object"
+      ) {
+        return false;
+      }
+
+      const placeType = getValue(place, [
+        "type",
+        "types",
+        "categorie",
+        "category"
+      ]);
+
+      if (
+        !typeMatches(
+          placeType,
+          selectedType
+        )
+      ) {
+        return false;
+      }
+
+      if (!query) {
+        return true;
+      }
+
+      const searchableText = normalize(
+        [
+          place.name,
+          place.nom,
+          place.label,
+          place.title,
+          place.type,
+          place.types,
+          place.city,
+          place.ville,
+          place.commune,
+          place.description,
+          place.description_fr,
+          place.wikidata,
+          place.wikidata_id,
+          place.wikipedia,
+          place.wikipedia_url,
+          place.website,
+          place.website_url
+        ]
+          .filter(Boolean)
+          .join(" ")
+      );
+
+      return searchableText.includes(query);
+    });
+
+    const visible =
+      filtered.slice(0, limit);
+
+    if (!visible.length) {
+      placesGrid.innerHTML = "";
+
+      statusBox.textContent =
+        allPlaces.length
+          ? "Aucun lieu trouvé."
+          : "Aucun lieu disponible.";
+
+      return;
+    }
+
+    placesGrid.innerHTML =
+      visible
+        .map(buildCard)
+        .join("");
+
+    statusBox.textContent =
+      `${visible.length} résultat${
+        visible.length > 1 ? "s" : ""
+      }`;
+  }
+
+  async function loadPlaces() {
+    statusBox.textContent =
+      "Chargement des lieux…";
+
+    const controller =
+      new AbortController();
+
+    const timeout =
+      setTimeout(() => {
+        controller.abort();
+      }, 10000);
+
+    try {
+      const url =
+        new URL(
+          "./places.json",
+          window.location.href
+        ).href;
+
+      const response =
+        await fetch(
+          url,
+          {
+            method: "GET",
+            cache: "no-store",
+            credentials: "same-origin",
+            signal: controller.signal,
+            headers: {
+              "Accept": "application/json"
+            }
+          }
+        );
+
+      if (!response.ok) {
+        throw new Error(
+          "HTTP " + response.status
+        );
+      }
+
+      const text =
+        await response.text();
+
+      if (!text.trim()) {
+        throw new Error(
+          "places.json est vide."
+        );
+      }
+
+      let data;
+
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error(
+          "places.json contient un JSON invalide."
+        );
+      }
+
+      if (Array.isArray(data)) {
+        allPlaces = data;
+      } else if (
+        data &&
+        Array.isArray(data.places)
+      ) {
+        allPlaces = data.places;
+      } else if (
+        data &&
+        Array.isArray(data.data)
+      ) {
+        allPlaces = data.data;
+      } else {
+        throw new Error(
+          "Structure JSON non reconnue."
+        );
+      }
+
+      allPlaces =
+        allPlaces.filter(
+          item =>
+            item &&
+            typeof item === "object"
+        );
+
+      clearTimeout(timeout);
+
+      renderPlaces();
+
+    } catch (error) {
+      clearTimeout(timeout);
+
+      console.error(
+        "Erreur places.json :",
+        error
+      );
+
+      placesGrid.innerHTML = "";
+
+      if (
+        error &&
+        error.name === "AbortError"
+      ) {
+        statusBox.textContent =
+          "Le chargement de places.json a expiré.";
+      } else {
+        statusBox.textContent =
+          "Impossible de charger places.json.";
+      }
+    }
+  }
+
+  searchInput?.addEventListener(
+    "input",
+    renderPlaces
+  );
+
+  typeSelect?.addEventListener(
+    "change",
+    renderPlaces
+  );
+
+  limitSelect?.addEventListener(
+    "change",
+    renderPlaces
+  );
+
+  if (
+    document.readyState ===
+    "loading"
+  ) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      loadPlaces,
+      { once: true }
+    );
+  } else {
+    loadPlaces();
+  }
+
+})();
+  </script>
+
+</body>
+  </html>
