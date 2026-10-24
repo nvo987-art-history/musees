@@ -2,7 +2,7 @@
   "source": "Wikidata (CC0)",
   "license": "CC0 1.0",
   "country": "France",
-  "count": 9354,
+  "count": 9360,
   "places": [
     {
       "id": "Q42296758",
@@ -1636,8 +1636,8 @@
       "id": "Q16532548",
       "name": "bibliothèque de l'Institut national d'histoire de l'art",
       "city": "Paris",
-      "lat": 48.867277777,
-      "lon": 2.338416666,
+      "lat": 48.86741,
+      "lon": 2.3381,
       "wikidata": "http://www.wikidata.org/entity/Q16532548",
       "wikipedia": "https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_de_l%27Institut_national_d%27histoire_de_l%27art",
       "website": "http://bibliotheque.inha.fr/",
@@ -1686,6 +1686,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_de_l%27universit%C3%A9_et_de_la_Soci%C3%A9t%C3%A9_industrielle_de_Mulhouse",
       "website": "http://www.scd.uha.fr",
       "source": "http://www.wikidata.org/entity/Q24938989"
+    },
+    {
+      "id": "Q141821277",
+      "name": "bibliothèque de la faculté de droit",
+      "city": "Aix-en-Provence",
+      "lat": 43.518717,
+      "lon": 5.446923,
+      "wikidata": "http://www.wikidata.org/entity/Q141821277",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q141821277"
     },
     {
       "id": "Q72699435",
@@ -2326,6 +2337,17 @@
       "source": "http://www.wikidata.org/entity/Q2357520"
     },
     {
+      "id": "Q141821690",
+      "name": "bibliothèque Proudhon du campus universitaire de la Bouloie",
+      "city": "Besançon",
+      "lat": 47.245387372,
+      "lon": 5.985041795,
+      "wikidata": "http://www.wikidata.org/entity/Q141821690",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q141821690"
+    },
+    {
       "id": "Q106833838",
       "name": "bibliothèque René Guy Cadou, bibliothèque associative René Guy Cadou, Bibliothèque associative René-Guy-Cadou",
       "city": "Saint-Herblain",
@@ -2368,6 +2390,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q122763379"
+    },
+    {
+      "id": "Q141822022",
+      "name": "bibliothèque Saint-Corneille",
+      "city": "Compiègne",
+      "lat": 49.416997382,
+      "lon": 2.825015215,
+      "wikidata": "http://www.wikidata.org/entity/Q141822022",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q141822022"
     },
     {
       "id": "Q284001",
@@ -2469,6 +2502,17 @@
       "source": "http://www.wikidata.org/entity/Q130366477"
     },
     {
+      "id": "Q141821798",
+      "name": "bibliothèque universitaire de sciences",
+      "city": "Orléans",
+      "lat": 47.845228681,
+      "lon": 1.936079736,
+      "wikidata": "http://www.wikidata.org/entity/Q141821798",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q141821798"
+    },
+    {
       "id": "Q105952449",
       "name": "bibliothèque universitaire du Bouguen",
       "city": "Brest",
@@ -2478,6 +2522,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q105952449"
+    },
+    {
+      "id": "Q141821687",
+      "name": "bibliothèque universitaire Lucien Febvre",
+      "city": "Belfort",
+      "lat": 47.245387372,
+      "lon": 5.985041795,
+      "wikidata": "http://www.wikidata.org/entity/Q141821687",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q141821687"
     },
     {
       "id": "Q139917276",
@@ -4253,7 +4308,7 @@
     {
       "id": "Q1378218",
       "name": "Centre européen du résistant déporté",
-      "city": "Natzwiller",
+      "city": "Bas-Rhin",
       "lat": 48.454394444,
       "lon": 7.254413888,
       "wikidata": "http://www.wikidata.org/entity/Q1378218",
@@ -11392,7 +11447,7 @@
     {
       "id": "Q1284688",
       "name": "Fondation Cartier pour l'art contemporain",
-      "city": "Montparnasse",
+      "city": "1er arrondissement de Paris",
       "lat": 48.863055555,
       "lon": 2.336944444,
       "wikidata": "http://www.wikidata.org/entity/Q1284688",
@@ -12611,17 +12666,6 @@
       "source": "http://www.wikidata.org/entity/Q43056031"
     },
     {
-      "id": "Q3114602",
-      "name": "Grand Théâtre",
-      "city": "Angers",
-      "lat": 47.471,
-      "lon": -0.5522,
-      "wikidata": "http://www.wikidata.org/entity/Q3114602",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Th%C3%A9%C3%A2tre_(Angers)",
-      "website": "http://www.angers.fr/vivre-a-angers/culture/theatre/grand-theatre/index.html",
-      "source": "http://www.wikidata.org/entity/Q3114602"
-    },
-    {
       "id": "Q46700374",
       "name": "Grand Théâtre",
       "city": "Le Havre",
@@ -12631,6 +12675,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Th%C3%A9%C3%A2tre_(Le_Havre)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q46700374"
+    },
+    {
+      "id": "Q3114602",
+      "name": "Grand Théâtre",
+      "city": "Angers",
+      "lat": 47.471,
+      "lon": -0.5522,
+      "wikidata": "http://www.wikidata.org/entity/Q3114602",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Th%C3%A9%C3%A2tre_(Angers)",
+      "website": "http://www.angers.fr/vivre-a-angers/culture/theatre/grand-theatre/index.html",
+      "source": "http://www.wikidata.org/entity/Q3114602"
     },
     {
       "id": "Q46104080",
@@ -14294,6 +14349,17 @@
       "source": "http://www.wikidata.org/entity/Q856640"
     },
     {
+      "id": "Q131718834",
+      "name": "La Coupole",
+      "city": "Clermont-Ferrand",
+      "lat": 45.7721,
+      "lon": 3.0813,
+      "wikidata": "http://www.wikidata.org/entity/Q131718834",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Coupole_(Clermont-Ferrand)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q131718834"
+    },
+    {
       "id": "Q3207869",
       "name": "La Coupole",
       "city": "Saint-Louis",
@@ -14314,17 +14380,6 @@
       "wikipedia": "",
       "website": "http://www.coupole-combs.fr/",
       "source": "http://www.wikidata.org/entity/Q43053719"
-    },
-    {
-      "id": "Q131718834",
-      "name": "La Coupole",
-      "city": "Clermont-Ferrand",
-      "lat": 45.7721,
-      "lon": 3.0813,
-      "wikidata": "http://www.wikidata.org/entity/Q131718834",
-      "wikipedia": "https://fr.wikipedia.org/wiki/La_Coupole_(Clermont-Ferrand)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q131718834"
     },
     {
       "id": "Q16508468",
@@ -14384,7 +14439,7 @@
     {
       "id": "Q3064034",
       "name": "La Fabuloserie",
-      "city": "Charny Orée de Puisaye",
+      "city": "Dicy",
       "lat": 47.933244,
       "lon": 3.106325,
       "wikidata": "http://www.wikidata.org/entity/Q3064034",
@@ -15009,17 +15064,6 @@
       "source": "http://www.wikidata.org/entity/Q112911610"
     },
     {
-      "id": "Q3219624",
-      "name": "Laurette Théâtre",
-      "city": "Avignon",
-      "lat": 43.9498,
-      "lon": 4.80236,
-      "wikidata": "http://www.wikidata.org/entity/Q3219624",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Laurette_Th%C3%A9%C3%A2tre_(Avignon)",
-      "website": "http://www.laurette-theatre.fr",
-      "source": "http://www.wikidata.org/entity/Q3219624"
-    },
-    {
       "id": "Q3219625",
       "name": "Laurette Théâtre",
       "city": "10ᵉ arrondissement de Paris",
@@ -15029,6 +15073,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Laurette_Th%C3%A9%C3%A2tre",
       "website": "http://www.laurette-theatre.fr",
       "source": "http://www.wikidata.org/entity/Q3219625"
+    },
+    {
+      "id": "Q3219624",
+      "name": "Laurette Théâtre",
+      "city": "Avignon",
+      "lat": 43.9498,
+      "lon": 4.80236,
+      "wikidata": "http://www.wikidata.org/entity/Q3219624",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Laurette_Th%C3%A9%C3%A2tre_(Avignon)",
+      "website": "http://www.laurette-theatre.fr",
+      "source": "http://www.wikidata.org/entity/Q3219624"
     },
     {
       "id": "Q110446134",
@@ -15812,6 +15867,28 @@
       "source": "http://www.wikidata.org/entity/Q113570435"
     },
     {
+      "id": "Q3225155",
+      "name": "Le Palace",
+      "city": "Périgueux",
+      "lat": 45.1868,
+      "lon": 0.717445,
+      "wikidata": "http://www.wikidata.org/entity/Q3225155",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Palace_(P%C3%A9rigueux)",
+      "website": "https://www.odyssee-perigueux.fr/",
+      "source": "http://www.wikidata.org/entity/Q3225155"
+    },
+    {
+      "id": "Q3225157",
+      "name": "Le Palace",
+      "city": "9e arrondissement de Paris",
+      "lat": 48.871944444,
+      "lon": 2.343333333,
+      "wikidata": "http://www.wikidata.org/entity/Q3225157",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Palace_(Paris)",
+      "website": "http://www.theatrelepalace.fr",
+      "source": "http://www.wikidata.org/entity/Q3225157"
+    },
+    {
       "id": "Q61787473",
       "name": "Le Palace",
       "city": "Montélimar",
@@ -15843,28 +15920,6 @@
       "wikipedia": "",
       "website": "https://www.cuisery.fr/le-palace/",
       "source": "http://www.wikidata.org/entity/Q124560830"
-    },
-    {
-      "id": "Q3225155",
-      "name": "Le Palace",
-      "city": "Périgueux",
-      "lat": 45.1868,
-      "lon": 0.717445,
-      "wikidata": "http://www.wikidata.org/entity/Q3225155",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Palace_(P%C3%A9rigueux)",
-      "website": "https://www.odyssee-perigueux.fr/",
-      "source": "http://www.wikidata.org/entity/Q3225155"
-    },
-    {
-      "id": "Q3225157",
-      "name": "Le Palace",
-      "city": "9e arrondissement de Paris",
-      "lat": 48.871944444,
-      "lon": 2.343333333,
-      "wikidata": "http://www.wikidata.org/entity/Q3225157",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Palace_(Paris)",
-      "website": "http://www.theatrelepalace.fr",
-      "source": "http://www.wikidata.org/entity/Q3225157"
     },
     {
       "id": "Q138864357",
@@ -16263,17 +16318,6 @@
       "source": "http://www.wikidata.org/entity/Q3227778"
     },
     {
-      "id": "Q22954264",
-      "name": "Le Trianon",
-      "city": "Mende",
-      "lat": 44.51919444,
-      "lon": 3.499888889,
-      "wikidata": "http://www.wikidata.org/entity/Q22954264",
-      "wikipedia": "",
-      "website": "https://www.trianon-mende.fr/",
-      "source": "http://www.wikidata.org/entity/Q22954264"
-    },
-    {
       "id": "Q2381141",
       "name": "Le Trianon",
       "city": "18e arrondissement de Paris",
@@ -16283,6 +16327,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Trianon_(Paris)",
       "website": "http://www.letrianon.fr",
       "source": "http://www.wikidata.org/entity/Q2381141"
+    },
+    {
+      "id": "Q22954264",
+      "name": "Le Trianon",
+      "city": "Mende",
+      "lat": 44.51919444,
+      "lon": 3.499888889,
+      "wikidata": "http://www.wikidata.org/entity/Q22954264",
+      "wikipedia": "",
+      "website": "https://www.trianon-mende.fr/",
+      "source": "http://www.wikidata.org/entity/Q22954264"
     },
     {
       "id": "Q3227810",
@@ -18114,8 +18169,8 @@
       "id": "Q3280045",
       "name": "maison du Peuple de Clichy",
       "city": "Clichy",
-      "lat": 48.9013,
-      "lon": 2.3147,
+      "lat": 48.9013352,
+      "lon": 2.314649,
       "wikidata": "http://www.wikidata.org/entity/Q3280045",
       "wikipedia": "https://fr.wikipedia.org/wiki/Maison_du_Peuple_de_Clichy",
       "website": "",
@@ -18300,7 +18355,7 @@
     {
       "id": "Q108934948",
       "name": "maison Julien-Gracq",
-      "city": "Mauges-sur-Loire",
+      "city": "Saint-Florent-le-Vieil",
       "lat": 47.363860654,
       "lon": -1.012683984,
       "wikidata": "http://www.wikidata.org/entity/Q108934948",
@@ -21671,7 +21726,7 @@
       "lon": 7.278453,
       "wikidata": "http://www.wikidata.org/entity/Q936859",
       "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_d%27Art_moderne_et_d%27Art_contemporain_de_Nice",
-      "website": "http://www.mamac-nice.org/",
+      "website": "https://mamac-nice.org/english/",
       "source": "http://www.wikidata.org/entity/Q936859"
     },
     {
@@ -22287,7 +22342,7 @@
       "lon": -0.7,
       "wikidata": "http://www.wikidata.org/entity/Q19950899",
       "wikipedia": "",
-      "website": "https://www.bayeuxmuseum.com/",
+      "website": "https://www.bayeuxmuseum.com/en/",
       "source": "http://www.wikidata.org/entity/Q19950899"
     },
     {
@@ -23470,7 +23525,7 @@
     {
       "id": "Q3279669",
       "name": "musée de l'Émigration française au Canada",
-      "city": "Tourouvre",
+      "city": "Tourouvre au Perche",
       "lat": 48.589638888,
       "lon": 0.655,
       "wikidata": "http://www.wikidata.org/entity/Q3279669",
@@ -24128,17 +24183,6 @@
       "source": "http://www.wikidata.org/entity/Q3329896"
     },
     {
-      "id": "Q16873487",
-      "name": "musée de la faïence",
-      "city": "Rarécourt",
-      "lat": 49.072509,
-      "lon": 5.124302,
-      "wikidata": "http://www.wikidata.org/entity/Q16873487",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_la_Fa%C3%AFence_de_Rar%C3%A9court",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q16873487"
-    },
-    {
       "id": "Q199335",
       "name": "musée de la Faïence",
       "city": "Marseille",
@@ -24159,6 +24203,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_la_fa%C3%AFence_de_Moustiers-Sainte-Marie",
       "website": "http://www.moustiers.eu/?Musee-de-la-faience&lang=fr",
       "source": "http://www.wikidata.org/entity/Q34645170"
+    },
+    {
+      "id": "Q16873487",
+      "name": "musée de la faïence",
+      "city": "Rarécourt",
+      "lat": 49.072509,
+      "lon": 5.124302,
+      "wikidata": "http://www.wikidata.org/entity/Q16873487",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_la_Fa%C3%AFence_de_Rar%C3%A9court",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q16873487"
     },
     {
       "id": "Q23013069",
@@ -24942,17 +24997,6 @@
       "source": "http://www.wikidata.org/entity/Q116207843"
     },
     {
-      "id": "Q2445818",
-      "name": "musée de La Poste",
-      "city": "15e arrondissement de Paris",
-      "lat": 48.8412,
-      "lon": 2.31626,
-      "wikidata": "http://www.wikidata.org/entity/Q2445818",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Postal_(Paris)",
-      "website": "https://www.museedelaposte.fr/",
-      "source": "http://www.wikidata.org/entity/Q2445818"
-    },
-    {
       "id": "Q23571183",
       "name": "musée de la poste",
       "city": "Amboise",
@@ -24962,6 +25006,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q23571183"
+    },
+    {
+      "id": "Q2445818",
+      "name": "musée de La Poste",
+      "city": "15e arrondissement de Paris",
+      "lat": 48.8412,
+      "lon": 2.31626,
+      "wikidata": "http://www.wikidata.org/entity/Q2445818",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Postal_(Paris)",
+      "website": "https://www.museedelaposte.fr/",
+      "source": "http://www.wikidata.org/entity/Q2445818"
     },
     {
       "id": "Q3329939",
@@ -26484,7 +26539,7 @@
     {
       "id": "Q3329755",
       "name": "musée de Tautavel - Centre européen de préhistoire",
-      "city": "Tautavel",
+      "city": "Pyrénées-Orientales",
       "lat": 42.815165728,
       "lon": 2.750071582,
       "wikidata": "http://www.wikidata.org/entity/Q3329755",
@@ -27010,17 +27065,6 @@
       "source": "http://www.wikidata.org/entity/Q2711480"
     },
     {
-      "id": "Q947018",
-      "name": "musée des automates",
-      "city": "La Rochelle",
-      "lat": 46.1517,
-      "lon": -1.15615,
-      "wikidata": "http://www.wikidata.org/entity/Q947018",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_automates",
-      "website": "http://www.museeslarochelle.com/",
-      "source": "http://www.wikidata.org/entity/Q947018"
-    },
-    {
       "id": "Q3330182",
       "name": "musée des automates",
       "city": "Neuilly-sur-Seine",
@@ -27041,6 +27085,17 @@
       "wikipedia": "",
       "website": "https://www.museeautomates.com/",
       "source": "http://www.wikidata.org/entity/Q22329679"
+    },
+    {
+      "id": "Q947018",
+      "name": "musée des automates",
+      "city": "La Rochelle",
+      "lat": 46.1517,
+      "lon": -1.15615,
+      "wikidata": "http://www.wikidata.org/entity/Q947018",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_automates",
+      "website": "http://www.museeslarochelle.com/",
+      "source": "http://www.wikidata.org/entity/Q947018"
     },
     {
       "id": "Q2391572",
@@ -28986,7 +29041,7 @@
       "lon": -1.45754,
       "wikidata": "http://www.wikidata.org/entity/Q93929598",
       "wikipedia": "https://fr.wikipedia.org/wiki/L%27Atelier_du_Chocolat",
-      "website": "https://www.atelierduchocolat.fr/fr/page/2-le-musee-du-chocolat",
+      "website": "https://www.atelierduchocolat.fr/",
       "source": "http://www.wikidata.org/entity/Q93929598"
     },
     {
@@ -29859,17 +29914,6 @@
       "source": "http://www.wikidata.org/entity/Q3330461"
     },
     {
-      "id": "Q3330363",
-      "name": "musée du Parfum",
-      "city": "Prissé",
-      "lat": 46.3318,
-      "lon": 4.7992,
-      "wikidata": "http://www.wikidata.org/entity/Q3330363",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_du_Parfum_(Priss%C3%A9)",
-      "website": "http://www.museeduparfum.com",
-      "source": "http://www.wikidata.org/entity/Q3330363"
-    },
-    {
       "id": "Q4820646",
       "name": "musée du Parfum",
       "city": "9e arrondissement de Paris",
@@ -29879,6 +29923,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_du_Parfum_(Paris)",
       "website": "https://musee-parfum-paris.fragonard.com",
       "source": "http://www.wikidata.org/entity/Q4820646"
+    },
+    {
+      "id": "Q3330363",
+      "name": "musée du Parfum",
+      "city": "Prissé",
+      "lat": 46.3318,
+      "lon": 4.7992,
+      "wikidata": "http://www.wikidata.org/entity/Q3330363",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_du_Parfum_(Priss%C3%A9)",
+      "website": "http://www.museeduparfum.com",
+      "source": "http://www.wikidata.org/entity/Q3330363"
     },
     {
       "id": "Q3330459",
@@ -33621,17 +33676,6 @@
       "source": "http://www.wikidata.org/entity/Q3329273"
     },
     {
-      "id": "Q1563354",
-      "name": "musée Matisse",
-      "city": "Nice",
-      "lat": 43.719444,
-      "lon": 7.276111,
-      "wikidata": "http://www.wikidata.org/entity/Q1563354",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Matisse_de_Nice",
-      "website": "http://musee-matisse-nice.org/",
-      "source": "http://www.wikidata.org/entity/Q1563354"
-    },
-    {
       "id": "Q3192181",
       "name": "musée Matisse",
       "city": "Le Cateau-Cambrésis",
@@ -33641,6 +33685,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Matisse_du_Cateau-Cambr%C3%A9sis",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3192181"
+    },
+    {
+      "id": "Q1563354",
+      "name": "musée Matisse",
+      "city": "Nice",
+      "lat": 43.719444,
+      "lon": 7.276111,
+      "wikidata": "http://www.wikidata.org/entity/Q1563354",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_Matisse_de_Nice",
+      "website": "http://musee-matisse-nice.org/",
+      "source": "http://www.wikidata.org/entity/Q1563354"
     },
     {
       "id": "Q3329274",
@@ -33656,7 +33711,7 @@
     {
       "id": "Q132127008",
       "name": "musée Maurepas",
-      "city": "Bretagne",
+      "city": "Rennes Métropole",
       "lat": 48.125487369,
       "lon": -1.66357642,
       "wikidata": "http://www.wikidata.org/entity/Q132127008",
@@ -36945,7 +37000,7 @@
     {
       "id": "Q106690989",
       "name": "Normandy Victory Museum",
-      "city": "Carentan-les-Marais",
+      "city": "Catz",
       "lat": 49.304611111,
       "lon": -1.193,
       "wikidata": "http://www.wikidata.org/entity/Q106690989",
@@ -39453,7 +39508,7 @@
     {
       "id": "Q109828290",
       "name": "place Aminadabu Birara",
-      "city": "18e arrondissement de Paris",
+      "city": "Clignancourt",
       "lat": 48.89075,
       "lon": 2.34546,
       "wikidata": "http://www.wikidata.org/entity/Q109828290",
@@ -39572,6 +39627,17 @@
       "source": "http://www.wikidata.org/entity/Q72404138"
     },
     {
+      "id": "Q105732280",
+      "name": "place Anatole-France",
+      "city": "Toulouse",
+      "lat": 43.60612,
+      "lon": 1.43864,
+      "wikidata": "http://www.wikidata.org/entity/Q105732280",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Anatole-France_(Toulouse)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105732280"
+    },
+    {
       "id": "Q20680504",
       "name": "place Anatole-France",
       "city": "Nantes",
@@ -39603,17 +39669,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q120494817"
-    },
-    {
-      "id": "Q105732280",
-      "name": "place Anatole-France",
-      "city": "Toulouse",
-      "lat": 43.60612,
-      "lon": 1.43864,
-      "wikidata": "http://www.wikidata.org/entity/Q105732280",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Anatole-France_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105732280"
     },
     {
       "id": "Q100363699",
@@ -40397,15 +40452,15 @@
       "source": "http://www.wikidata.org/entity/Q135935804"
     },
     {
-      "id": "Q55599070",
+      "id": "Q16510109",
       "name": "place Aristide-Briand",
-      "city": "3e arrondissement de Lyon",
-      "lat": 45.75298,
-      "lon": 4.84972,
-      "wikidata": "http://www.wikidata.org/entity/Q55599070",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Aristide-Briand_(Lyon)",
+      "city": "Nantes",
+      "lat": 47.2173,
+      "lon": -1.56277,
+      "wikidata": "http://www.wikidata.org/entity/Q16510109",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Aristide-Briand_(Nantes)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q55599070"
+      "source": "http://www.wikidata.org/entity/Q16510109"
     },
     {
       "id": "Q19407179",
@@ -40419,15 +40474,26 @@
       "source": "http://www.wikidata.org/entity/Q19407179"
     },
     {
-      "id": "Q16510109",
+      "id": "Q55599070",
       "name": "place Aristide-Briand",
-      "city": "Nantes",
-      "lat": 47.2173,
-      "lon": -1.56277,
-      "wikidata": "http://www.wikidata.org/entity/Q16510109",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Aristide-Briand_(Nantes)",
+      "city": "3e arrondissement de Lyon",
+      "lat": 45.75298,
+      "lon": 4.84972,
+      "wikidata": "http://www.wikidata.org/entity/Q55599070",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Aristide-Briand_(Lyon)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q16510109"
+      "source": "http://www.wikidata.org/entity/Q55599070"
+    },
+    {
+      "id": "Q111098391",
+      "name": "place Aristide-Briand",
+      "city": "Meudon",
+      "lat": 48.82018,
+      "lon": 2.22915,
+      "wikidata": "http://www.wikidata.org/entity/Q111098391",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Aristide-Briand_(Meudon)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111098391"
     },
     {
       "id": "Q27908967",
@@ -40527,17 +40593,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q118470799"
-    },
-    {
-      "id": "Q111098391",
-      "name": "place Aristide-Briand",
-      "city": "Meudon",
-      "lat": 48.82018,
-      "lon": 2.22915,
-      "wikidata": "http://www.wikidata.org/entity/Q111098391",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Aristide-Briand_(Meudon)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111098391"
     },
     {
       "id": "Q105733741",
@@ -40661,17 +40716,6 @@
       "source": "http://www.wikidata.org/entity/Q27910336"
     },
     {
-      "id": "Q111474840",
-      "name": "place Arthur-Rimbaud",
-      "city": "Bondy",
-      "lat": 48.905263121,
-      "lon": 2.478779819,
-      "wikidata": "http://www.wikidata.org/entity/Q111474840",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111474840"
-    },
-    {
       "id": "Q111847946",
       "name": "place Arthur-Rimbaud",
       "city": "Limeil-Brévannes",
@@ -40681,6 +40725,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q111847946"
+    },
+    {
+      "id": "Q111474840",
+      "name": "place Arthur-Rimbaud",
+      "city": "Bondy",
+      "lat": 48.905263121,
+      "lon": 2.478779819,
+      "wikidata": "http://www.wikidata.org/entity/Q111474840",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111474840"
     },
     {
       "id": "Q111324253",
@@ -41675,7 +41730,7 @@
     {
       "id": "Q108909197",
       "name": "place Bernard-Tissot",
-      "city": "quartier Gare Jouvenet",
+      "city": "Rouen",
       "lat": 49.4486,
       "lon": 1.09393,
       "wikidata": "http://www.wikidata.org/entity/Q108909197",
@@ -41785,7 +41840,7 @@
     {
       "id": "Q67322105",
       "name": "place Bilal-Berreni",
-      "city": "Charonne",
+      "city": "20e arrondissement de Paris",
       "lat": 48.85739,
       "lon": 2.4079,
       "wikidata": "http://www.wikidata.org/entity/Q67322105",
@@ -41840,7 +41895,7 @@
     {
       "id": "Q14629336",
       "name": "place Blanche-Lefebvre",
-      "city": "17e arrondissement de Paris",
+      "city": "Épinettes",
       "lat": 48.8973,
       "lon": 2.31762,
       "wikidata": "http://www.wikidata.org/entity/Q14629336",
@@ -42333,26 +42388,37 @@
       "source": "http://www.wikidata.org/entity/Q3389740"
     },
     {
+      "id": "Q109660546",
+      "name": "place Carnot",
+      "city": "Rouen",
+      "lat": 49.433869,
+      "lon": 1.0914,
+      "wikidata": "http://www.wikidata.org/entity/Q109660546",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Rouen)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q109660546"
+    },
+    {
+      "id": "Q23013098",
+      "name": "place Carnot",
+      "city": "Romainville",
+      "lat": 48.883825,
+      "lon": 2.440747,
+      "wikidata": "http://www.wikidata.org/entity/Q23013098",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Romainville)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q23013098"
+    },
+    {
       "id": "Q78038406",
       "name": "place Carnot",
       "city": "Rosny-sous-Bois",
-      "lat": 48.87362624,
-      "lon": 2.4827003,
+      "lat": 48.8742,
+      "lon": 2.48285,
       "wikidata": "http://www.wikidata.org/entity/Q78038406",
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Rosny-sous-Bois)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q78038406"
-    },
-    {
-      "id": "Q123964145",
-      "name": "place Carnot",
-      "city": "Nevers",
-      "lat": 46.98898,
-      "lon": 3.15715,
-      "wikidata": "http://www.wikidata.org/entity/Q123964145",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Nevers)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q123964145"
     },
     {
       "id": "Q4258",
@@ -42364,17 +42430,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Lyon)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q4258"
-    },
-    {
-      "id": "Q109660546",
-      "name": "place Carnot",
-      "city": "Rouen",
-      "lat": 49.433869,
-      "lon": 1.0914,
-      "wikidata": "http://www.wikidata.org/entity/Q109660546",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Rouen)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q109660546"
     },
     {
       "id": "Q43087245",
@@ -42454,15 +42509,15 @@
       "source": "http://www.wikidata.org/entity/Q116437650"
     },
     {
-      "id": "Q23013098",
+      "id": "Q123964145",
       "name": "place Carnot",
-      "city": "Romainville",
-      "lat": 48.883825,
-      "lon": 2.440747,
-      "wikidata": "http://www.wikidata.org/entity/Q23013098",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Romainville)",
+      "city": "Nevers",
+      "lat": 46.98898,
+      "lon": 3.15715,
+      "wikidata": "http://www.wikidata.org/entity/Q123964145",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Carnot_(Nevers)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q23013098"
+      "source": "http://www.wikidata.org/entity/Q123964145"
     },
     {
       "id": "Q106440663",
@@ -42960,17 +43015,6 @@
       "source": "http://www.wikidata.org/entity/Q105173647"
     },
     {
-      "id": "Q106643523",
-      "name": "place Charles-de-Gaulle",
-      "city": "Les Lilas",
-      "lat": 48.8825689,
-      "lon": 2.419116995,
-      "wikidata": "http://www.wikidata.org/entity/Q106643523",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q106643523"
-    },
-    {
       "id": "Q106349997",
       "name": "place Charles-de-Gaulle",
       "city": "Villemomble",
@@ -42980,6 +43024,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q106349997"
+    },
+    {
+      "id": "Q106643523",
+      "name": "place Charles-de-Gaulle",
+      "city": "Les Lilas",
+      "lat": 48.8825689,
+      "lon": 2.419116995,
+      "wikidata": "http://www.wikidata.org/entity/Q106643523",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q106643523"
     },
     {
       "id": "Q108805943",
@@ -43015,17 +43070,6 @@
       "source": "http://www.wikidata.org/entity/Q111303431"
     },
     {
-      "id": "Q111667792",
-      "name": "place Charles-de-Gaulle",
-      "city": "Orly",
-      "lat": 48.747096266,
-      "lon": 2.4073005,
-      "wikidata": "http://www.wikidata.org/entity/Q111667792",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111667792"
-    },
-    {
       "id": "Q111847903",
       "name": "place Charles-de-Gaulle",
       "city": "Limeil-Brévannes",
@@ -43035,6 +43079,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q111847903"
+    },
+    {
+      "id": "Q111667792",
+      "name": "place Charles-de-Gaulle",
+      "city": "Orly",
+      "lat": 48.747096266,
+      "lon": 2.4073005,
+      "wikidata": "http://www.wikidata.org/entity/Q111667792",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111667792"
     },
     {
       "id": "Q112120983",
@@ -43853,7 +43908,7 @@
     {
       "id": "Q15971535",
       "name": "place Clemenceau",
-      "city": "8e arrondissement de Paris",
+      "city": "Champs-Élysées",
       "lat": 48.8674,
       "lon": 2.31373,
       "wikidata": "http://www.wikidata.org/entity/Q15971535",
@@ -44073,7 +44128,7 @@
     {
       "id": "Q3389769",
       "name": "place Coluche",
-      "city": "14e arrondissement de Paris",
+      "city": "13e arrondissement de Paris",
       "lat": 48.8265,
       "lon": 2.34167,
       "wikidata": "http://www.wikidata.org/entity/Q3389769",
@@ -44183,7 +44238,7 @@
     {
       "id": "Q3389772",
       "name": "place Constantin-Brancusi",
-      "city": "Plaisance",
+      "city": "14e arrondissement de Paris",
       "lat": 48.8371,
       "lon": 2.32116,
       "wikidata": "http://www.wikidata.org/entity/Q3389772",
@@ -44392,7 +44447,7 @@
     {
       "id": "Q3389776",
       "name": "place Cécile-Brunschvicg",
-      "city": "Clignancourt",
+      "city": "18e arrondissement de Paris",
       "lat": 48.8936,
       "lon": 2.35113,
       "wikidata": "http://www.wikidata.org/entity/Q3389776",
@@ -44764,17 +44819,6 @@
       "source": "http://www.wikidata.org/entity/Q3390201"
     },
     {
-      "id": "Q96755702",
-      "name": "place d'Armes",
-      "city": "Fontainebleau",
-      "lat": 48.40347,
-      "lon": 2.70197,
-      "wikidata": "http://www.wikidata.org/entity/Q96755702",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_d%27Armes_(Fontainebleau)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q96755702"
-    },
-    {
       "id": "Q1428517",
       "name": "place d'Armes",
       "city": "Metz",
@@ -44784,6 +44828,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_d%27Armes_(Metz)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q1428517"
+    },
+    {
+      "id": "Q96755702",
+      "name": "place d'Armes",
+      "city": "Fontainebleau",
+      "lat": 48.40347,
+      "lon": 2.70197,
+      "wikidata": "http://www.wikidata.org/entity/Q96755702",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_d%27Armes_(Fontainebleau)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q96755702"
     },
     {
       "id": "Q105609099",
@@ -45622,6 +45677,17 @@
       "source": "http://www.wikidata.org/entity/Q14629274"
     },
     {
+      "id": "Q110882212",
+      "name": "place de Bir-Hakeim",
+      "city": "Bordeaux",
+      "lat": 44.836468,
+      "lon": -0.566042,
+      "wikidata": "http://www.wikidata.org/entity/Q110882212",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_Bir-Hakeim_(Bordeaux)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q110882212"
+    },
+    {
       "id": "Q110764670",
       "name": "place de Bir-Hakeim",
       "city": "Boulogne-Billancourt",
@@ -45642,17 +45708,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q122547722"
-    },
-    {
-      "id": "Q110882212",
-      "name": "place de Bir-Hakeim",
-      "city": "Bordeaux",
-      "lat": 44.836468,
-      "lon": -0.566042,
-      "wikidata": "http://www.wikidata.org/entity/Q110882212",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_Bir-Hakeim_(Bordeaux)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q110882212"
     },
     {
       "id": "Q3390218",
@@ -46284,7 +46339,7 @@
     {
       "id": "Q73573162",
       "name": "place de Jérusalem",
-      "city": "Quartier des Ternes",
+      "city": "Plaine-de-Monceaux",
       "lat": 48.88755,
       "lon": 2.29474,
       "wikidata": "http://www.wikidata.org/entity/Q73573162",
@@ -46471,7 +46526,7 @@
     {
       "id": "Q3390284",
       "name": "place de l'Adjudant-Vincenot",
-      "city": "Saint-Fargeau",
+      "city": "20e arrondissement de Paris",
       "lat": 48.8706,
       "lon": 2.40847,
       "wikidata": "http://www.wikidata.org/entity/Q3390284",
@@ -46570,7 +46625,7 @@
     {
       "id": "Q3390293",
       "name": "place de l'Amphithéâtre",
-      "city": "14e arrondissement de Paris",
+      "city": "Plaisance",
       "lat": 48.8369,
       "lon": 2.31723,
       "wikidata": "http://www.wikidata.org/entity/Q3390293",
@@ -47010,7 +47065,7 @@
     {
       "id": "Q3390301",
       "name": "place de l'Estrapade",
-      "city": "quartier du Val-de-Grâce",
+      "city": "Sorbonne",
       "lat": 48.8452,
       "lon": 2.34483,
       "wikidata": "http://www.wikidata.org/entity/Q3390301",
@@ -47028,17 +47083,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27Estrapade_(Toulouse)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q105732271"
-    },
-    {
-      "id": "Q105735319",
-      "name": "place de l'Europe",
-      "city": "Toulouse",
-      "lat": 43.61036,
-      "lon": 1.43122,
-      "wikidata": "http://www.wikidata.org/entity/Q105735319",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27Europe_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105735319"
     },
     {
       "id": "Q3390308",
@@ -47107,17 +47151,6 @@
       "source": "http://www.wikidata.org/entity/Q97066106"
     },
     {
-      "id": "Q106380537",
-      "name": "place de l'Europe",
-      "city": "Rosny-sous-Bois",
-      "lat": 48.8759461,
-      "lon": 2.4747681,
-      "wikidata": "http://www.wikidata.org/entity/Q106380537",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q106380537"
-    },
-    {
       "id": "Q105950468",
       "name": "place de l'Europe",
       "city": "Créteil",
@@ -47127,6 +47160,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q105950468"
+    },
+    {
+      "id": "Q106380537",
+      "name": "place de l'Europe",
+      "city": "Rosny-sous-Bois",
+      "lat": 48.8759461,
+      "lon": 2.4747681,
+      "wikidata": "http://www.wikidata.org/entity/Q106380537",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q106380537"
     },
     {
       "id": "Q110764892",
@@ -47228,6 +47272,17 @@
       "source": "http://www.wikidata.org/entity/Q127505303"
     },
     {
+      "id": "Q134308805",
+      "name": "place de l'Europe",
+      "city": "Roissy-en-France",
+      "lat": 49.0022905,
+      "lon": 2.5136483,
+      "wikidata": "http://www.wikidata.org/entity/Q134308805",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q134308805"
+    },
+    {
       "id": "Q132729610",
       "name": "place de l'Europe",
       "city": "Vaires-sur-Marne",
@@ -47261,17 +47316,6 @@
       "source": "http://www.wikidata.org/entity/Q132531280"
     },
     {
-      "id": "Q134308805",
-      "name": "place de l'Europe",
-      "city": "Roissy-en-France",
-      "lat": 49.0022905,
-      "lon": 2.5136483,
-      "wikidata": "http://www.wikidata.org/entity/Q134308805",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q134308805"
-    },
-    {
       "id": "Q134695649",
       "name": "place de l'Europe",
       "city": "Charnay-lès-Mâcon",
@@ -47292,6 +47336,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q135613388"
+    },
+    {
+      "id": "Q105735319",
+      "name": "place de l'Europe",
+      "city": "Toulouse",
+      "lat": 43.61036,
+      "lon": 1.43122,
+      "wikidata": "http://www.wikidata.org/entity/Q105735319",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27Europe_(Toulouse)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105735319"
     },
     {
       "id": "Q105097516",
@@ -47624,6 +47679,17 @@
       "source": "http://www.wikidata.org/entity/Q110958385"
     },
     {
+      "id": "Q1469337",
+      "name": "place de l'Hôtel-de-Ville",
+      "city": "Saint-Merri",
+      "lat": 48.856666666,
+      "lon": 2.351388888,
+      "wikidata": "http://www.wikidata.org/entity/Q1469337",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27H%C3%B4tel-de-Ville_-_esplanade_de_la_Lib%C3%A9ration",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q1469337"
+    },
+    {
       "id": "Q16510108",
       "name": "place de l'Hôtel-de-Ville",
       "city": "Nantes",
@@ -47635,15 +47701,15 @@
       "source": "http://www.wikidata.org/entity/Q16510108"
     },
     {
-      "id": "Q1469337",
+      "id": "Q39364",
       "name": "place de l'Hôtel-de-Ville",
-      "city": "Saint-Merri",
-      "lat": 48.856666666,
-      "lon": 2.351388888,
-      "wikidata": "http://www.wikidata.org/entity/Q1469337",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27H%C3%B4tel-de-Ville_-_esplanade_de_la_Lib%C3%A9ration",
+      "city": "Aix-en-Provence",
+      "lat": 43.5299,
+      "lon": 5.44787,
+      "wikidata": "http://www.wikidata.org/entity/Q39364",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27H%C3%B4tel-de-Ville_(Aix-en-Provence)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q1469337"
+      "source": "http://www.wikidata.org/entity/Q39364"
     },
     {
       "id": "Q29914521",
@@ -47734,17 +47800,6 @@
       "source": "http://www.wikidata.org/entity/Q124340513"
     },
     {
-      "id": "Q39364",
-      "name": "place de l'Hôtel-de-Ville",
-      "city": "Aix-en-Provence",
-      "lat": 43.5299,
-      "lon": 5.44787,
-      "wikidata": "http://www.wikidata.org/entity/Q39364",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27H%C3%B4tel-de-Ville_(Aix-en-Provence)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q39364"
-    },
-    {
       "id": "Q107352828",
       "name": "place de l'Incorporation",
       "city": "Mulhouse",
@@ -47811,17 +47866,6 @@
       "source": "http://www.wikidata.org/entity/Q53865127"
     },
     {
-      "id": "Q112063547",
-      "name": "place de l'Obélisque",
-      "city": "Chalon-sur-Saône",
-      "lat": 46.7845,
-      "lon": 4.8525,
-      "wikidata": "http://www.wikidata.org/entity/Q112063547",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q112063547"
-    },
-    {
       "id": "Q22954329",
       "name": "place de l'Obélisque",
       "city": "Port-Vendres",
@@ -47833,9 +47877,20 @@
       "source": "http://www.wikidata.org/entity/Q22954329"
     },
     {
+      "id": "Q112063547",
+      "name": "place de l'Obélisque",
+      "city": "Chalon-sur-Saône",
+      "lat": 46.7845,
+      "lon": 4.8525,
+      "wikidata": "http://www.wikidata.org/entity/Q112063547",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q112063547"
+    },
+    {
       "id": "Q3390310",
       "name": "place de l'Odéon",
-      "city": "6e arrondissement de Paris",
+      "city": "Odéon",
       "lat": 48.8497,
       "lon": 2.33861,
       "wikidata": "http://www.wikidata.org/entity/Q3390310",
@@ -48020,17 +48075,6 @@
       "source": "http://www.wikidata.org/entity/Q106502440"
     },
     {
-      "id": "Q133872518",
-      "name": "place de l'Union Européenne",
-      "city": "Massy",
-      "lat": 48.7269852,
-      "lon": 2.2573454,
-      "wikidata": "http://www.wikidata.org/entity/Q133872518",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q133872518"
-    },
-    {
       "id": "Q134127055",
       "name": "place de l'Union Européenne",
       "city": "Lognes",
@@ -48040,6 +48084,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q134127055"
+    },
+    {
+      "id": "Q133872518",
+      "name": "place de l'Union Européenne",
+      "city": "Massy",
+      "lat": 48.7269852,
+      "lon": 2.2573454,
+      "wikidata": "http://www.wikidata.org/entity/Q133872518",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q133872518"
     },
     {
       "id": "Q111264305",
@@ -48055,7 +48110,7 @@
     {
       "id": "Q3390315",
       "name": "place de l'Uruguay",
-      "city": "16e arrondissement de Paris",
+      "city": "Chaillot",
       "lat": 48.8697,
       "lon": 2.29579,
       "wikidata": "http://www.wikidata.org/entity/Q3390315",
@@ -48086,17 +48141,6 @@
       "source": "http://www.wikidata.org/entity/Q101413344"
     },
     {
-      "id": "Q18611210",
-      "name": "place de l'École",
-      "city": "Colmar",
-      "lat": 48.0779,
-      "lon": 7.35585,
-      "wikidata": "http://www.wikidata.org/entity/Q18611210",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89cole_(Colmar)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q18611210"
-    },
-    {
       "id": "Q3390323",
       "name": "place de l'École",
       "city": "Saint-Germain-l'Auxerrois",
@@ -48106,6 +48150,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89cole_(Paris)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3390323"
+    },
+    {
+      "id": "Q18611210",
+      "name": "place de l'École",
+      "city": "Colmar",
+      "lat": 48.0779,
+      "lon": 7.35585,
+      "wikidata": "http://www.wikidata.org/entity/Q18611210",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89cole_(Colmar)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q18611210"
     },
     {
       "id": "Q61456740",
@@ -48130,17 +48185,6 @@
       "source": "http://www.wikidata.org/entity/Q3390325"
     },
     {
-      "id": "Q3390328",
-      "name": "place de l'Édit-de-Nantes",
-      "city": "Nantes",
-      "lat": 47.2146,
-      "lon": -1.56747,
-      "wikidata": "http://www.wikidata.org/entity/Q3390328",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89dit-de-Nantes_(Nantes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390328"
-    },
-    {
       "id": "Q3390327",
       "name": "place de l'Édit-de-Nantes",
       "city": "Villette",
@@ -48150,6 +48194,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89dit-de-Nantes_(Paris)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3390327"
+    },
+    {
+      "id": "Q3390328",
+      "name": "place de l'Édit-de-Nantes",
+      "city": "Nantes",
+      "lat": 47.2146,
+      "lon": -1.56747,
+      "wikidata": "http://www.wikidata.org/entity/Q3390328",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89dit-de-Nantes_(Nantes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3390328"
     },
     {
       "id": "Q110503056",
@@ -48183,6 +48238,28 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89glise_(Locronan)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q109018362"
+    },
+    {
+      "id": "Q22249084",
+      "name": "place de l'Église",
+      "city": "Bugeat",
+      "lat": 45.59889,
+      "lon": 1.92806,
+      "wikidata": "http://www.wikidata.org/entity/Q22249084",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89glise_%C3%A0_Bugeat",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q22249084"
+    },
+    {
+      "id": "Q22954801",
+      "name": "place de l'Église",
+      "city": "Corme-Royal",
+      "lat": 45.745545,
+      "lon": -0.811374,
+      "wikidata": "http://www.wikidata.org/entity/Q22954801",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89glise_(Corme-Royal)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q22954801"
     },
     {
       "id": "Q60257952",
@@ -48383,6 +48460,17 @@
       "source": "http://www.wikidata.org/entity/Q105106675"
     },
     {
+      "id": "Q106271096",
+      "name": "place de l'Église",
+      "city": "Neuilly-Plaisance",
+      "lat": 48.8570953,
+      "lon": 2.508033025,
+      "wikidata": "http://www.wikidata.org/entity/Q106271096",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q106271096"
+    },
+    {
       "id": "Q106606777",
       "name": "place de l'Église",
       "city": "Romainville",
@@ -48414,17 +48502,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q107128958"
-    },
-    {
-      "id": "Q106271096",
-      "name": "place de l'Église",
-      "city": "Neuilly-Plaisance",
-      "lat": 48.8570953,
-      "lon": 2.508033025,
-      "wikidata": "http://www.wikidata.org/entity/Q106271096",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q106271096"
     },
     {
       "id": "Q108781355",
@@ -48493,17 +48570,6 @@
       "source": "http://www.wikidata.org/entity/Q111250411"
     },
     {
-      "id": "Q111831397",
-      "name": "place de l'Église",
-      "city": "Sucy-en-Brie",
-      "lat": 48.768872319,
-      "lon": 2.521211362,
-      "wikidata": "http://www.wikidata.org/entity/Q111831397",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111831397"
-    },
-    {
       "id": "Q111847927",
       "name": "place de l'Église",
       "city": "Limeil-Brévannes",
@@ -48535,6 +48601,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q112064893"
+    },
+    {
+      "id": "Q111831397",
+      "name": "place de l'Église",
+      "city": "Sucy-en-Brie",
+      "lat": 48.768872319,
+      "lon": 2.521211362,
+      "wikidata": "http://www.wikidata.org/entity/Q111831397",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111831397"
     },
     {
       "id": "Q113455443",
@@ -48900,28 +48977,6 @@
       "source": "http://www.wikidata.org/entity/Q141001683"
     },
     {
-      "id": "Q22954801",
-      "name": "place de l'Église",
-      "city": "Corme-Royal",
-      "lat": 45.745545,
-      "lon": -0.811374,
-      "wikidata": "http://www.wikidata.org/entity/Q22954801",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89glise_(Corme-Royal)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q22954801"
-    },
-    {
-      "id": "Q22249084",
-      "name": "place de l'Église",
-      "city": "Bugeat",
-      "lat": 45.59889,
-      "lon": 1.92806,
-      "wikidata": "http://www.wikidata.org/entity/Q22249084",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_l%27%C3%89glise_%C3%A0_Bugeat",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q22249084"
-    },
-    {
       "id": "Q110960810",
       "name": "place de l'Église - François Maleterre",
       "city": "16e arrondissement de Marseille",
@@ -49243,7 +49298,7 @@
     {
       "id": "Q3390337",
       "name": "place de l'Île-de-la-Réunion",
-      "city": "12e arrondissement de Paris",
+      "city": "Picpus",
       "lat": 48.848,
       "lon": 2.3992,
       "wikidata": "http://www.wikidata.org/entity/Q3390337",
@@ -49254,7 +49309,7 @@
     {
       "id": "Q3390336",
       "name": "place de l'Île-de-Sein",
-      "city": "Montparnasse",
+      "city": "14e arrondissement de Paris",
       "lat": 48.8344,
       "lon": 2.33651,
       "wikidata": "http://www.wikidata.org/entity/Q3390336",
@@ -49474,7 +49529,7 @@
     {
       "id": "Q3390339",
       "name": "place de la Bergère-d'Ivry",
-      "city": "13e arrondissement de Paris",
+      "city": "Croulebarbe",
       "lat": 48.831,
       "lon": 2.34841,
       "wikidata": "http://www.wikidata.org/entity/Q3390339",
@@ -49560,6 +49615,17 @@
       "source": "http://www.wikidata.org/entity/Q121564300"
     },
     {
+      "id": "Q3390344",
+      "name": "place de la Bourse",
+      "city": "Vivienne",
+      "lat": 48.8692,
+      "lon": 2.34139,
+      "wikidata": "http://www.wikidata.org/entity/Q3390344",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Bourse_(Paris)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3390344"
+    },
+    {
       "id": "Q3390343",
       "name": "place de la Bourse",
       "city": "Nantes",
@@ -49569,17 +49635,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Bourse_(Nantes)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3390343"
-    },
-    {
-      "id": "Q3390344",
-      "name": "place de la Bourse",
-      "city": "2e arrondissement de Paris",
-      "lat": 48.8692,
-      "lon": 2.34139,
-      "wikidata": "http://www.wikidata.org/entity/Q3390344",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Bourse_(Paris)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390344"
     },
     {
       "id": "Q3390346",
@@ -49604,6 +49659,17 @@
       "source": "http://www.wikidata.org/entity/Q16855045"
     },
     {
+      "id": "Q25397571",
+      "name": "place de la Bourse",
+      "city": "Toulouse",
+      "lat": 43.601318,
+      "lon": 1.442139,
+      "wikidata": "http://www.wikidata.org/entity/Q25397571",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Bourse_(Toulouse)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q25397571"
+    },
+    {
       "id": "Q97067167",
       "name": "place de la Bourse",
       "city": "Clermont-Ferrand",
@@ -49624,17 +49690,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q103957540"
-    },
-    {
-      "id": "Q25397571",
-      "name": "place de la Bourse",
-      "city": "Toulouse",
-      "lat": 43.601318,
-      "lon": 1.442139,
-      "wikidata": "http://www.wikidata.org/entity/Q25397571",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Bourse_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q25397571"
     },
     {
       "id": "Q111324648",
@@ -49747,17 +49802,6 @@
       "source": "http://www.wikidata.org/entity/Q3390348"
     },
     {
-      "id": "Q3390351",
-      "name": "place de la Cathédrale",
-      "city": "Belley",
-      "lat": 45.7578,
-      "lon": 5.6888,
-      "wikidata": "http://www.wikidata.org/entity/Q3390351",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Cath%C3%A9drale_(Belley)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390351"
-    },
-    {
       "id": "Q3390470",
       "name": "place de la Cathédrale",
       "city": "Strasbourg",
@@ -49767,6 +49811,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Cath%C3%A9drale_(Strasbourg)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3390470"
+    },
+    {
+      "id": "Q3390351",
+      "name": "place de la Cathédrale",
+      "city": "Belley",
+      "lat": 45.7578,
+      "lon": 5.6888,
+      "wikidata": "http://www.wikidata.org/entity/Q3390351",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Cath%C3%A9drale_(Belley)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3390351"
     },
     {
       "id": "Q17154210",
@@ -50035,7 +50090,7 @@
     {
       "id": "Q3390354",
       "name": "place de la Commune-de-Paris",
-      "city": "13e arrondissement de Paris",
+      "city": "Maison-Blanche",
       "lat": 48.8275,
       "lon": 2.34874,
       "wikidata": "http://www.wikidata.org/entity/Q3390354",
@@ -50066,17 +50121,6 @@
       "source": "http://www.wikidata.org/entity/Q61455334"
     },
     {
-      "id": "Q17355461",
-      "name": "place de la Comédie",
-      "city": "Metz",
-      "lat": 49.121444,
-      "lon": 6.173007,
-      "wikidata": "http://www.wikidata.org/entity/Q17355461",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Com%C3%A9die_(Metz)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q17355461"
-    },
-    {
       "id": "Q109018352",
       "name": "place de la Comédie",
       "city": "Bordeaux",
@@ -50086,6 +50130,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Com%C3%A9die_(Bordeaux)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q109018352"
+    },
+    {
+      "id": "Q17355461",
+      "name": "place de la Comédie",
+      "city": "Metz",
+      "lat": 49.121444,
+      "lon": 6.173007,
+      "wikidata": "http://www.wikidata.org/entity/Q17355461",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Com%C3%A9die_(Metz)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q17355461"
     },
     {
       "id": "Q108781392",
@@ -50946,6 +51001,50 @@
       "source": "http://www.wikidata.org/entity/Q20681590"
     },
     {
+      "id": "Q17154197",
+      "name": "place de la Gare",
+      "city": "Colmar",
+      "lat": 48.0721,
+      "lon": 7.34749,
+      "wikidata": "http://www.wikidata.org/entity/Q17154197",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Colmar)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q17154197"
+    },
+    {
+      "id": "Q86679286",
+      "name": "place de la Gare",
+      "city": "Lille",
+      "lat": 50.636666666,
+      "lon": 3.069444444,
+      "wikidata": "http://www.wikidata.org/entity/Q86679286",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Lille)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q86679286"
+    },
+    {
+      "id": "Q20731552",
+      "name": "place de la Gare",
+      "city": "Strasbourg",
+      "lat": 48.5847,
+      "lon": 7.73542,
+      "wikidata": "http://www.wikidata.org/entity/Q20731552",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Strasbourg)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q20731552"
+    },
+    {
+      "id": "Q116227232",
+      "name": "place de la Gare",
+      "city": "Bourg-la-Reine",
+      "lat": 48.78009257,
+      "lon": 2.313247665,
+      "wikidata": "http://www.wikidata.org/entity/Q116227232",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Bourg-la-Reine)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q116227232"
+    },
+    {
       "id": "Q53865123",
       "name": "place de la Gare",
       "city": "Courbevoie",
@@ -50968,37 +51067,15 @@
       "source": "http://www.wikidata.org/entity/Q85337443"
     },
     {
-      "id": "Q86679286",
+      "id": "Q116270632",
       "name": "place de la Gare",
-      "city": "Lille",
-      "lat": 50.636666666,
-      "lon": 3.069444444,
-      "wikidata": "http://www.wikidata.org/entity/Q86679286",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Lille)",
+      "city": "Garches",
+      "lat": 48.838509766,
+      "lon": 2.186892833,
+      "wikidata": "http://www.wikidata.org/entity/Q116270632",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Garches)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q86679286"
-    },
-    {
-      "id": "Q17154197",
-      "name": "place de la Gare",
-      "city": "Colmar",
-      "lat": 48.0721,
-      "lon": 7.34749,
-      "wikidata": "http://www.wikidata.org/entity/Q17154197",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Colmar)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q17154197"
-    },
-    {
-      "id": "Q20731552",
-      "name": "place de la Gare",
-      "city": "Strasbourg",
-      "lat": 48.5847,
-      "lon": 7.73542,
-      "wikidata": "http://www.wikidata.org/entity/Q20731552",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Strasbourg)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q20731552"
+      "source": "http://www.wikidata.org/entity/Q116270632"
     },
     {
       "id": "Q62523103",
@@ -51230,28 +51307,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q141170126"
-    },
-    {
-      "id": "Q116227232",
-      "name": "place de la Gare",
-      "city": "Bourg-la-Reine",
-      "lat": 48.78009257,
-      "lon": 2.313247665,
-      "wikidata": "http://www.wikidata.org/entity/Q116227232",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Bourg-la-Reine)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q116227232"
-    },
-    {
-      "id": "Q116270632",
-      "name": "place de la Gare",
-      "city": "Garches",
-      "lat": 48.838509766,
-      "lon": 2.186892833,
-      "wikidata": "http://www.wikidata.org/entity/Q116270632",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Gare_(Garches)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q116270632"
     },
     {
       "id": "Q116143983",
@@ -51705,17 +51760,6 @@
       "source": "http://www.wikidata.org/entity/Q105950356"
     },
     {
-      "id": "Q3390369",
-      "name": "place de la Liberté",
-      "city": "Toulon",
-      "lat": 43.1258,
-      "lon": 5.93047,
-      "wikidata": "http://www.wikidata.org/entity/Q3390369",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Libert%C3%A9_(Toulon)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390369"
-    },
-    {
       "id": "Q3390366",
       "name": "place de la Liberté",
       "city": "Brest",
@@ -51727,6 +51771,17 @@
       "source": "http://www.wikidata.org/entity/Q3390366"
     },
     {
+      "id": "Q3390369",
+      "name": "place de la Liberté",
+      "city": "Toulon",
+      "lat": 43.1258,
+      "lon": 5.93047,
+      "wikidata": "http://www.wikidata.org/entity/Q3390369",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Libert%C3%A9_(Toulon)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3390369"
+    },
+    {
       "id": "Q18745292",
       "name": "place de la Liberté",
       "city": "Nantes",
@@ -51736,6 +51791,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Libert%C3%A9_(Nantes)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q18745292"
+    },
+    {
+      "id": "Q111147099",
+      "name": "place de la Liberté",
+      "city": "Poitiers",
+      "lat": 46.58569,
+      "lon": 0.34289,
+      "wikidata": "http://www.wikidata.org/entity/Q111147099",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Libert%C3%A9_(Poitiers)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111147099"
     },
     {
       "id": "Q20796729",
@@ -51848,17 +51914,6 @@
       "source": "http://www.wikidata.org/entity/Q141665050"
     },
     {
-      "id": "Q111147099",
-      "name": "place de la Liberté",
-      "city": "Poitiers",
-      "lat": 46.58569,
-      "lon": 0.34289,
-      "wikidata": "http://www.wikidata.org/entity/Q111147099",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Libert%C3%A9_(Poitiers)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111147099"
-    },
-    {
       "id": "Q140720910",
       "name": "Place de la Liberté (Capbreton)",
       "city": "Capbreton",
@@ -51881,15 +51936,15 @@
       "source": "http://www.wikidata.org/entity/Q116761103"
     },
     {
-      "id": "Q3390370",
+      "id": "Q60848933",
       "name": "place de la Libération",
-      "city": "Dijon",
-      "lat": 47.3213,
-      "lon": 5.04137,
-      "wikidata": "http://www.wikidata.org/entity/Q3390370",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Lib%C3%A9ration_(Dijon)",
+      "city": "Bobigny",
+      "lat": 48.9065,
+      "lon": 2.4388,
+      "wikidata": "http://www.wikidata.org/entity/Q60848933",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Lib%C3%A9ration_(Bobigny)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390370"
+      "source": "http://www.wikidata.org/entity/Q60848933"
     },
     {
       "id": "Q3390368",
@@ -51903,15 +51958,15 @@
       "source": "http://www.wikidata.org/entity/Q3390368"
     },
     {
-      "id": "Q60848933",
+      "id": "Q3390370",
       "name": "place de la Libération",
-      "city": "Bobigny",
-      "lat": 48.9065,
-      "lon": 2.4388,
-      "wikidata": "http://www.wikidata.org/entity/Q60848933",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Lib%C3%A9ration_(Bobigny)",
+      "city": "Dijon",
+      "lat": 47.3213,
+      "lon": 5.04137,
+      "wikidata": "http://www.wikidata.org/entity/Q3390370",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Lib%C3%A9ration_(Dijon)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q60848933"
+      "source": "http://www.wikidata.org/entity/Q3390370"
     },
     {
       "id": "Q96649413",
@@ -52354,17 +52409,6 @@
       "source": "http://www.wikidata.org/entity/Q60851040"
     },
     {
-      "id": "Q18736613",
-      "name": "place de la Mairie",
-      "city": "Colmar",
-      "lat": 48.0797,
-      "lon": 7.35786,
-      "wikidata": "http://www.wikidata.org/entity/Q18736613",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Mairie_(Colmar)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q18736613"
-    },
-    {
       "id": "Q16912462",
       "name": "place de la Mairie",
       "city": "Rennes",
@@ -52374,6 +52418,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Mairie_(Rennes)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q16912462"
+    },
+    {
+      "id": "Q18736613",
+      "name": "place de la Mairie",
+      "city": "Colmar",
+      "lat": 48.0797,
+      "lon": 7.35786,
+      "wikidata": "http://www.wikidata.org/entity/Q18736613",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Mairie_(Colmar)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q18736613"
     },
     {
       "id": "Q26710793",
@@ -52882,6 +52937,17 @@
       "source": "http://www.wikidata.org/entity/Q61986942"
     },
     {
+      "id": "Q113239453",
+      "name": "place de la Paix",
+      "city": "Nouméa",
+      "lat": -22.271111111,
+      "lon": 166.440277777,
+      "wikidata": "http://www.wikidata.org/entity/Q113239453",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Paix_(Noum%C3%A9a)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q113239453"
+    },
+    {
       "id": "Q113840376",
       "name": "place de la Paix",
       "city": "Angers",
@@ -52992,17 +53058,6 @@
       "source": "http://www.wikidata.org/entity/Q134621500"
     },
     {
-      "id": "Q113239453",
-      "name": "place de la Paix",
-      "city": "Nouméa",
-      "lat": -22.271111111,
-      "lon": 166.440277777,
-      "wikidata": "http://www.wikidata.org/entity/Q113239453",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Paix_(Noum%C3%A9a)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q113239453"
-    },
-    {
       "id": "Q113840377",
       "name": "place de la Paix et de la Légion d'Honneur",
       "city": "Roanne",
@@ -53027,7 +53082,7 @@
     {
       "id": "Q62614724",
       "name": "place de la Patte-d'Oie",
-      "city": "Toulouse",
+      "city": "Patte d'Oie",
       "lat": 43.59645,
       "lon": 1.42324,
       "wikidata": "http://www.wikidata.org/entity/Q62614724",
@@ -53170,7 +53225,7 @@
     {
       "id": "Q3390392",
       "name": "place de la Porte-d'Auteuil",
-      "city": "16e arrondissement de Paris",
+      "city": "Auteuil",
       "lat": 48.8483,
       "lon": 2.2577,
       "wikidata": "http://www.wikidata.org/entity/Q3390392",
@@ -53181,7 +53236,7 @@
     {
       "id": "Q3390393",
       "name": "place de la Porte-de-Bagnolet",
-      "city": "20e arrondissement de Paris",
+      "city": "Charonne",
       "lat": 48.8645,
       "lon": 2.40884,
       "wikidata": "http://www.wikidata.org/entity/Q3390393",
@@ -53608,17 +53663,6 @@
       "source": "http://www.wikidata.org/entity/Q132531305"
     },
     {
-      "id": "Q105735068",
-      "name": "place de la Roseraie",
-      "city": "Toulouse",
-      "lat": 43.62031,
-      "lon": 1.46958,
-      "wikidata": "http://www.wikidata.org/entity/Q105735068",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Roseraie",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105735068"
-    },
-    {
       "id": "Q106509911",
       "name": "place de la Roseraie",
       "city": "Rosny-sous-Bois",
@@ -53628,6 +53672,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q106509911"
+    },
+    {
+      "id": "Q105735068",
+      "name": "place de la Roseraie",
+      "city": "Toulouse",
+      "lat": 43.62031,
+      "lon": 1.46958,
+      "wikidata": "http://www.wikidata.org/entity/Q105735068",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Roseraie",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105735068"
     },
     {
       "id": "Q3390407",
@@ -53674,6 +53729,39 @@
       "source": "http://www.wikidata.org/entity/Q16964757"
     },
     {
+      "id": "Q60851506",
+      "name": "place de la République",
+      "city": "Saint-Ouen-sur-Seine",
+      "lat": 48.91201,
+      "lon": 2.3339,
+      "wikidata": "http://www.wikidata.org/entity/Q60851506",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Saint-Ouen-sur-Seine)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q60851506"
+    },
+    {
+      "id": "Q60853383",
+      "name": "place de la République",
+      "city": "Hyères",
+      "lat": 43.121338,
+      "lon": 6.130469,
+      "wikidata": "http://www.wikidata.org/entity/Q60853383",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Hy%C3%A8res)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q60853383"
+    },
+    {
+      "id": "Q86724386",
+      "name": "place de la République",
+      "city": "Fontainebleau",
+      "lat": 48.406111111,
+      "lon": 2.700833333,
+      "wikidata": "http://www.wikidata.org/entity/Q86724386",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Fontainebleau)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q86724386"
+    },
+    {
       "id": "Q175055",
       "name": "place de la République",
       "city": "11e arrondissement de Paris",
@@ -53683,17 +53771,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Paris)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q175055"
-    },
-    {
-      "id": "Q54957491",
-      "name": "place de la République",
-      "city": "Châlons-en-Champagne",
-      "lat": 48.955302,
-      "lon": 4.362521,
-      "wikidata": "http://www.wikidata.org/entity/Q54957491",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Ch%C3%A2lons-en-Champagne)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q54957491"
     },
     {
       "id": "Q3390434",
@@ -53850,39 +53927,6 @@
       "source": "http://www.wikidata.org/entity/Q3390435"
     },
     {
-      "id": "Q85838039",
-      "name": "place de la République",
-      "city": "Bondy",
-      "lat": 48.89518,
-      "lon": 2.47761,
-      "wikidata": "http://www.wikidata.org/entity/Q85838039",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Bondy)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q85838039"
-    },
-    {
-      "id": "Q60853383",
-      "name": "place de la République",
-      "city": "Hyères",
-      "lat": 43.121338,
-      "lon": 6.130469,
-      "wikidata": "http://www.wikidata.org/entity/Q60853383",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Hy%C3%A8res)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q60853383"
-    },
-    {
-      "id": "Q60851506",
-      "name": "place de la République",
-      "city": "Saint-Ouen-sur-Seine",
-      "lat": 48.91201,
-      "lon": 2.3339,
-      "wikidata": "http://www.wikidata.org/entity/Q60851506",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Saint-Ouen-sur-Seine)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q60851506"
-    },
-    {
       "id": "Q16510105",
       "name": "place de la République",
       "city": "Dijon",
@@ -53894,26 +53938,59 @@
       "source": "http://www.wikidata.org/entity/Q16510105"
     },
     {
-      "id": "Q86724386",
+      "id": "Q109706124",
       "name": "place de la République",
-      "city": "Fontainebleau",
-      "lat": 48.406111111,
-      "lon": 2.700833333,
-      "wikidata": "http://www.wikidata.org/entity/Q86724386",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Fontainebleau)",
+      "city": "Bois-Colombes",
+      "lat": 48.915,
+      "lon": 2.268611111,
+      "wikidata": "http://www.wikidata.org/entity/Q109706124",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Bois-Colombes)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q86724386"
+      "source": "http://www.wikidata.org/entity/Q109706124"
     },
     {
-      "id": "Q106095733",
+      "id": "Q54957491",
       "name": "place de la République",
-      "city": "Bagneux",
-      "lat": 48.796227375,
-      "lon": 2.302115175,
-      "wikidata": "http://www.wikidata.org/entity/Q106095733",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Bagneux)",
+      "city": "Châlons-en-Champagne",
+      "lat": 48.955302,
+      "lon": 4.362521,
+      "wikidata": "http://www.wikidata.org/entity/Q54957491",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Ch%C3%A2lons-en-Champagne)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q106095733"
+      "source": "http://www.wikidata.org/entity/Q54957491"
+    },
+    {
+      "id": "Q23774348",
+      "name": "place de la République",
+      "city": "Perpignan",
+      "lat": 42.698495,
+      "lon": 2.895293,
+      "wikidata": "http://www.wikidata.org/entity/Q23774348",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Perpignan)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q23774348"
+    },
+    {
+      "id": "Q27908969",
+      "name": "place de la République",
+      "city": "Fougères",
+      "lat": 48.34988,
+      "lon": -1.19541,
+      "wikidata": "http://www.wikidata.org/entity/Q27908969",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Foug%C3%A8res)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q27908969"
+    },
+    {
+      "id": "Q85838039",
+      "name": "place de la République",
+      "city": "Bondy",
+      "lat": 48.89518,
+      "lon": 2.47761,
+      "wikidata": "http://www.wikidata.org/entity/Q85838039",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Bondy)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q85838039"
     },
     {
       "id": "Q110862922",
@@ -53927,15 +54004,15 @@
       "source": "http://www.wikidata.org/entity/Q110862922"
     },
     {
-      "id": "Q109706124",
+      "id": "Q110863239",
       "name": "place de la République",
-      "city": "Bois-Colombes",
-      "lat": 48.915,
-      "lon": 2.268611111,
-      "wikidata": "http://www.wikidata.org/entity/Q109706124",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Bois-Colombes)",
+      "city": "Malakoff",
+      "lat": 48.8244253,
+      "lon": 2.30395095,
+      "wikidata": "http://www.wikidata.org/entity/Q110863239",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Malakoff,_Hauts-de-Seine)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q109706124"
+      "source": "http://www.wikidata.org/entity/Q110863239"
     },
     {
       "id": "Q97069425",
@@ -54059,17 +54136,6 @@
       "source": "http://www.wikidata.org/entity/Q105396218"
     },
     {
-      "id": "Q108212027",
-      "name": "place de la République",
-      "city": "Issoire",
-      "lat": 45.54348,
-      "lon": 3.24806,
-      "wikidata": "http://www.wikidata.org/entity/Q108212027",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q108212027"
-    },
-    {
       "id": "Q106349848",
       "name": "place de la République",
       "city": "Villemomble",
@@ -54079,6 +54145,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q106349848"
+    },
+    {
+      "id": "Q108212027",
+      "name": "place de la République",
+      "city": "Issoire",
+      "lat": 45.54348,
+      "lon": 3.24806,
+      "wikidata": "http://www.wikidata.org/entity/Q108212027",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q108212027"
     },
     {
       "id": "Q109612594",
@@ -54279,6 +54356,17 @@
       "source": "http://www.wikidata.org/entity/Q120495323"
     },
     {
+      "id": "Q134320776",
+      "name": "place de la République",
+      "city": "Bellerive-sur-Allier",
+      "lat": 46.11762,
+      "lon": 3.4102,
+      "wikidata": "http://www.wikidata.org/entity/Q134320776",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q134320776"
+    },
+    {
       "id": "Q132729706",
       "name": "place de la République",
       "city": "Vaires-sur-Marne",
@@ -54299,17 +54387,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q132203097"
-    },
-    {
-      "id": "Q134320776",
-      "name": "place de la République",
-      "city": "Bellerive-sur-Allier",
-      "lat": 46.11762,
-      "lon": 3.4102,
-      "wikidata": "http://www.wikidata.org/entity/Q134320776",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q134320776"
     },
     {
       "id": "Q140667526",
@@ -54334,37 +54411,15 @@
       "source": "http://www.wikidata.org/entity/Q140530930"
     },
     {
-      "id": "Q23774348",
+      "id": "Q106095733",
       "name": "place de la République",
-      "city": "Perpignan",
-      "lat": 42.698495,
-      "lon": 2.895293,
-      "wikidata": "http://www.wikidata.org/entity/Q23774348",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Perpignan)",
+      "city": "Bagneux",
+      "lat": 48.796227375,
+      "lon": 2.302115175,
+      "wikidata": "http://www.wikidata.org/entity/Q106095733",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Bagneux)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q23774348"
-    },
-    {
-      "id": "Q110863239",
-      "name": "place de la République",
-      "city": "Malakoff",
-      "lat": 48.8244253,
-      "lon": 2.30395095,
-      "wikidata": "http://www.wikidata.org/entity/Q110863239",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Malakoff,_Hauts-de-Seine)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q110863239"
-    },
-    {
-      "id": "Q27908969",
-      "name": "place de la République",
-      "city": "Fougères",
-      "lat": 48.34988,
-      "lon": -1.19541,
-      "wikidata": "http://www.wikidata.org/entity/Q27908969",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_R%C3%A9publique_(Foug%C3%A8res)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q27908969"
+      "source": "http://www.wikidata.org/entity/Q106095733"
     },
     {
       "id": "Q134285840",
@@ -54477,6 +54532,17 @@
       "source": "http://www.wikidata.org/entity/Q20792932"
     },
     {
+      "id": "Q106349584",
+      "name": "place de la Résistance",
+      "city": "Villemomble",
+      "lat": 48.887441652,
+      "lon": 2.511212164,
+      "wikidata": "http://www.wikidata.org/entity/Q106349584",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q106349584"
+    },
+    {
       "id": "Q106502543",
       "name": "place de la Résistance",
       "city": "Champigny-sur-Marne",
@@ -54508,17 +54574,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q106643426"
-    },
-    {
-      "id": "Q106349584",
-      "name": "place de la Résistance",
-      "city": "Villemomble",
-      "lat": 48.887441652,
-      "lon": 2.511212164,
-      "wikidata": "http://www.wikidata.org/entity/Q106349584",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q106349584"
     },
     {
       "id": "Q108781532",
@@ -54939,17 +54994,6 @@
       "source": "http://www.wikidata.org/entity/Q16670295"
     },
     {
-      "id": "Q111306055",
-      "name": "place de la Trinité",
-      "city": "Rennes",
-      "lat": 48.11232,
-      "lon": -1.68346,
-      "wikidata": "http://www.wikidata.org/entity/Q111306055",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111306055"
-    },
-    {
       "id": "Q9517",
       "name": "place de la Trinité",
       "city": "5e arrondissement de Lyon",
@@ -54959,6 +55003,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_la_Trinit%C3%A9_(Lyon)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q9517"
+    },
+    {
+      "id": "Q111306055",
+      "name": "place de la Trinité",
+      "city": "Rennes",
+      "lat": 48.11232,
+      "lon": -1.68346,
+      "wikidata": "http://www.wikidata.org/entity/Q111306055",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111306055"
     },
     {
       "id": "Q16510097",
@@ -56435,6 +56490,17 @@
       "source": "http://www.wikidata.org/entity/Q110958400"
     },
     {
+      "id": "Q109018356",
+      "name": "place de Verdun",
+      "city": "Grenoble",
+      "lat": 45.188888888,
+      "lon": 5.731944444,
+      "wikidata": "http://www.wikidata.org/entity/Q109018356",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_Verdun_(Grenoble)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q109018356"
+    },
+    {
       "id": "Q3390272",
       "name": "place de Verdun",
       "city": "Quartier des Ternes",
@@ -56468,15 +56534,15 @@
       "source": "http://www.wikidata.org/entity/Q111511785"
     },
     {
-      "id": "Q109018356",
+      "id": "Q23013100",
       "name": "place de Verdun",
-      "city": "Grenoble",
-      "lat": 45.188888888,
-      "lon": 5.731944444,
-      "wikidata": "http://www.wikidata.org/entity/Q109018356",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_Verdun_(Grenoble)",
+      "city": "Saint-Georges-de-Didonne",
+      "lat": 45.60251,
+      "lon": -0.99799,
+      "wikidata": "http://www.wikidata.org/entity/Q23013100",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_Verdun_(Saint-Georges-de-Didonne)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q109018356"
+      "source": "http://www.wikidata.org/entity/Q23013100"
     },
     {
       "id": "Q105099374",
@@ -56633,17 +56699,6 @@
       "source": "http://www.wikidata.org/entity/Q138949593"
     },
     {
-      "id": "Q23013100",
-      "name": "place de Verdun",
-      "city": "Saint-Georges-de-Didonne",
-      "lat": 45.60251,
-      "lon": -0.99799,
-      "wikidata": "http://www.wikidata.org/entity/Q23013100",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_de_Verdun_(Saint-Georges-de-Didonne)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q23013100"
-    },
-    {
       "id": "Q105735772",
       "name": "place de Vintimille",
       "city": "Toulouse",
@@ -56679,7 +56734,7 @@
     {
       "id": "Q3390282",
       "name": "place de Wagram",
-      "city": "17e arrondissement de Paris",
+      "city": "Plaine-de-Monceaux",
       "lat": 48.8874,
       "lon": 2.3047,
       "wikidata": "http://www.wikidata.org/entity/Q3390282",
@@ -56996,17 +57051,6 @@
       "source": "http://www.wikidata.org/entity/Q134394966"
     },
     {
-      "id": "Q105734711",
-      "name": "place des Abattoirs",
-      "city": "Toulouse",
-      "lat": 43.6008,
-      "lon": 1.42837,
-      "wikidata": "http://www.wikidata.org/entity/Q105734711",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Abattoirs",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105734711"
-    },
-    {
       "id": "Q110958401",
       "name": "place des Abattoirs",
       "city": "15e arrondissement de Marseille",
@@ -57016,6 +57060,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q110958401"
+    },
+    {
+      "id": "Q105734711",
+      "name": "place des Abattoirs",
+      "city": "Toulouse",
+      "lat": 43.6008,
+      "lon": 1.42837,
+      "wikidata": "http://www.wikidata.org/entity/Q105734711",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Abattoirs",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105734711"
     },
     {
       "id": "Q3390487",
@@ -57722,6 +57777,17 @@
       "source": "http://www.wikidata.org/entity/Q61455064"
     },
     {
+      "id": "Q109315446",
+      "name": "place des Carmes",
+      "city": "Lyon",
+      "lat": 45.7674,
+      "lon": 4.8316,
+      "wikidata": "http://www.wikidata.org/entity/Q109315446",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Carmes_(Lyon)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q109315446"
+    },
+    {
       "id": "Q16510100",
       "name": "place des Carmes",
       "city": "Toulouse",
@@ -57742,17 +57808,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Carmes_(Rouen)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q21619179"
-    },
-    {
-      "id": "Q109315446",
-      "name": "place des Carmes",
-      "city": "Lyon",
-      "lat": 45.7674,
-      "lon": 4.8316,
-      "wikidata": "http://www.wikidata.org/entity/Q109315446",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Carmes_(Lyon)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q109315446"
     },
     {
       "id": "Q24834026",
@@ -57911,7 +57966,7 @@
     {
       "id": "Q132523124",
       "name": "place des Chibanis et des Chibanias",
-      "city": "Goutte-d'Or",
+      "city": "18e arrondissement de Paris",
       "lat": 48.884954,
       "lon": 2.352523,
       "wikidata": "http://www.wikidata.org/entity/Q132523124",
@@ -58151,17 +58206,6 @@
       "source": "http://www.wikidata.org/entity/Q113141792"
     },
     {
-      "id": "Q19901143",
-      "name": "place des Cordeliers",
-      "city": "2e arrondissement de Lyon",
-      "lat": 45.7635595,
-      "lon": 4.8371459,
-      "wikidata": "http://www.wikidata.org/entity/Q19901143",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Cordeliers_(Lyon)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q19901143"
-    },
-    {
       "id": "Q20724453",
       "name": "place des Cordeliers",
       "city": "Dijon",
@@ -58171,6 +58215,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Cordeliers_(Dijon)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q20724453"
+    },
+    {
+      "id": "Q19901143",
+      "name": "place des Cordeliers",
+      "city": "2e arrondissement de Lyon",
+      "lat": 45.7635595,
+      "lon": 4.8371459,
+      "wikidata": "http://www.wikidata.org/entity/Q19901143",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Cordeliers_(Lyon)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q19901143"
     },
     {
       "id": "Q101070976",
@@ -58503,9 +58558,20 @@
       "source": "http://www.wikidata.org/entity/Q121600369"
     },
     {
+      "id": "Q141821874",
+      "name": "place des Droits de l'Homme et du Citoyen",
+      "city": "Évry-Courcouronnes",
+      "lat": 48.624145685,
+      "lon": 2.428275871,
+      "wikidata": "http://www.wikidata.org/entity/Q141821874",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q141821874"
+    },
+    {
       "id": "Q60849060",
       "name": "place des Droits-de-l'Enfant",
-      "city": "14e arrondissement de Paris",
+      "city": "Petit-Montrouge",
       "lat": 48.82751,
       "lon": 2.33217,
       "wikidata": "http://www.wikidata.org/entity/Q60849060",
@@ -59262,17 +59328,6 @@
       "source": "http://www.wikidata.org/entity/Q16510111"
     },
     {
-      "id": "Q105734093",
-      "name": "place des Jacobins",
-      "city": "Toulouse",
-      "lat": 43.60336,
-      "lon": 1.4394,
-      "wikidata": "http://www.wikidata.org/entity/Q105734093",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105734093"
-    },
-    {
       "id": "Q10169",
       "name": "place des Jacobins",
       "city": "2e arrondissement de Lyon",
@@ -59282,6 +59337,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Jacobins_(Lyon)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q10169"
+    },
+    {
+      "id": "Q105734093",
+      "name": "place des Jacobins",
+      "city": "Toulouse",
+      "lat": 43.60336,
+      "lon": 1.4394,
+      "wikidata": "http://www.wikidata.org/entity/Q105734093",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105734093"
     },
     {
       "id": "Q105950067",
@@ -59405,17 +59471,6 @@
       "source": "http://www.wikidata.org/entity/Q3390521"
     },
     {
-      "id": "Q96399502",
-      "name": "place des Lices",
-      "city": "",
-      "lat": 43.27,
-      "lon": 6.641138888,
-      "wikidata": "http://www.wikidata.org/entity/Q96399502",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Lices_(Saint-Tropez)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q96399502"
-    },
-    {
       "id": "Q18346412",
       "name": "place des Lices",
       "city": "Rennes",
@@ -59425,6 +59480,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Lices_(Rennes)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q18346412"
+    },
+    {
+      "id": "Q96399502",
+      "name": "place des Lices",
+      "city": "",
+      "lat": 43.27,
+      "lon": 6.641138888,
+      "wikidata": "http://www.wikidata.org/entity/Q96399502",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_des_Lices_(Saint-Tropez)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q96399502"
     },
     {
       "id": "Q101070767",
@@ -61066,17 +61132,6 @@
       "source": "http://www.wikidata.org/entity/Q111204937"
     },
     {
-      "id": "Q111832855",
-      "name": "place des Tilleuls",
-      "city": "Boissy-Saint-Léger",
-      "lat": 48.756196187,
-      "lon": 2.498265087,
-      "wikidata": "http://www.wikidata.org/entity/Q111832855",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111832855"
-    },
-    {
       "id": "Q111847904",
       "name": "place des Tilleuls",
       "city": "Limeil-Brévannes",
@@ -61086,6 +61141,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q111847904"
+    },
+    {
+      "id": "Q111832855",
+      "name": "place des Tilleuls",
+      "city": "Boissy-Saint-Léger",
+      "lat": 48.756196187,
+      "lon": 2.498265087,
+      "wikidata": "http://www.wikidata.org/entity/Q111832855",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111832855"
     },
     {
       "id": "Q113138159",
@@ -61660,17 +61726,6 @@
       "source": "http://www.wikidata.org/entity/Q84090571"
     },
     {
-      "id": "Q111832857",
-      "name": "place des Érables",
-      "city": "Boissy-Saint-Léger",
-      "lat": 48.757352126,
-      "lon": 2.500923015,
-      "wikidata": "http://www.wikidata.org/entity/Q111832857",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q111832857"
-    },
-    {
       "id": "Q111916853",
       "name": "place des Érables",
       "city": "Villeneuve-Saint-Georges",
@@ -61680,6 +61735,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q111916853"
+    },
+    {
+      "id": "Q111832857",
+      "name": "place des Érables",
+      "city": "Boissy-Saint-Léger",
+      "lat": 48.757352126,
+      "lon": 2.500923015,
+      "wikidata": "http://www.wikidata.org/entity/Q111832857",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q111832857"
     },
     {
       "id": "Q113447125",
@@ -62045,28 +62111,6 @@
       "source": "http://www.wikidata.org/entity/Q104519452"
     },
     {
-      "id": "Q108781152",
-      "name": "place du 11 Novembre 1918",
-      "city": "Noisy-le-Grand",
-      "lat": 48.843406153,
-      "lon": 2.575464107,
-      "wikidata": "http://www.wikidata.org/entity/Q108781152",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q108781152"
-    },
-    {
-      "id": "Q106665879",
-      "name": "place du 11 Novembre 1918",
-      "city": "Bagnolet",
-      "lat": 48.8701,
-      "lon": 2.42092,
-      "wikidata": "http://www.wikidata.org/entity/Q106665879",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q106665879"
-    },
-    {
       "id": "Q105812930",
       "name": "place du 11 novembre 1918",
       "city": "Sainte-Luce-sur-Loire",
@@ -62087,6 +62131,28 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q105771493"
+    },
+    {
+      "id": "Q108781152",
+      "name": "place du 11 Novembre 1918",
+      "city": "Noisy-le-Grand",
+      "lat": 48.843406153,
+      "lon": 2.575464107,
+      "wikidata": "http://www.wikidata.org/entity/Q108781152",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q108781152"
+    },
+    {
+      "id": "Q106665879",
+      "name": "place du 11 Novembre 1918",
+      "city": "Bagnolet",
+      "lat": 48.8701,
+      "lon": 2.42092,
+      "wikidata": "http://www.wikidata.org/entity/Q106665879",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q106665879"
     },
     {
       "id": "Q108784472",
@@ -64267,6 +64333,17 @@
       "source": "http://www.wikidata.org/entity/Q3390586"
     },
     {
+      "id": "Q1422975",
+      "name": "place du Châtelet",
+      "city": "Saint-Germain-l'Auxerrois",
+      "lat": 48.8575,
+      "lon": 2.347222222,
+      "wikidata": "http://www.wikidata.org/entity/Q1422975",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Ch%C3%A2telet",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q1422975"
+    },
+    {
       "id": "Q15966975",
       "name": "place du Châtelet",
       "city": "Orléans",
@@ -64276,17 +64353,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Ch%C3%A2telet_(Orl%C3%A9ans)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q15966975"
-    },
-    {
-      "id": "Q1422975",
-      "name": "place du Châtelet",
-      "city": "Saint-Merri",
-      "lat": 48.8575,
-      "lon": 2.347222222,
-      "wikidata": "http://www.wikidata.org/entity/Q1422975",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Ch%C3%A2telet",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q1422975"
     },
     {
       "id": "Q109661158",
@@ -65697,17 +65763,6 @@
       "source": "http://www.wikidata.org/entity/Q141065447"
     },
     {
-      "id": "Q132729748",
-      "name": "place du Général de Gaulle",
-      "city": "Vaires-sur-Marne",
-      "lat": 48.874767,
-      "lon": 2.639303,
-      "wikidata": "http://www.wikidata.org/entity/Q132729748",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q132729748"
-    },
-    {
       "id": "Q134127949",
       "name": "place du Général de Gaulle",
       "city": "Noisiel",
@@ -65728,6 +65783,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q134086318"
+    },
+    {
+      "id": "Q132729748",
+      "name": "place du Général de Gaulle",
+      "city": "Vaires-sur-Marne",
+      "lat": 48.874767,
+      "lon": 2.639303,
+      "wikidata": "http://www.wikidata.org/entity/Q132729748",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q132729748"
     },
     {
       "id": "Q134701961",
@@ -65829,28 +65895,6 @@
       "source": "http://www.wikidata.org/entity/Q3390614"
     },
     {
-      "id": "Q55087343",
-      "name": "place du Général-de-Gaulle",
-      "city": "Nancy",
-      "lat": 48.69675,
-      "lon": 6.18106,
-      "wikidata": "http://www.wikidata.org/entity/Q55087343",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Nancy)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q55087343"
-    },
-    {
-      "id": "Q64626982",
-      "name": "place du Général-de-Gaulle",
-      "city": "Metz",
-      "lat": 49.110833333,
-      "lon": 6.171388888,
-      "wikidata": "http://www.wikidata.org/entity/Q64626982",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Metz)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q64626982"
-    },
-    {
       "id": "Q3390623",
       "name": "place du Général-de-Gaulle",
       "city": "1er arrondissement de Marseille",
@@ -65873,6 +65917,17 @@
       "source": "http://www.wikidata.org/entity/Q3390627"
     },
     {
+      "id": "Q64626982",
+      "name": "place du Général-de-Gaulle",
+      "city": "Metz",
+      "lat": 49.110833333,
+      "lon": 6.171388888,
+      "wikidata": "http://www.wikidata.org/entity/Q64626982",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Metz)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q64626982"
+    },
+    {
       "id": "Q18611077",
       "name": "place du Général-de-Gaulle",
       "city": "Antony",
@@ -65882,17 +65937,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Carrefour_de_la_Croix_de_Berny",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q18611077"
-    },
-    {
-      "id": "Q102190663",
-      "name": "place du Général-de-Gaulle",
-      "city": "Fontainebleau",
-      "lat": 48.402495,
-      "lon": 2.696773,
-      "wikidata": "http://www.wikidata.org/entity/Q102190663",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Fontainebleau)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q102190663"
     },
     {
       "id": "Q88867674",
@@ -65915,6 +65959,39 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Gagny)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q106377838"
+    },
+    {
+      "id": "Q55087343",
+      "name": "place du Général-de-Gaulle",
+      "city": "Nancy",
+      "lat": 48.69675,
+      "lon": 6.18106,
+      "wikidata": "http://www.wikidata.org/entity/Q55087343",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Nancy)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q55087343"
+    },
+    {
+      "id": "Q22248488",
+      "name": "place du Général-de-Gaulle",
+      "city": "Rouen",
+      "lat": 49.443366666,
+      "lon": 1.099288888,
+      "wikidata": "http://www.wikidata.org/entity/Q22248488",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Rouen)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q22248488"
+    },
+    {
+      "id": "Q102190663",
+      "name": "place du Général-de-Gaulle",
+      "city": "Fontainebleau",
+      "lat": 48.402495,
+      "lon": 2.696773,
+      "wikidata": "http://www.wikidata.org/entity/Q102190663",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Fontainebleau)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q102190663"
     },
     {
       "id": "Q27661914",
@@ -66181,17 +66258,6 @@
       "source": "http://www.wikidata.org/entity/Q123504513"
     },
     {
-      "id": "Q22248488",
-      "name": "place du Général-de-Gaulle",
-      "city": "Rouen",
-      "lat": 49.443366666,
-      "lon": 1.099288888,
-      "wikidata": "http://www.wikidata.org/entity/Q22248488",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-de-Gaulle_(Rouen)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q22248488"
-    },
-    {
       "id": "Q86682461",
       "name": "place du Général-Gouraud",
       "city": "Neuilly-sur-Seine",
@@ -66258,39 +66324,6 @@
       "source": "http://www.wikidata.org/entity/Q3390617"
     },
     {
-      "id": "Q72802423",
-      "name": "place du Général-Leclerc",
-      "city": "Fontenay-sous-Bois",
-      "lat": 48.84728,
-      "lon": 2.47155,
-      "wikidata": "http://www.wikidata.org/entity/Q72802423",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Fontenay-sous-Bois)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q72802423"
-    },
-    {
-      "id": "Q65129416",
-      "name": "place du Général-Leclerc",
-      "city": "Colombes",
-      "lat": 48.922861,
-      "lon": 2.252558,
-      "wikidata": "http://www.wikidata.org/entity/Q65129416",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Colombes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q65129416"
-    },
-    {
-      "id": "Q86678566",
-      "name": "place du Général-Leclerc",
-      "city": "Suresnes",
-      "lat": 48.869393,
-      "lon": 2.227248,
-      "wikidata": "http://www.wikidata.org/entity/Q86678566",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Suresnes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q86678566"
-    },
-    {
       "id": "Q60847282",
       "name": "place du Général-Leclerc",
       "city": "Saint-Denis",
@@ -66313,6 +66346,39 @@
       "source": "http://www.wikidata.org/entity/Q87413674"
     },
     {
+      "id": "Q86678566",
+      "name": "place du Général-Leclerc",
+      "city": "Suresnes",
+      "lat": 48.869393,
+      "lon": 2.227248,
+      "wikidata": "http://www.wikidata.org/entity/Q86678566",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Suresnes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q86678566"
+    },
+    {
+      "id": "Q65129416",
+      "name": "place du Général-Leclerc",
+      "city": "Colombes",
+      "lat": 48.922861,
+      "lon": 2.252558,
+      "wikidata": "http://www.wikidata.org/entity/Q65129416",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Colombes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q65129416"
+    },
+    {
+      "id": "Q72802423",
+      "name": "place du Général-Leclerc",
+      "city": "Fontenay-sous-Bois",
+      "lat": 48.84728,
+      "lon": 2.47155,
+      "wikidata": "http://www.wikidata.org/entity/Q72802423",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Fontenay-sous-Bois)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q72802423"
+    },
+    {
       "id": "Q96621135",
       "name": "place du Général-Leclerc",
       "city": "Saint-Mandé",
@@ -66324,17 +66390,6 @@
       "source": "http://www.wikidata.org/entity/Q96621135"
     },
     {
-      "id": "Q105398017",
-      "name": "place du Général-Leclerc",
-      "city": "Nogent-sur-Marne",
-      "lat": 48.83514,
-      "lon": 2.47267,
-      "wikidata": "http://www.wikidata.org/entity/Q105398017",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Nogent-sur-Marne)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105398017"
-    },
-    {
       "id": "Q116838270",
       "name": "place du Général-Leclerc",
       "city": "",
@@ -66344,6 +66399,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Mont-de-Marsan)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q116838270"
+    },
+    {
+      "id": "Q105398017",
+      "name": "place du Général-Leclerc",
+      "city": "Nogent-sur-Marne",
+      "lat": 48.83514,
+      "lon": 2.47267,
+      "wikidata": "http://www.wikidata.org/entity/Q105398017",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_G%C3%A9n%C3%A9ral-Leclerc_(Nogent-sur-Marne)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105398017"
     },
     {
       "id": "Q61467485",
@@ -66764,17 +66830,6 @@
       "source": "http://www.wikidata.org/entity/Q132531197"
     },
     {
-      "id": "Q132728718",
-      "name": "place du Lavoir",
-      "city": "Brou-sur-Chantereine",
-      "lat": 48.879921,
-      "lon": 2.629674,
-      "wikidata": "http://www.wikidata.org/entity/Q132728718",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q132728718"
-    },
-    {
       "id": "Q134126943",
       "name": "place du Lavoir",
       "city": "Lognes",
@@ -66784,6 +66839,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q134126943"
+    },
+    {
+      "id": "Q132728718",
+      "name": "place du Lavoir",
+      "city": "Brou-sur-Chantereine",
+      "lat": 48.879921,
+      "lon": 2.629674,
+      "wikidata": "http://www.wikidata.org/entity/Q132728718",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q132728718"
     },
     {
       "id": "Q125546226",
@@ -67688,6 +67754,17 @@
       "source": "http://www.wikidata.org/entity/Q134348631"
     },
     {
+      "id": "Q116270769",
+      "name": "place du Maréchal Leclerc",
+      "city": "Meudon",
+      "lat": 48.8178429,
+      "lon": 2.230011043,
+      "wikidata": "http://www.wikidata.org/entity/Q116270769",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Leclerc_(Meudon)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q116270769"
+    },
+    {
       "id": "Q102349437",
       "name": "place du Maréchal Leclerc",
       "city": "Auxerre",
@@ -67776,17 +67853,6 @@
       "source": "http://www.wikidata.org/entity/Q135612855"
     },
     {
-      "id": "Q116270769",
-      "name": "place du Maréchal Leclerc",
-      "city": "Meudon",
-      "lat": 48.8178429,
-      "lon": 2.230011043,
-      "wikidata": "http://www.wikidata.org/entity/Q116270769",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Leclerc_(Meudon)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q116270769"
-    },
-    {
       "id": "Q63027074",
       "name": "place du Maréchal Lyautey",
       "city": "Versailles",
@@ -67820,6 +67886,17 @@
       "source": "http://www.wikidata.org/entity/Q3390652"
     },
     {
+      "id": "Q110862970",
+      "name": "place du Maréchal-de-Lattre-de-Tassigny",
+      "city": "Vanves",
+      "lat": 48.821792271,
+      "lon": 2.284753728,
+      "wikidata": "http://www.wikidata.org/entity/Q110862970",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-de-Lattre-de-Tassigny_(Vanves)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q110862970"
+    },
+    {
       "id": "Q110806451",
       "name": "place du Maréchal-de-Lattre-de-Tassigny",
       "city": "Levallois-Perret",
@@ -67842,15 +67919,15 @@
       "source": "http://www.wikidata.org/entity/Q112064426"
     },
     {
-      "id": "Q110862970",
-      "name": "place du Maréchal-de-Lattre-de-Tassigny",
-      "city": "Vanves",
-      "lat": 48.821792271,
-      "lon": 2.284753728,
-      "wikidata": "http://www.wikidata.org/entity/Q110862970",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-de-Lattre-de-Tassigny_(Vanves)",
+      "id": "Q21427792",
+      "name": "place du Maréchal-Foch",
+      "city": "Rouen",
+      "lat": 49.442777777,
+      "lon": 1.091111111,
+      "wikidata": "http://www.wikidata.org/entity/Q21427792",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Foch",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q110862970"
+      "source": "http://www.wikidata.org/entity/Q21427792"
     },
     {
       "id": "Q86675923",
@@ -67862,17 +67939,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Foch_(Nanterre)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q86675923"
-    },
-    {
-      "id": "Q21427792",
-      "name": "place du Maréchal-Foch",
-      "city": "Rouen",
-      "lat": 49.442777777,
-      "lon": 1.091111111,
-      "wikidata": "http://www.wikidata.org/entity/Q21427792",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Foch",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q21427792"
     },
     {
       "id": "Q22980604",
@@ -67930,17 +67996,6 @@
       "source": "http://www.wikidata.org/entity/Q110806378"
     },
     {
-      "id": "Q101413718",
-      "name": "place du Maréchal-Leclerc",
-      "city": "Montrouge",
-      "lat": 48.81723,
-      "lon": 2.3188,
-      "wikidata": "http://www.wikidata.org/entity/Q101413718",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Leclerc_(Montrouge)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q101413718"
-    },
-    {
       "id": "Q16510178",
       "name": "place du Maréchal-Leclerc",
       "city": "Poitiers",
@@ -67950,6 +68005,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Leclerc_(Poitiers)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q16510178"
+    },
+    {
+      "id": "Q101413718",
+      "name": "place du Maréchal-Leclerc",
+      "city": "Montrouge",
+      "lat": 48.81723,
+      "lon": 2.3188,
+      "wikidata": "http://www.wikidata.org/entity/Q101413718",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_du_Mar%C3%A9chal-Leclerc_(Montrouge)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q101413718"
     },
     {
       "id": "Q65596214",
@@ -71540,7 +71606,7 @@
     {
       "id": "Q97169881",
       "name": "place Fernand-Forest",
-      "city": "Javel",
+      "city": "Grenelle",
       "lat": 48.84926,
       "lon": 2.28184,
       "wikidata": "http://www.wikidata.org/entity/Q97169881",
@@ -72055,17 +72121,6 @@
       "source": "http://www.wikidata.org/entity/Q120494567"
     },
     {
-      "id": "Q132203178",
-      "name": "place François Mitterrand",
-      "city": "Chelles",
-      "lat": 48.876743,
-      "lon": 2.600828,
-      "wikidata": "http://www.wikidata.org/entity/Q132203178",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q132203178"
-    },
-    {
       "id": "Q134385569",
       "name": "place François Mitterrand",
       "city": "Rezé",
@@ -72075,6 +72130,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q134385569"
+    },
+    {
+      "id": "Q132203178",
+      "name": "place François Mitterrand",
+      "city": "Chelles",
+      "lat": 48.876743,
+      "lon": 2.600828,
+      "wikidata": "http://www.wikidata.org/entity/Q132203178",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q132203178"
     },
     {
       "id": "Q141299624",
@@ -72178,7 +72244,7 @@
     {
       "id": "Q15971536",
       "name": "place François-Ier",
-      "city": "Champs-Élysées",
+      "city": "8e arrondissement de Paris",
       "lat": 48.866208418,
       "lon": 2.307844454,
       "wikidata": "http://www.wikidata.org/entity/Q15971536",
@@ -72299,7 +72365,7 @@
     {
       "id": "Q60851781",
       "name": "place Françoise-Dorin",
-      "city": "17e arrondissement de Paris",
+      "city": "Batignolles",
       "lat": 48.88913,
       "lon": 2.31425,
       "wikidata": "http://www.wikidata.org/entity/Q60851781",
@@ -72594,17 +72660,6 @@
       "source": "http://www.wikidata.org/entity/Q73260038"
     },
     {
-      "id": "Q108732436",
-      "name": "place Gabriel-Péri",
-      "city": "Bobigny",
-      "lat": 48.90659,
-      "lon": 2.44164,
-      "wikidata": "http://www.wikidata.org/entity/Q108732436",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Gabriel-P%C3%A9ri_(Bobigny)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q108732436"
-    },
-    {
       "id": "Q30742286",
       "name": "place Gabriel-Péri",
       "city": "8e arrondissement de Paris",
@@ -72614,6 +72669,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Gabriel-P%C3%A9ri_(Paris)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q30742286"
+    },
+    {
+      "id": "Q108732436",
+      "name": "place Gabriel-Péri",
+      "city": "Bobigny",
+      "lat": 48.90659,
+      "lon": 2.44164,
+      "wikidata": "http://www.wikidata.org/entity/Q108732436",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Gabriel-P%C3%A9ri_(Bobigny)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q108732436"
     },
     {
       "id": "Q97354169",
@@ -72926,7 +72992,7 @@
     {
       "id": "Q134540653",
       "name": "place Ganda Fadiga",
-      "city": "18e arrondissement de Paris",
+      "city": "Goutte-d'Or",
       "lat": 48.887113,
       "lon": 2.35344,
       "wikidata": "http://www.wikidata.org/entity/Q134540653",
@@ -75113,17 +75179,6 @@
       "source": "http://www.wikidata.org/entity/Q55130397"
     },
     {
-      "id": "Q3389852",
-      "name": "place Henri-IV",
-      "city": "Vannes",
-      "lat": 47.65779,
-      "lon": -2.75779,
-      "wikidata": "http://www.wikidata.org/entity/Q3389852",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Henri-IV_(Vannes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3389852"
-    },
-    {
       "id": "Q86678340",
       "name": "place Henri-IV",
       "city": "Suresnes",
@@ -75133,6 +75188,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Henri-IV_(Suresnes)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q86678340"
+    },
+    {
+      "id": "Q3389852",
+      "name": "place Henri-IV",
+      "city": "Vannes",
+      "lat": 47.65779,
+      "lon": -2.75779,
+      "wikidata": "http://www.wikidata.org/entity/Q3389852",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Henri-IV_(Vannes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3389852"
     },
     {
       "id": "Q16510198",
@@ -75146,17 +75212,6 @@
       "source": "http://www.wikidata.org/entity/Q16510198"
     },
     {
-      "id": "Q27910345",
-      "name": "place Henri-IV",
-      "city": "Charenton-le-Pont",
-      "lat": 48.82128,
-      "lon": 2.41719,
-      "wikidata": "http://www.wikidata.org/entity/Q27910345",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q27910345"
-    },
-    {
       "id": "Q22248551",
       "name": "place Henri-IV",
       "city": "Rouen",
@@ -75166,6 +75221,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Henri-IV_(Rouen)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q22248551"
+    },
+    {
+      "id": "Q27910345",
+      "name": "place Henri-IV",
+      "city": "Charenton-le-Pont",
+      "lat": 48.82128,
+      "lon": 2.41719,
+      "wikidata": "http://www.wikidata.org/entity/Q27910345",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q27910345"
     },
     {
       "id": "Q3389853",
@@ -75388,17 +75454,6 @@
       "source": "http://www.wikidata.org/entity/Q105734212"
     },
     {
-      "id": "Q63027071",
-      "name": "place Hoche",
-      "city": "Versailles",
-      "lat": 48.806052139,
-      "lon": 2.127753537,
-      "wikidata": "http://www.wikidata.org/entity/Q63027071",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q63027071"
-    },
-    {
       "id": "Q111305923",
       "name": "place Hoche",
       "city": "Rennes",
@@ -75408,6 +75463,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Hoche",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q111305923"
+    },
+    {
+      "id": "Q63027071",
+      "name": "place Hoche",
+      "city": "Versailles",
+      "lat": 48.806052139,
+      "lon": 2.127753537,
+      "wikidata": "http://www.wikidata.org/entity/Q63027071",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q63027071"
     },
     {
       "id": "Q111306075",
@@ -75775,7 +75841,7 @@
     {
       "id": "Q107347331",
       "name": "place Jacqueline-François",
-      "city": "17e arrondissement de Paris",
+      "city": "Plaine-de-Monceaux",
       "lat": 48.8805,
       "lon": 2.29984,
       "wikidata": "http://www.wikidata.org/entity/Q107347331",
@@ -76842,7 +76908,7 @@
     {
       "id": "Q19945107",
       "name": "place Jean-Ferrat",
-      "city": "Saint-Ambroise",
+      "city": "11e arrondissement de Paris",
       "lat": 48.86660004,
       "lon": 2.38319993,
       "wikidata": "http://www.wikidata.org/entity/Q19945107",
@@ -76961,17 +77027,6 @@
       "source": "http://www.wikidata.org/entity/Q114842958"
     },
     {
-      "id": "Q3389882",
-      "name": "place Jean-Jaurès",
-      "city": "7e arrondissement de Lyon",
-      "lat": 45.7396,
-      "lon": 4.83965,
-      "wikidata": "http://www.wikidata.org/entity/Q3389882",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Lyon)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3389882"
-    },
-    {
       "id": "Q3389888",
       "name": "place Jean-Jaurès",
       "city": "1er arrondissement de Marseille",
@@ -76994,15 +77049,15 @@
       "source": "http://www.wikidata.org/entity/Q3389884"
     },
     {
-      "id": "Q73523026",
+      "id": "Q3389882",
       "name": "place Jean-Jaurès",
-      "city": "Tours",
-      "lat": 47.39003,
-      "lon": 0.68894,
-      "wikidata": "http://www.wikidata.org/entity/Q73523026",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Tours)",
+      "city": "7e arrondissement de Lyon",
+      "lat": 45.7396,
+      "lon": 4.83965,
+      "wikidata": "http://www.wikidata.org/entity/Q3389882",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Lyon)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q73523026"
+      "source": "http://www.wikidata.org/entity/Q3389882"
     },
     {
       "id": "Q100740143",
@@ -77016,15 +77071,15 @@
       "source": "http://www.wikidata.org/entity/Q100740143"
     },
     {
-      "id": "Q30742266",
+      "id": "Q73523026",
       "name": "place Jean-Jaurès",
-      "city": "Saint-Étienne",
-      "lat": 45.4413,
-      "lon": 4.3864,
-      "wikidata": "http://www.wikidata.org/entity/Q30742266",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Saint-%C3%89tienne)",
+      "city": "Tours",
+      "lat": 47.39003,
+      "lon": 0.68894,
+      "wikidata": "http://www.wikidata.org/entity/Q73523026",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Tours)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q30742266"
+      "source": "http://www.wikidata.org/entity/Q73523026"
     },
     {
       "id": "Q116815002",
@@ -77036,6 +77091,28 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Mont-de-Marsan)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q116815002"
+    },
+    {
+      "id": "Q30742266",
+      "name": "place Jean-Jaurès",
+      "city": "Saint-Étienne",
+      "lat": 45.4413,
+      "lon": 4.3864,
+      "wikidata": "http://www.wikidata.org/entity/Q30742266",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Saint-%C3%89tienne)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q30742266"
+    },
+    {
+      "id": "Q105491808",
+      "name": "place Jean-Jaurès",
+      "city": "Castres",
+      "lat": 43.605555555,
+      "lon": 2.241666666,
+      "wikidata": "http://www.wikidata.org/entity/Q105491808",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Castres)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105491808"
     },
     {
       "id": "Q110619769",
@@ -77256,17 +77333,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q120494068"
-    },
-    {
-      "id": "Q105491808",
-      "name": "place Jean-Jaurès",
-      "city": "Castres",
-      "lat": 43.605555555,
-      "lon": 2.241666666,
-      "wikidata": "http://www.wikidata.org/entity/Q105491808",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jean-Jaur%C3%A8s_(Castres)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105491808"
     },
     {
       "id": "Q110958478",
@@ -78006,6 +78072,17 @@
       "source": "http://www.wikidata.org/entity/Q3389900"
     },
     {
+      "id": "Q17154206",
+      "name": "place Jeanne-d'Arc",
+      "city": "Colmar",
+      "lat": 48.0776,
+      "lon": 7.36051,
+      "wikidata": "http://www.wikidata.org/entity/Q17154206",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jeanne-d%27Arc_(Colmar)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q17154206"
+    },
+    {
       "id": "Q85835852",
       "name": "place Jeanne-d'Arc",
       "city": "Noisy-le-Sec",
@@ -78017,15 +78094,15 @@
       "source": "http://www.wikidata.org/entity/Q85835852"
     },
     {
-      "id": "Q17154206",
+      "id": "Q105687937",
       "name": "place Jeanne-d'Arc",
-      "city": "Colmar",
-      "lat": 48.0776,
-      "lon": 7.36051,
-      "wikidata": "http://www.wikidata.org/entity/Q17154206",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jeanne-d%27Arc_(Colmar)",
+      "city": "Toulouse",
+      "lat": 43.60866,
+      "lon": 1.44596,
+      "wikidata": "http://www.wikidata.org/entity/Q105687937",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jeanne-d%27Arc_(Toulouse)",
       "website": "",
-      "source": "http://www.wikidata.org/entity/Q17154206"
+      "source": "http://www.wikidata.org/entity/Q105687937"
     },
     {
       "id": "Q64461264",
@@ -78070,17 +78147,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q116144034"
-    },
-    {
-      "id": "Q105687937",
-      "name": "place Jeanne-d'Arc",
-      "city": "Toulouse",
-      "lat": 43.60866,
-      "lon": 1.44596,
-      "wikidata": "http://www.wikidata.org/entity/Q105687937",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Jeanne-d%27Arc_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105687937"
     },
     {
       "id": "Q111305709",
@@ -80912,7 +80978,7 @@
     {
       "id": "Q134540655",
       "name": "place Madeleine Riffaud",
-      "city": "Combat",
+      "city": "19e arrondissement de Paris",
       "lat": 48.876449,
       "lon": 2.379323,
       "wikidata": "http://www.wikidata.org/entity/Q134540655",
@@ -81539,7 +81605,7 @@
     {
       "id": "Q88952142",
       "name": "place Marcelle-Henry",
-      "city": "Batignolles",
+      "city": "17e arrondissement de Paris",
       "lat": 48.890277777,
       "lon": 2.311388888,
       "wikidata": "http://www.wikidata.org/entity/Q88952142",
@@ -81572,7 +81638,7 @@
     {
       "id": "Q101064728",
       "name": "place Marek-Edelman",
-      "city": "11e arrondissement de Paris",
+      "city": "Folie-Méricourt",
       "lat": 48.869827548,
       "lon": 2.378534748,
       "wikidata": "http://www.wikidata.org/entity/Q101064728",
@@ -82793,7 +82859,7 @@
     {
       "id": "Q23295058",
       "name": "place Mireille-et-Jacques-Renouvin",
-      "city": "Paris",
+      "city": "6e arrondissement de Paris",
       "lat": 48.850905,
       "lon": 2.330629,
       "wikidata": "http://www.wikidata.org/entity/Q23295058",
@@ -82879,17 +82945,6 @@
       "source": "http://www.wikidata.org/entity/Q112065742"
     },
     {
-      "id": "Q132203009",
-      "name": "place Molière",
-      "city": "Chelles",
-      "lat": 48.892995,
-      "lon": 2.617419,
-      "wikidata": "http://www.wikidata.org/entity/Q132203009",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q132203009"
-    },
-    {
       "id": "Q134127731",
       "name": "place Molière",
       "city": "Noisiel",
@@ -82899,6 +82954,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q134127731"
+    },
+    {
+      "id": "Q132203009",
+      "name": "place Molière",
+      "city": "Chelles",
+      "lat": 48.892995,
+      "lon": 2.617419,
+      "wikidata": "http://www.wikidata.org/entity/Q132203009",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q132203009"
     },
     {
       "id": "Q134695531",
@@ -83937,7 +84003,7 @@
     {
       "id": "Q101064731",
       "name": "place Ousmane-Sow",
-      "city": "Paris",
+      "city": "Grenelle",
       "lat": 48.84707,
       "lon": 2.2959,
       "wikidata": "http://www.wikidata.org/entity/Q101064731",
@@ -84025,7 +84091,7 @@
     {
       "id": "Q134540647",
       "name": "place Pan Yuliang",
-      "city": "Quartier des Arts-et-Métiers",
+      "city": "3e arrondissement de Paris",
       "lat": 48.865362,
       "lon": 2.356125,
       "wikidata": "http://www.wikidata.org/entity/Q134540647",
@@ -84081,8 +84147,8 @@
       "id": "Q77042080",
       "name": "place Parmentier",
       "city": "Saint-Denis",
-      "lat": 48.930640746,
-      "lon": 2.353192646,
+      "lat": 48.93052,
+      "lon": 2.35328,
       "wikidata": "http://www.wikidata.org/entity/Q77042080",
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Parmentier_(Saint-Denis)",
       "website": "",
@@ -84234,7 +84300,7 @@
     {
       "id": "Q132523121",
       "name": "place Paul et Marcelle Vergara",
-      "city": "Quartier des Halles",
+      "city": "1er arrondissement de Paris",
       "lat": 48.861411,
       "lon": 2.342513,
       "wikidata": "http://www.wikidata.org/entity/Q132523121",
@@ -84850,7 +84916,7 @@
     {
       "id": "Q114283548",
       "name": "place Philippe-de-Broca",
-      "city": "Quinze-Vingts",
+      "city": "12e arrondissement de Paris",
       "lat": 48.84689,
       "lon": 2.36674,
       "wikidata": "http://www.wikidata.org/entity/Q114283548",
@@ -85398,17 +85464,6 @@
       "source": "http://www.wikidata.org/entity/Q105733821"
     },
     {
-      "id": "Q106438262",
-      "name": "place Pierre-Mendès-France",
-      "city": "Neuilly-sur-Marne",
-      "lat": 48.867523733,
-      "lon": 2.531622133,
-      "wikidata": "http://www.wikidata.org/entity/Q106438262",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q106438262"
-    },
-    {
       "id": "Q105949995",
       "name": "place Pierre-Mendès-France",
       "city": "Créteil",
@@ -85418,6 +85473,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q105949995"
+    },
+    {
+      "id": "Q106438262",
+      "name": "place Pierre-Mendès-France",
+      "city": "Neuilly-sur-Marne",
+      "lat": 48.867523733,
+      "lon": 2.531622133,
+      "wikidata": "http://www.wikidata.org/entity/Q106438262",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q106438262"
     },
     {
       "id": "Q111302066",
@@ -85607,17 +85673,6 @@
       "source": "http://www.wikidata.org/entity/Q105398015"
     },
     {
-      "id": "Q107128974",
-      "name": "place Pierre-Semard",
-      "city": "Choisy-le-Roi",
-      "lat": 48.7656775,
-      "lon": 2.41054952,
-      "wikidata": "http://www.wikidata.org/entity/Q107128974",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q107128974"
-    },
-    {
       "id": "Q105899641",
       "name": "place Pierre-Semard",
       "city": "Vitry-sur-Seine",
@@ -85627,6 +85682,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q105899641"
+    },
+    {
+      "id": "Q107128974",
+      "name": "place Pierre-Semard",
+      "city": "Choisy-le-Roi",
+      "lat": 48.7656775,
+      "lon": 2.41054952,
+      "wikidata": "http://www.wikidata.org/entity/Q107128974",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q107128974"
     },
     {
       "id": "Q111916800",
@@ -86245,17 +86311,6 @@
       "source": "http://www.wikidata.org/entity/Q118470503"
     },
     {
-      "id": "Q16510163",
-      "name": "place Raymond-Poincaré",
-      "city": "Nantes",
-      "lat": 47.2223,
-      "lon": -1.5854,
-      "wikidata": "http://www.wikidata.org/entity/Q16510163",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Raymond-Poincar%C3%A9_(Nantes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q16510163"
-    },
-    {
       "id": "Q63027076",
       "name": "place Raymond-Poincaré",
       "city": "Versailles",
@@ -86265,6 +86320,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Poincar%C3%A9",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q63027076"
+    },
+    {
+      "id": "Q16510163",
+      "name": "place Raymond-Poincaré",
+      "city": "Nantes",
+      "lat": 47.2223,
+      "lon": -1.5854,
+      "wikidata": "http://www.wikidata.org/entity/Q16510163",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Raymond-Poincar%C3%A9_(Nantes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q16510163"
     },
     {
       "id": "Q123901006",
@@ -86533,7 +86599,7 @@
     {
       "id": "Q56870161",
       "name": "place René-Clair",
-      "city": "Île-de-France",
+      "city": "Épinay-sur-Seine",
       "lat": 48.953659451,
       "lon": 2.311136931,
       "wikidata": "http://www.wikidata.org/entity/Q56870161",
@@ -86566,7 +86632,7 @@
     {
       "id": "Q101064732",
       "name": "place René-Laennec",
-      "city": "Paris",
+      "city": "Saint-Thomas-d'Aquin",
       "lat": 48.851666666,
       "lon": 2.324722222,
       "wikidata": "http://www.wikidata.org/entity/Q101064732",
@@ -86828,6 +86894,17 @@
       "source": "http://www.wikidata.org/entity/Q108805942"
     },
     {
+      "id": "Q105732541",
+      "name": "place Robert Schuman",
+      "city": "Toulouse",
+      "lat": 43.60954,
+      "lon": 1.44933,
+      "wikidata": "http://www.wikidata.org/entity/Q105732541",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Robert-Schuman",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105732541"
+    },
+    {
       "id": "Q111243316",
       "name": "place Robert Schuman",
       "city": "Le Plessis-Trévise",
@@ -86870,17 +86947,6 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q137271879"
-    },
-    {
-      "id": "Q105732541",
-      "name": "place Robert Schuman",
-      "city": "Toulouse",
-      "lat": 43.60954,
-      "lon": 1.44933,
-      "wikidata": "http://www.wikidata.org/entity/Q105732541",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Robert-Schuman",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105732541"
     },
     {
       "id": "Q113044617",
@@ -86940,7 +87006,7 @@
     {
       "id": "Q101064734",
       "name": "place Robert-Verdier",
-      "city": "Clignancourt",
+      "city": "Paris",
       "lat": 48.891207181,
       "lon": 2.339660428,
       "wikidata": "http://www.wikidata.org/entity/Q101064734",
@@ -87664,17 +87730,6 @@
       "source": "http://www.wikidata.org/entity/Q109660435"
     },
     {
-      "id": "Q55599083",
-      "name": "place Saint-André",
-      "city": "Lille",
-      "lat": 50.646405986,
-      "lon": 3.053284948,
-      "wikidata": "http://www.wikidata.org/entity/Q55599083",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Andr%C3%A9_(Lille)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q55599083"
-    },
-    {
       "id": "Q62070763",
       "name": "place Saint-André",
       "city": "Grenoble",
@@ -87684,6 +87739,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Andr%C3%A9_(Grenoble)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q62070763"
+    },
+    {
+      "id": "Q55599083",
+      "name": "place Saint-André",
+      "city": "Lille",
+      "lat": 50.646405986,
+      "lon": 3.053284948,
+      "wikidata": "http://www.wikidata.org/entity/Q55599083",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Andr%C3%A9_(Lille)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q55599083"
     },
     {
       "id": "Q3390073",
@@ -88137,17 +88203,6 @@
       "source": "http://www.wikidata.org/entity/Q120495303"
     },
     {
-      "id": "Q116255328",
-      "name": "place Saint-Germain",
-      "city": "Issy-les-Moulineaux",
-      "lat": 48.82162076,
-      "lon": 2.2402053,
-      "wikidata": "http://www.wikidata.org/entity/Q116255328",
-      "wikipedia": "",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q116255328"
-    },
-    {
       "id": "Q111305616",
       "name": "place Saint-Germain",
       "city": "Rennes",
@@ -88157,6 +88212,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Germain",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q111305616"
+    },
+    {
+      "id": "Q116255328",
+      "name": "place Saint-Germain",
+      "city": "Issy-les-Moulineaux",
+      "lat": 48.82162076,
+      "lon": 2.2402053,
+      "wikidata": "http://www.wikidata.org/entity/Q116255328",
+      "wikipedia": "",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q116255328"
     },
     {
       "id": "Q110764811",
@@ -88280,6 +88346,17 @@
       "source": "http://www.wikidata.org/entity/Q2097855"
     },
     {
+      "id": "Q105733679",
+      "name": "place Saint-Jacques",
+      "city": "Toulouse",
+      "lat": 43.59777,
+      "lon": 1.45119,
+      "wikidata": "http://www.wikidata.org/entity/Q105733679",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Jacques_(Toulouse)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q105733679"
+    },
+    {
       "id": "Q63536443",
       "name": "place Saint-Jacques",
       "city": "4e arrondissement de Lyon",
@@ -88302,17 +88379,6 @@
       "source": "http://www.wikidata.org/entity/Q113989203"
     },
     {
-      "id": "Q105733679",
-      "name": "place Saint-Jacques",
-      "city": "Toulouse",
-      "lat": 43.59777,
-      "lon": 1.45119,
-      "wikidata": "http://www.wikidata.org/entity/Q105733679",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Jacques_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q105733679"
-    },
-    {
       "id": "Q3390096",
       "name": "place Saint-Jean",
       "city": "Épinettes",
@@ -88322,17 +88388,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Jean_(Paris)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3390096"
-    },
-    {
-      "id": "Q16510237",
-      "name": "place Saint-Jean",
-      "city": "Nantes",
-      "lat": 47.2183,
-      "lon": -1.5533,
-      "wikidata": "http://www.wikidata.org/entity/Q16510237",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Jean_(Nantes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q16510237"
     },
     {
       "id": "Q18380105",
@@ -88355,6 +88410,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Jean_(Lyon)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q9516"
+    },
+    {
+      "id": "Q16510237",
+      "name": "place Saint-Jean",
+      "city": "Nantes",
+      "lat": 47.2183,
+      "lon": -1.5533,
+      "wikidata": "http://www.wikidata.org/entity/Q16510237",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Jean_(Nantes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q16510237"
     },
     {
       "id": "Q126285641",
@@ -88841,28 +88907,6 @@
       "source": "http://www.wikidata.org/entity/Q139741852"
     },
     {
-      "id": "Q3390105",
-      "name": "place Saint-Pierre",
-      "city": "Le Mans",
-      "lat": 48.0073,
-      "lon": 0.196729,
-      "wikidata": "http://www.wikidata.org/entity/Q3390105",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Pierre_(Le_Mans)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390105"
-    },
-    {
-      "id": "Q3390113",
-      "name": "place Saint-Pierre",
-      "city": "Toulouse",
-      "lat": 43.6041,
-      "lon": 1.43548,
-      "wikidata": "http://www.wikidata.org/entity/Q3390113",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Pierre_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3390113"
-    },
-    {
       "id": "Q3390107",
       "name": "place Saint-Pierre",
       "city": "Clignancourt",
@@ -88883,6 +88927,28 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Pierre_(Nantes)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3390106"
+    },
+    {
+      "id": "Q3390105",
+      "name": "place Saint-Pierre",
+      "city": "Le Mans",
+      "lat": 48.0073,
+      "lon": 0.196729,
+      "wikidata": "http://www.wikidata.org/entity/Q3390105",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Pierre_(Le_Mans)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3390105"
+    },
+    {
+      "id": "Q3390113",
+      "name": "place Saint-Pierre",
+      "city": "Toulouse",
+      "lat": 43.6041,
+      "lon": 1.43548,
+      "wikidata": "http://www.wikidata.org/entity/Q3390113",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Pierre_(Toulouse)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3390113"
     },
     {
       "id": "Q2402940",
@@ -89204,17 +89270,6 @@
       "source": "http://www.wikidata.org/entity/Q110958525"
     },
     {
-      "id": "Q16510230",
-      "name": "place Saint-Vincent",
-      "city": "Nantes",
-      "lat": 47.2173,
-      "lon": -1.55341,
-      "wikidata": "http://www.wikidata.org/entity/Q16510230",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Vincent_(Nantes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q16510230"
-    },
-    {
       "id": "Q61986957",
       "name": "place Saint-Vincent",
       "city": "1er arrondissement de Lyon",
@@ -89224,6 +89279,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Vincent_(Lyon)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q61986957"
+    },
+    {
+      "id": "Q16510230",
+      "name": "place Saint-Vincent",
+      "city": "Nantes",
+      "lat": 47.2173,
+      "lon": -1.55341,
+      "wikidata": "http://www.wikidata.org/entity/Q16510230",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-Vincent_(Nantes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q16510230"
     },
     {
       "id": "Q105106667",
@@ -89303,17 +89369,6 @@
       "source": "http://www.wikidata.org/entity/Q100740152"
     },
     {
-      "id": "Q16510216",
-      "name": "place Saint-Étienne",
-      "city": "Strasbourg",
-      "lat": 48.5834,
-      "lon": 7.75479,
-      "wikidata": "http://www.wikidata.org/entity/Q16510216",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-%C3%89tienne_(Strasbourg)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q16510216"
-    },
-    {
       "id": "Q16670285",
       "name": "place Saint-Étienne",
       "city": "Toulouse",
@@ -89323,6 +89378,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-%C3%89tienne_(Toulouse)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q16670285"
+    },
+    {
+      "id": "Q16510216",
+      "name": "place Saint-Étienne",
+      "city": "Strasbourg",
+      "lat": 48.5834,
+      "lon": 7.75479,
+      "wikidata": "http://www.wikidata.org/entity/Q16510216",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Saint-%C3%89tienne_(Strasbourg)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q16510216"
     },
     {
       "id": "Q65096261",
@@ -89424,17 +89490,6 @@
       "source": "http://www.wikidata.org/entity/Q118470071"
     },
     {
-      "id": "Q16510262",
-      "name": "place Sainte-Croix",
-      "city": "Nantes",
-      "lat": 47.2154,
-      "lon": -1.55437,
-      "wikidata": "http://www.wikidata.org/entity/Q16510262",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Sainte-Croix_(Nantes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q16510262"
-    },
-    {
       "id": "Q74360021",
       "name": "place Sainte-Croix",
       "city": "Metz",
@@ -89444,6 +89499,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Sainte-Croix_(Metz)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q74360021"
+    },
+    {
+      "id": "Q16510262",
+      "name": "place Sainte-Croix",
+      "city": "Nantes",
+      "lat": 47.2154,
+      "lon": -1.55437,
+      "wikidata": "http://www.wikidata.org/entity/Q16510262",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Sainte-Croix_(Nantes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q16510262"
     },
     {
       "id": "Q124740832",
@@ -90020,7 +90086,7 @@
     {
       "id": "Q132523114",
       "name": "place Slavik",
-      "city": "Champs-Élysées",
+      "city": "8e arrondissement de Paris",
       "lat": 48.872485,
       "lon": 2.296499,
       "wikidata": "http://www.wikidata.org/entity/Q132523114",
@@ -90515,7 +90581,7 @@
     {
       "id": "Q133523249",
       "name": "place Tina-Turner",
-      "city": "Gare",
+      "city": "13e arrondissement de Paris",
       "lat": 48.835207,
       "lon": 2.371835,
       "wikidata": "http://www.wikidata.org/entity/Q133523249",
@@ -90857,8 +90923,8 @@
       "id": "Q106572773",
       "name": "place Vaucanson",
       "city": "Grenoble",
-      "lat": 45.1883,
-      "lon": 5.72829,
+      "lat": 45.188334,
+      "lon": 5.728259,
       "wikidata": "http://www.wikidata.org/entity/Q106572773",
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Vaucanson",
       "website": "",
@@ -91162,17 +91228,6 @@
       "source": "http://www.wikidata.org/entity/Q3390161"
     },
     {
-      "id": "Q72866582",
-      "name": "place Victor-Hugo",
-      "city": "Toulouse",
-      "lat": 43.60651,
-      "lon": 1.44674,
-      "wikidata": "http://www.wikidata.org/entity/Q72866582",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Victor-Hugo_(Toulouse)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q72866582"
-    },
-    {
       "id": "Q100740154",
       "name": "place Victor-Hugo",
       "city": "Saint-Denis",
@@ -91193,6 +91248,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_Victor-Hugo_(Grenoble)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q96089939"
+    },
+    {
+      "id": "Q72866582",
+      "name": "place Victor-Hugo",
+      "city": "Toulouse",
+      "lat": 43.60651,
+      "lon": 1.44674,
+      "wikidata": "http://www.wikidata.org/entity/Q72866582",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Place_Victor-Hugo_(Toulouse)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q72866582"
     },
     {
       "id": "Q99291975",
@@ -91758,7 +91824,7 @@
     {
       "id": "Q71400704",
       "name": "place Édith-Thomas",
-      "city": "Petit-Montrouge",
+      "city": "Paris",
       "lat": 48.821515,
       "lon": 2.327683,
       "wikidata": "http://www.wikidata.org/entity/Q71400704",
@@ -92155,8 +92221,8 @@
       "id": "Q78862657",
       "name": "place Émile-Lécrivain",
       "city": "Rosny-sous-Bois",
-      "lat": 48.872381736,
-      "lon": 2.485159563,
+      "lat": 48.87233,
+      "lon": 2.48515,
       "wikidata": "http://www.wikidata.org/entity/Q78862657",
       "wikipedia": "https://fr.wikipedia.org/wiki/Place_%C3%89mile-L%C3%A9crivain",
       "website": "",
@@ -97103,7 +97169,7 @@
     },
     {
       "id": "Q3322463",
-      "name": "théâtre de la Reine",
+      "name": "Théâtre de la Reine",
       "city": "Versailles",
       "lat": 48.816,
       "lon": 2.10805,
@@ -97111,17 +97177,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Reine",
       "website": "http://www.chateauversailles.fr/decouvrir/domaine/domaine-trianon/theatre-reine",
       "source": "http://www.wikidata.org/entity/Q3322463"
-    },
-    {
-      "id": "Q3527709",
-      "name": "théâtre de la Renaissance",
-      "city": "Nantes",
-      "lat": 47.2191,
-      "lon": -1.56381,
-      "wikidata": "http://www.wikidata.org/entity/Q3527709",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Renaissance_(Nantes)",
-      "website": "",
-      "source": "http://www.wikidata.org/entity/Q3527709"
     },
     {
       "id": "Q3527713",
@@ -97133,6 +97188,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Renaissance_(Paris)",
       "website": "http://www.theatredelarenaissance.com",
       "source": "http://www.wikidata.org/entity/Q3527713"
+    },
+    {
+      "id": "Q3527709",
+      "name": "théâtre de la Renaissance",
+      "city": "Nantes",
+      "lat": 47.2191,
+      "lon": -1.56381,
+      "wikidata": "http://www.wikidata.org/entity/Q3527709",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Renaissance_(Nantes)",
+      "website": "",
+      "source": "http://www.wikidata.org/entity/Q3527709"
     },
     {
       "id": "Q102355468",
@@ -97223,17 +97289,6 @@
       "source": "http://www.wikidata.org/entity/Q3527718"
     },
     {
-      "id": "Q46700081",
-      "name": "théâtre de la Ville",
-      "city": "Valence",
-      "lat": 44.9329,
-      "lon": 4.89191,
-      "wikidata": "http://www.wikidata.org/entity/Q46700081",
-      "wikipedia": "",
-      "website": "http://theatre.valence.fr/",
-      "source": "http://www.wikidata.org/entity/Q46700081"
-    },
-    {
       "id": "Q2352779",
       "name": "théâtre de la Ville",
       "city": "4e arrondissement de Paris",
@@ -97243,6 +97298,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Ville_-_Sarah-Bernhardt",
       "website": "https://www.theatredelaville-paris.com",
       "source": "http://www.wikidata.org/entity/Q2352779"
+    },
+    {
+      "id": "Q46700081",
+      "name": "théâtre de la Ville",
+      "city": "Valence",
+      "lat": 44.9329,
+      "lon": 4.89191,
+      "wikidata": "http://www.wikidata.org/entity/Q46700081",
+      "wikipedia": "",
+      "website": "http://theatre.valence.fr/",
+      "source": "http://www.wikidata.org/entity/Q46700081"
     },
     {
       "id": "Q3527633",
@@ -97553,17 +97619,6 @@
       "source": "http://www.wikidata.org/entity/Q104290741"
     },
     {
-      "id": "Q115255744",
-      "name": "théâtre de Passy",
-      "city": "16e arrondissement de Paris",
-      "lat": 48.858,
-      "lon": 2.27538,
-      "wikidata": "http://www.wikidata.org/entity/Q115255744",
-      "wikipedia": "",
-      "website": "https://theatredepassy.fr/",
-      "source": "http://www.wikidata.org/entity/Q115255744"
-    },
-    {
       "id": "Q140697456",
       "name": "Théâtre de Passy",
       "city": "16e arrondissement de Paris",
@@ -97573,6 +97628,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_Passy",
       "website": "https://theatredepassy.fr",
       "source": "http://www.wikidata.org/entity/Q140697456"
+    },
+    {
+      "id": "Q115255744",
+      "name": "théâtre de Passy",
+      "city": "16e arrondissement de Paris",
+      "lat": 48.858,
+      "lon": 2.27538,
+      "wikidata": "http://www.wikidata.org/entity/Q115255744",
+      "wikipedia": "",
+      "website": "https://theatredepassy.fr/",
+      "source": "http://www.wikidata.org/entity/Q115255744"
     },
     {
       "id": "Q3527644",
@@ -98400,17 +98466,6 @@
       "source": "http://www.wikidata.org/entity/Q16680084"
     },
     {
-      "id": "Q46487534",
-      "name": "théâtre des Nouveautés",
-      "city": "Tarbes",
-      "lat": 43.2303,
-      "lon": 0.07566,
-      "wikidata": "http://www.wikidata.org/entity/Q46487534",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Nouveaut%C3%A9s_de_Tarbes",
-      "website": "https://www.tarbes.fr/mes-loisirs/tarbes-culture/theatre-les-nouveautes/",
-      "source": "http://www.wikidata.org/entity/Q46487534"
-    },
-    {
       "id": "Q2430641",
       "name": "théâtre des Nouveautés",
       "city": "9e arrondissement de Paris",
@@ -98420,6 +98475,17 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Nouveaut%C3%A9s",
       "website": "http://theatredesnouveautes.efilprod.net",
       "source": "http://www.wikidata.org/entity/Q2430641"
+    },
+    {
+      "id": "Q46487534",
+      "name": "théâtre des Nouveautés",
+      "city": "Tarbes",
+      "lat": 43.2303,
+      "lon": 0.07566,
+      "wikidata": "http://www.wikidata.org/entity/Q46487534",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Nouveaut%C3%A9s_de_Tarbes",
+      "website": "https://www.tarbes.fr/mes-loisirs/tarbes-culture/theatre-les-nouveautes/",
+      "source": "http://www.wikidata.org/entity/Q46487534"
     },
     {
       "id": "Q46487209",
@@ -99445,6 +99511,17 @@
       "source": "http://www.wikidata.org/entity/Q97727799"
     },
     {
+      "id": "Q63197222",
+      "name": "théâtre Gérard-Philipe",
+      "city": "Somain",
+      "lat": 50.357867,
+      "lon": 3.281874,
+      "wikidata": "http://www.wikidata.org/entity/Q63197222",
+      "wikipedia": "",
+      "website": "http://ville-somain.fr/culture-sports-et-loisirs/theatre-municipal-gerard-philipe/?lang=fr",
+      "source": "http://www.wikidata.org/entity/Q63197222"
+    },
+    {
       "id": "Q3527474",
       "name": "théâtre Gérard-Philipe",
       "city": "Frouard",
@@ -99465,17 +99542,6 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_G%C3%A9rard-Philipe_(Saint-Denis)",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q3527475"
-    },
-    {
-      "id": "Q63197222",
-      "name": "théâtre Gérard-Philipe",
-      "city": "Somain",
-      "lat": 50.357867,
-      "lon": 3.281874,
-      "wikidata": "http://www.wikidata.org/entity/Q63197222",
-      "wikipedia": "",
-      "website": "http://ville-somain.fr/culture-sports-et-loisirs/theatre-municipal-gerard-philipe/?lang=fr",
-      "source": "http://www.wikidata.org/entity/Q63197222"
     },
     {
       "id": "Q63871040",
@@ -99599,17 +99665,6 @@
       "source": "http://www.wikidata.org/entity/Q43037358"
     },
     {
-      "id": "Q3527486",
-      "name": "théâtre Jean-Vilar",
-      "city": "Montpellier",
-      "lat": 43.6281,
-      "lon": 3.81677,
-      "wikidata": "http://www.wikidata.org/entity/Q3527486",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_Jean-Vilar_(Montpellier)",
-      "website": "http://www.theatrejeanvilar.montpellier.fr",
-      "source": "http://www.wikidata.org/entity/Q3527486"
-    },
-    {
       "id": "Q64447868",
       "name": "Théâtre Jean-Vilar",
       "city": "Bourgoin-Jallieu",
@@ -99619,6 +99674,17 @@
       "wikipedia": "",
       "website": "",
       "source": "http://www.wikidata.org/entity/Q64447868"
+    },
+    {
+      "id": "Q3527486",
+      "name": "théâtre Jean-Vilar",
+      "city": "Montpellier",
+      "lat": 43.6281,
+      "lon": 3.81677,
+      "wikidata": "http://www.wikidata.org/entity/Q3527486",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_Jean-Vilar_(Montpellier)",
+      "website": "http://www.theatrejeanvilar.montpellier.fr",
+      "source": "http://www.wikidata.org/entity/Q3527486"
     },
     {
       "id": "Q16666849",
@@ -99667,7 +99733,7 @@
     {
       "id": "Q3527852",
       "name": "théâtre la Renaissance",
-      "city": "Oullins",
+      "city": "Oullins-Pierre-Bénite",
       "lat": 45.7165,
       "lon": 4.81077,
       "wikidata": "http://www.wikidata.org/entity/Q3527852",
@@ -101161,17 +101227,6 @@
       "source": "http://www.wikidata.org/entity/Q88807713"
     },
     {
-      "id": "Q3527547",
-      "name": "théâtre Rive gauche",
-      "city": "14e arrondissement de Paris",
-      "lat": 48.8408,
-      "lon": 2.3243,
-      "wikidata": "http://www.wikidata.org/entity/Q3527547",
-      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Ga%C3%AEt%C3%A9-Rive_gauche",
-      "website": "https://www.theatre-rive-gauche.com/",
-      "source": "http://www.wikidata.org/entity/Q3527547"
-    },
-    {
       "id": "Q61854686",
       "name": "théâtre Rive Gauche",
       "city": "Saint-Étienne-du-Rouvray",
@@ -101181,6 +101236,17 @@
       "wikipedia": "",
       "website": "https://www.lerivegauche76.fr/",
       "source": "http://www.wikidata.org/entity/Q61854686"
+    },
+    {
+      "id": "Q3527547",
+      "name": "théâtre Rive gauche",
+      "city": "14e arrondissement de Paris",
+      "lat": 48.8408,
+      "lon": 2.3243,
+      "wikidata": "http://www.wikidata.org/entity/Q3527547",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_la_Ga%C3%AEt%C3%A9-Rive_gauche",
+      "website": "https://www.theatre-rive-gauche.com/",
+      "source": "http://www.wikidata.org/entity/Q3527547"
     },
     {
       "id": "Q63955649",
